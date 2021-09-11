@@ -1,2 +1,0 @@
-export KUBECONFIG=$(expand_path ./kubeconfig)
-export ANSIBLE_CONFIG=$(expand_path ./server/ansible/ansible.cfg)

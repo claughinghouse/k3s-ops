@@ -1,4 +1,0 @@
----
-- include: flux-system.yaml
-  tags:
-    - flux

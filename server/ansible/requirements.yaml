@@ -1,8 +1,0 @@
----
-roles:
-  - src: xanmanning.k3s
-  - src: geerlingguy.pip
-collections:
-  - name: community.general
-  - name: community.sops
-  - name: community.kubernetes
