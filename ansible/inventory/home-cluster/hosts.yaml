@@ -1,0 +1,26 @@
+---
+kubernetes:
+  children:
+    master:
+      hosts:
+        k8s-master-1:
+        k8s-master-2:
+        k8s-master-3:
+      vars:
+        ansible_user: ubuntu
+    worker:
+      hosts:
+        k8s-worker-1:
+        k8s-worker-2:
+        k8s-worker-3:
+        k8s-worker-4:
+        k8s-worker-5:
+        k8s-worker-6:
+        k8s-worker-7:
+        k8s-worker-8:
+      vars:
+        ansible_user: ubuntu
+
+router:
+  hosts:
+    gateway:

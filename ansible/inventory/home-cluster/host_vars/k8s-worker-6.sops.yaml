@@ -1,0 +1,37 @@
+kind: Secret
+ansible_become_pass: ENC[AES256_GCM,data:R0ym02Ry,iv:X1kj8dI1Iffc/OrPcSW9s/OgMfwFzBFdyUb2vwkFEpY=,tag:Vh3ZI/Dn+FT3mRC+7feGkw==,type:str]
+ansible_host: ENC[AES256_GCM,data:Vh2jKKCBYP2TDg==,iv:SCfQfffqZty2ETwb41iDY5VH+s59bZoIKZ4EFwnWzZY=,tag:rq5mHsGpvflzK5nieYm+7Q==,type:str]
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+          created_at: "2021-09-11T15:59:02Z"
+          enc: CiQA1r6bINlwSUdVmCXWrJa/7Tjrj3URVVPW7XEkeW8o2MGBw6QSSQCbI6ie8o9BSijaFtpe6iewWfUNxCaIEU/noWf0J32yt48t/pKFR+42mYJNVg4imfMsONFupSQaY2VlAk9RKPiswO21A99KtWQ=
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-09-11T15:59:03Z"
+    mac: ENC[AES256_GCM,data:Zdf3h/rbhymPSxJ6qbrQNRMNfihVbFaAmtqP6V/jCD0rsvIIIWal7oDyVl1fOhti7KEq2Ox+wyUkCGaMDB7yN+XR+tZ1Vm0kggci8DyBlUuRWXAuLg3kKfpqtmBDfo2nmE6JlqUT6NK63h56Ce/P6qUvIx1IMoYblOeYGyJIDsQ=,iv:JQLowmSNkV5sLRWPHm07molzxS2rHBQ2CzlaLqCd5nQ=,tag:gw6cdDsxkGuq3GTEaMR49A==,type:str]
+    pgp:
+        - created_at: "2021-09-11T15:59:02Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLARAAuWlnH94YJlMjPIMSBlZd/DGEOFLg4kSnXXDcFiRr0sba
+            k72rz9Lp4MwHvGzvHEwBJBKspazh8P9epchsRkRMZGdbcnZSMCtmPS1KAvwz+J+u
+            r8625Ol0cIpGK6wrxaB9/MvgxLNoM3xBMjQ1YXsoDqlWvJ/0rBDwC3WHXDiqo0aL
+            /rbjnPH1OlgNB8+s7l+vMWMCcbI6+Yk6Qk4xqz5DwuvKJS9/bENRtFHg8PCKBrno
+            ZEvfGh93/gerpVWmHlwp3R+j5bkOLm3Dc0/B7BFzdkDGKp5sl2qmUzOpAElSKxEM
+            4UTCxmSoJWzN5X1ov0bBXj+qVKOENKKfJh3TdR+keMZ/2JnG2zmFu2HzkL3kPAf8
+            diNH8B84Bn8gRVD+smvz2t2MMqh0TyqWBKSgE2MwvIRgzseShFvgj3/kq1tkHJ5x
+            olldChIQeSQmdRsXKNo+g7zyd5ELe+RRV+/lfoKJIQzQsXZmGKZIYr+Vs0gGn+au
+            wPpEG1Dw7meSKZwkjF3HcPWb6WXLjZVCKFfjSrrX3uPm46CzVjSIcLBBTgF6oZT9
+            XLfcH875wtiVqYM0VWsDVS0Mux24Y1XP6oQs6A7zkp0NyXun/HjlzCoCeQc6zG4m
+            UIKdLRVSyBaEdekhRZA4HD7qqoJsn+3Lz4d7hJ4NkWtWxebwM/V9XA9KfwRAbkbS
+            XgEYL26/XNNAxJEXdUvwz40JS8tEFtR2oLfY4jJUBeFmIeobFC0J3DFds9i7Uh/X
+            7e2uHComt152s3B+HmdErkpDdmnZb+9NeuxpNcl92AyYoL2tFJs8MPUbtPBUDWk=
+            =lmMG
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    unencrypted_regex: ^(kind)$
+    version: 3.7.1

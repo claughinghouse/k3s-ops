@@ -1,0 +1,9 @@
+---
+
+# Timezone for the servers
+timezone: "America/New_York"
+
+# Additional ssh public keys to add to the nodes
+ssh_authorized_keys:
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJHiKbjWHf/hfmD5ArZek3BnKaLf56L3dBqovisvlABw"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILF85elFb+GqJ8D2Jrr7VZyknAGbxSLWir4bHrdeCqVk"
