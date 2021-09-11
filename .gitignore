@@ -1,18 +1,24 @@
+# Editors
+.vscode/
 # Trash
 .DS_Store
 Thumbs.db
+# Binaries
 bin
-# flux
+/flux
 *.iso
-# Temp
-ignore/
-logs/
+# Temp folders
+.temp*
+.private/
+.logs/
 .task/
-# Server folder
-server/ansible/roles/xanmanning.k3s*
-server/ansible/roles/geerlingguy.pip*
-ansible.log
-# SOPS
-.decrypted~*.yaml
-.vault-password
+# Ansible
+xanmanning.k3s*
+# Sops
+.decrypted~*
+# Kubernetes
 kubeconfig
+# NAS
+server/secrets.json
+# Other
+report.html
