@@ -11,13 +11,14 @@ apt_install_packages:
   - iputils-ping
   - ipvsadm
   - lvm2
+  - nano
   - net-tools
   - nfs-common
-  - nano
   - ntpdate
   - nvme-cli
   - open-iscsi
   - psmisc
+  - qemu-guest-agent
   - smartmontools
   - socat
   - software-properties-common
