@@ -1,0 +1,116 @@
+---
+# Project information
+site_name: claughinghouse | k8s-ops
+site_description: This repo is a declarative implementation of a Kubernetes cluster using GitOps.
+site_author: claughinghouse
+site_url: https://claughinghouse.github.io/k8s-ops/
+
+# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-name
+repo_name: claughinghouse/k8s-ops
+repo_url: https://github.com/claughinghouse/k8s-ops
+
+# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#edit-button
+edit_uri: "edit/main/docs/"
+
+theme:
+  name: material
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo
+  logo: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+  favicon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language
+  language: en
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette
+  palette:
+    scheme: preference
+    primary: deep purple
+    accent: indigo
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#automatic-hiding
+    - header.autohide
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-tracking
+    - navigation.tracking
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting
+    - search.highlight
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-sharing
+    - search.share
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+
+docs_dir: docs/
+
+extra:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning
+  version:
+    provider: mike
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/claughinghouse
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#remove-generator
+  generator: false
+
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
+copyright: Copyright &copy; 2020 - 2021 claughinghouse
+
+extra_css:
+  - _static/custom.css
+
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#built-in-search
+  - search
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#revision-date-localized
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#google-analytics
+# google_analytics:
+#   - UA-XXXXXXXX-X
+#   - auto
+
+# https://www.mkdocs.org/user-guide/configuration/#markdown_extensions
+markdown_extensions:
+  - admonition
+  - meta
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      highlight_code: true
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.progressbar
+  - pymdownx.tasklist
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Introduction: index.md
+  - Core Concepts: core-concepts/index.md
+  - Getting Started:
+      - Environment: get-started/environment.md
+      - Ansible: get-started/ansible.md
+      - Direnv: get-started/direnv.md
+      - Docker: get-started/docker.md
+      - Flux: get-started/fluxv2.md
+      - Git: get-started/git.md
+      - Go-Task: get-started/go-task.md
+      - Go: get-started/go.md
+      - Helm: get-started/helm.md
+      - jq: get-started/jq.md
+      - Kubectl: get-started/kubectl.md
+      - Kubetail: get-started/kubetail.md
+      - Pre-commit: get-started/pre-commit.md
+      - Shellcheck: get-started/shellcheck.md
+      - SOPS: get-started/sops.md
+      - VS Code: get-started/vs-code.md
+      - Yamllint: get-started/yamllint.md
