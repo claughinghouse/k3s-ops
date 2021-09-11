@@ -13,7 +13,7 @@ cp autoinstall-masters.yaml iso/nocloud/user-data
 
 xorriso -as mkisofs -r \
     -V Ubuntu\ masters\ amd64 \
-    -o /build/ubuntu-20.04.2-live-server-amd64-autoinstall-masters.iso \
+    -o /build/ubuntu-20.04.3-live-server-amd64-autoinstall-masters.iso \
     -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot \
     -boot-load-size 4 -boot-info-table \
     -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot \
@@ -25,7 +25,7 @@ cp autoinstall-workers.yaml iso/nocloud/user-data
 
 xorriso -as mkisofs -r \
     -V Ubuntu\ workers\ amd64 \
-    -o /build/ubuntu-20.04.2-live-server-amd64-autoinstall-workers.iso \
+    -o /build/ubuntu-20.04.3-live-server-amd64-autoinstall-workers.iso \
     -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot \
     -boot-load-size 4 -boot-info-table \
     -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot \

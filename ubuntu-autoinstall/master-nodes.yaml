@@ -33,12 +33,12 @@ autoinstall:
         nameservers:
           addresses:
             - 10.1.6.1
-      # id1:
-      #   match:
-      #     name: ens19
-      #   dhcp4: true
-      #   dhcp4-overrides:
-      #     use-routes: false
+      id1:
+        match:
+          name: ens19
+        dhcp4: true
+        dhcp4-overrides:
+          use-routes: false
   ssh:
     allow-pw: true
     authorized-keys:
