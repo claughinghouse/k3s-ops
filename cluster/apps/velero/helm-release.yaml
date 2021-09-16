@@ -29,10 +29,11 @@ spec:
         config:
           s3Url: https://s3.us-west-001.backblazeb2.com
           publicUrl: https://s3.us-west-001.backblazeb2.com
+          signatureVersion: "4"
       volumeSnapshotLocation:
         name: aws
         config:
-          region: us-east-1
+          region: us-west-001
       resticTimeout: 6h
     initContainers:
       - name: velero-plugin-for-aws
