@@ -29,7 +29,8 @@ spec:
         config:
           s3Url: https://s3.us-west-001.backblazeb2.com
           publicUrl: https://s3.us-west-001.backblazeb2.com
-          signatureVersion: "4"
+          region: us-west-001
+          s3ForcePathStyle: "true"
       volumeSnapshotLocation:
         name: aws
         config:
