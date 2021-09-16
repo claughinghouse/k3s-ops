@@ -27,14 +27,14 @@ spec:
         name: default
         bucket: velero-dc2
         config:
-          region: us-east-1
+          region: us-west-001
           s3ForcePathStyle: true
           s3Url: https://s3.us-west-001.backblazeb2.com:443
           publicUrl: https://s3.us-west-001.backblazeb2.com
       volumeSnapshotLocation:
         name: aws
         config:
-          region: us-east-1
+          region: us-west-001
       resticTimeout: 6h
     initContainers:
       - name: velero-plugin-for-aws
