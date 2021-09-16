@@ -29,8 +29,8 @@ spec:
         config:
           region: us-east-1
           s3ForcePathStyle: true
-          s3Url: http://${SECRET_NAS_ADDR}:9000
-          publicUrl: https://s3.${SECRET_HOME_DOMAIN}
+          s3Url: https://${SECRET_B2_S3_URL}
+          # publicUrl: https://s3.${SECRET_B2_S3_URL}
       volumeSnapshotLocation:
         name: aws
         config:
