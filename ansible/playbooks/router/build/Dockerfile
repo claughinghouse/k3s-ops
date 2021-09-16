@@ -4,9 +4,9 @@ ARG VERSION
 ENV VERSION=${VERSION:-v1.8.4}
 
 ENV CGO_ENABLED=0 \
-  GOPATH=/go \
-  GOBIN=/go/bin \
-  GO111MODULE=on
+    GOPATH=/go \
+    GOBIN=/go/bin \
+    GO111MODULE=on
 
 WORKDIR /go/src/coredns
 
@@ -25,7 +25,7 @@ RUN \
   && go mod tidy
 
 ENV GOOS=freebsd \
-  GOARCH=amd64
+    GOARCH=amd64
 
 RUN \
   go build -ldflags "-s -w -X github.com/coredns/coredns/coremain.GitCommit=$(git describe --always)" -o coredns

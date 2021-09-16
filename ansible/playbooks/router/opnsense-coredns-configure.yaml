@@ -6,7 +6,7 @@
   gather_facts: false
   any_errors_fatal: true
   tasks:
-    - name: Generate kubeconfig for home-dns on k8s-0
+    - name: Generate kubeconfig for home-dns on k8s-master-1
       block:
         - name: Fetch service account for home-dns
           ansible.builtin.set_fact:
@@ -57,7 +57,7 @@
             src: "/tmp/kubeconfig-homedns"
             dest: "/tmp/kubeconfig-homedns"
             flat: true
-      when: "'k8s-0' in inventory_hostname"
+      when: "'k8s-master-1' in inventory_hostname"
 
     - name: Configure and start CoreDNS on Opnsense
       block:
