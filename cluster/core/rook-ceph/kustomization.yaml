@@ -4,7 +4,7 @@ resources:
   - helm-release.yaml
   - secret.sops.yaml
   - storage
-  # - rook-direct-mount
+  - rook-direct-mount
   - service-monitors
   - snapshot-controller
   # - dashboard
