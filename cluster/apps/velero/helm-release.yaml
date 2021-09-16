@@ -25,12 +25,10 @@ spec:
       provider: aws
       backupStorageLocation:
         name: default
-        bucket: velero
+        bucket: ${SECRET_B2_BUCKET}
         config:
-          region: us-east-1
-          s3ForcePathStyle: true
           s3Url: https://${SECRET_B2_S3_URL}
-          # publicUrl: https://s3.${SECRET_B2_S3_URL}
+          publicUrl: https://s3.${SECRET_B2_S3_URL}
       volumeSnapshotLocation:
         name: aws
         config:
