@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - cluster-external.yaml
   - ceph-block-pool.yaml
+  - ceph-file-system.yaml
