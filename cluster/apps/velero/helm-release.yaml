@@ -27,8 +27,8 @@ spec:
         name: default
         bucket: ${SECRET_B2_BUCKET}
         config:
-          s3Url: https://${SECRET_B2_S3_URL}
-          publicUrl: https://s3.${SECRET_B2_S3_URL}
+          s3Url: https://s3.us-west-001.backblazeb2.com
+          publicUrl: https://s3.us-west-001.backblazeb2.com
       volumeSnapshotLocation:
         name: aws
         config:
