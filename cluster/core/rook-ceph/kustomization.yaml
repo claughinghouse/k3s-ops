@@ -3,8 +3,7 @@ kind: Kustomization
 resources:
   - helm-release.yaml
   - secret.sops.yaml
-  - cluster-external.yaml
-  # - storage
+  - storage
   # - rook-direct-mount
   # - service-monitors
   # - snapshot-controller
