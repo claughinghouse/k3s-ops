@@ -6,7 +6,6 @@ metadata:
   name: cluster-settings
 data:
   GATEWAY_ADDR: "10.1.6.1"
-  NAS_ADDR: "10.10.0.4"
   #
   KUBE_VIP_ADDR: "192.168.42.5"
   KUBE_VIP_IFACE: "ens18"
