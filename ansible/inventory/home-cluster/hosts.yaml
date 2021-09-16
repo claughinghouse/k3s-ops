@@ -4,23 +4,36 @@ kubernetes:
     master:
       hosts:
         k8s-master-1:
+          ansible_host: 10.1.6.101
         k8s-master-2:
+          ansible_host: 10.1.6.102
         k8s-master-3:
+          ansible_host: 10.1.6.103
       vars:
         ansible_user: ubuntu
     worker:
       hosts:
         k8s-worker-1:
+          ansible_host: 10.1.6.111
         k8s-worker-2:
+          ansible_host: 10.1.6.112
         k8s-worker-3:
+          ansible_host: 10.1.6.113
         k8s-worker-4:
+          ansible_host: 10.1.6.114
         k8s-worker-5:
+          ansible_host: 10.1.6.115
         k8s-worker-6:
+          ansible_host: 10.1.6.116
         k8s-worker-7:
+          ansible_host: 10.1.6.117
         k8s-worker-8:
+          ansible_host: 10.1.6.118
       vars:
         ansible_user: ubuntu
 
 router:
   hosts:
     gateway:
+      ansible_host: 10.1.6.1
+      ansible_user: root
