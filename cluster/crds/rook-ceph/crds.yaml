@@ -15,7 +15,6 @@ spec:
     /*
     # path to crds
     !/cluster/examples/kubernetes/ceph/crds.yaml
-
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
