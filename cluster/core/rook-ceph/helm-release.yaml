@@ -15,6 +15,7 @@ spec:
         kind: HelmRepository
         name: rook-ceph-charts
         namespace: flux-system
+  timeout: 30m
   values:
     crds:
       enabled: false
