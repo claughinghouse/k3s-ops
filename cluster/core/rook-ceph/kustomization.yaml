@@ -6,6 +6,6 @@ resources:
   - helm-release.yaml
   - storage
   - rook-direct-mount
-  # - service-monitors
+  - service-monitors
   # - snapshot-controller
   # - dashboard
