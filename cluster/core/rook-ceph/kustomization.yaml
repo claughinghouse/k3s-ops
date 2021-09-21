@@ -8,4 +8,4 @@ resources:
   - rook-direct-mount
   - service-monitors
   - snapshot-controller
-  # - dashboard
+  - dashboard
