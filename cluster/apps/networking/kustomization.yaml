@@ -6,5 +6,5 @@ resources:
   # - error-pages
   - external-dns
   - secret-reflector
-  # - traefik
+  - traefik
   - wildcard-certificate
