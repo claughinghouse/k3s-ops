@@ -58,31 +58,44 @@ spec:
         enabled: true
     config: |
       upstream:
-        externalResolvers:
-        - tcp-tls:1.1.1.1:853
-        - tcp-tls:1.0.0.1:853
-        - tcp-tls:8.8.8.8:853
-        - tcp-tls:8.8.4.4:853
+        default:
+          - tcp+udp:${GATEWAY_ADDR}
       conditional:
         mapping:
-          ${SECRET_DOMAIN}: udp:${GATEWAY_ADDR}
+          ${SECRET_DOMAIN}: tcp+udp:${GATEWAY_ADDR}
       blocking:
         blackLists:
           ads:
-          # https://oisd.nl/
-          - https://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/dbl.txt
+            - https://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/dbl.txt
+            - |
+              /^ad([sxv]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]/
+              /^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]/
+              /^(.+[_.-])?telemetry[_.-]/
+              /^adim(age|g)s?[0-9]*[_.-]/
+              /^adtrack(er|ing)?[0-9]*[_.-]/
+              /^advert(s|is(ing|ements?))?[0-9]*[_.-]/
+              /^aff(iliat(es?|ion))?[_.-]/
+              /^analytics?[_.-]/
+              /^banners?[_.-]/
+              /^beacons?[0-9]*[_.-]/
+              /^count(ers?)?[0-9]*[_.-]/
+              /^mads\./
+              /^pixels?[-.]/
+              /^stat(s|istics)?[0-9]*[_.-]/
         whiteLists:
           ads:
-          - https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt
+            - https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt
         clientGroupsBlock:
           default:
-          - ads
+            - ads
       clientLookup:
-        upstream: udp:${GATEWAY_ADDR}
+        upstream: tcp+udp:${GATEWAY_ADDR}
       prometheus:
         enable: true
         path: /metrics
+      bootstrapDns: tcp:1.1.1.1
       httpPort: 4000
+      logFormat: json
       logLevel: info
     persistence:
       whitelists:
