@@ -20,25 +20,21 @@ spec:
     image:
       repository: ghcr.io/k8s-at-home/velero
     configuration:
+      # features: EnableCSI
       extraEnvVars:
         TZ: "America/New_York"
       provider: aws
       backupStorageLocation:
         name: default
-        bucket: velero-dc2
+        bucket: ${SECRET_B2_BUCKET}
+        default: true
         config:
-          region: us-west-001
           s3ForcePathStyle: true
-          s3Url: https://s3.us-west-001.backblazeb2.com:443
-          # publicUrl: https://s3.us-west-001.backblazeb2.com
-      volumeSnapshotLocation:
-        name: aws
-        config:
-          region: us-west-001
-      resticTimeout: 6h
+          s3Url: https://${SECRET_B2_S3_URL}:443
+      resticTimeout: 4h
     initContainers:
       - name: velero-plugin-for-aws
-        image: ghcr.io/k8s-at-home/velero-plugin-for-aws:v1.3.0
+        image: ghcr.io/k8s-at-home/velero-plugin-for-aws:v1.2.1
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: /target
@@ -47,14 +43,15 @@ spec:
       existingSecret: velero-s3-creds
     schedules:
       daily-backup:
-        schedule: "0 6 * * *"
+        schedule: "0 4 * * *"
         template:
-          ttl: "120h"
+          ttl: "168h"
     metrics:
       enabled: true
       serviceMonitor:
         enabled: true
-    snapshotsEnabled: true
+    backupsEnabled: true
+    snapshotsEnabled: false
     upgradeCRDs: false
     cleanUpCRDs: false
     kubectl:
