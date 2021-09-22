@@ -24,8 +24,6 @@ spec:
     controller:
       replicas: 2
     nameOverride: error-pages
-    env:
-      TEMPLATE_NAME: hacker-terminal
     service:
       main:
         ports:

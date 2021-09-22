@@ -5,11 +5,10 @@ metadata:
   name: traefik-dashboard
   namespace: networking
   annotations:
-    hajimari.io/appName: "traefik"
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     hajimari.io/enable: "true"
     hajimari.io/icon: "web"
-    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-
+    hajimari.io/appName: "traefik"
 spec:
   tls:
     - hosts:
