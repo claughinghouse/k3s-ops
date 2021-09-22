@@ -29,6 +29,7 @@ spec:
         bucket: ${SECRET_B2_BUCKET}
         default: true
         config:
+          region: us-west-001
           s3ForcePathStyle: true
           s3Url: https://${SECRET_B2_S3_URL}:443
       resticTimeout: 4h
