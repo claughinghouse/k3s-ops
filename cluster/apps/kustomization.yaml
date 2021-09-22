@@ -9,7 +9,7 @@ resources:
   # - media
   # - monitoring
   - networking
-  # - system-upgrade
+  - system-upgrade
   # - tools
   - velero
   # - vpn-gateway
