@@ -10,6 +10,6 @@ resources:
   # - monitoring
   - networking
   - system-upgrade
-  # - tools
+  - tools
   - velero
   - vpn-gateway
