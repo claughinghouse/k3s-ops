@@ -39,6 +39,7 @@ spec:
         aws:
           s3: "s3://${SECRET_LOKI_ACCESS_KEY}:${SECRET_LOKI_SECRET_KEY}@${SECRET_B2_S3_URL}/${SECRET_LOKI_BUCKET}"
           s3forcepathstyle: true
+          insecure: false
         boltdb_shipper:
           active_index_directory: /data/loki/index
           cache_location: /data/loki/index_cache
