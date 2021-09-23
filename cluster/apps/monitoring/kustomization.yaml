@@ -12,6 +12,6 @@ resources:
   # - snmp-exporter-pdu-1
   # - snmp-exporter-ups-0
   # - speedtest-exporter
-  # - thanos
+  - thanos
   # - unifi-poller
   # - uptimerobot-heartbeat
