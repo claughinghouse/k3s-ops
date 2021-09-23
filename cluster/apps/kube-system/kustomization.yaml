@@ -4,7 +4,7 @@ resources:
   - descheduler
   - home-dns
   # - intel-gpu-plugin
-  # - kured
+  - kured
   # - metrics-server
   # - nfs-subdir-external-provisioner
   # - node-feature-discovery
