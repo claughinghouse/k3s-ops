@@ -21,6 +21,7 @@ spec:
   values:
     replicaCount: 2
     nfs:
+      ## TODO: Env substitution is not working for this. Commented out in Kustomize.
       server: ${SECRET_NAS_ADDR}
       path: "/nas/k8s/PersistentVolumeClaims"
       mountOptions:
