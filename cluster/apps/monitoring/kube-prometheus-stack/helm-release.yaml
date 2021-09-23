@@ -16,9 +16,6 @@ spec:
         name: prometheus-community-charts
         namespace: flux-system
       interval: 5m
-  dependsOn:
-    - name: thanks
-      namespace: monitoring
   values:
     fullnameOverride: prometheus
     alertmanager:
@@ -159,10 +156,10 @@ spec:
         tls:
           - hosts:
               - "prometheus.${SECRET_DOMAIN}"
-      thanosService:
-        enabled: true
-      thanosServiceMonitor:
-        enabled: true
+      # thanosService:
+      #   enabled: true
+      # thanosServiceMonitor:
+      #   enabled: true
       prometheusSpec:
         replicas: 1
         replicaExternalLabelName: "replica"
