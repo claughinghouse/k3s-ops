@@ -22,7 +22,7 @@ spec:
     replicaCount: 2
     nfs:
       server: "${SECRET_NAS_ADDR}"
-      path: "/nas/PersistentVolumeClaims"
+      path: "/nas/k8s/PersistentVolumeClaims"
       mountOptions:
         - noatime
     storageClass:
