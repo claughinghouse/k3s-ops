@@ -9,4 +9,4 @@ resources:
   # - nfs-subdir-external-provisioner
   # - node-feature-discovery
   - node-problem-detector
-  # - reloader
+  - reloader
