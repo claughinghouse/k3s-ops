@@ -7,7 +7,7 @@ resources:
   # - home
   # - kube-system
   # - media
-  # - monitoring
+  - monitoring
   - networking
   - system-upgrade
   - tools
