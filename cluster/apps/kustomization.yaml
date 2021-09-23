@@ -5,7 +5,7 @@ resources:
   - falco-system
   # - flux-system
   # - home
-  # - kube-system
+  - kube-system
   # - media
   - monitoring
   - networking
