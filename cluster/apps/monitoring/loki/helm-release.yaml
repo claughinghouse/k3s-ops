@@ -115,17 +115,17 @@ spec:
       #
       # *arr applications
       #
-      - name: arr
-        rules:
-          - alert: ArrDatabaseIsLocked
-            expr: |
-              sum by (app) (count_over_time({app=~".*arr"} |= "database is locked"[2m])) > 0
-            for: 10s
-            labels:
-              severity: critical
-              category: logs
-            annotations:
-              summary: "{{$app}} is experiencing locked database issues"
+      # - name: arr
+      #   rules:
+      #     - alert: ArrDatabaseIsLocked
+      #       expr: |
+      #         sum by (app) (count_over_time({app=~".*arr"} |= "database is locked"[2m])) > 0
+      #       for: 10s
+      #       labels:
+      #         severity: critical
+      #         category: logs
+      #       annotations:
+      #         summary: "{{$app}} is experiencing locked database issues"
       #
       # home-assistant
       #
