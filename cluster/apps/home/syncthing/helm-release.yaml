@@ -26,22 +26,22 @@ spec:
       config:
         enabled: true
         existingClaim: syncthing-v1
-        mountPath: /var/syncthing
+        # mountPath: /var/syncthing
     podAnnotations:
       backup.velero.io/backup-volumes: config
       pre.hook.backup.velero.io/container: fsfreeze
       pre.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--freeze", "/config"]'
       post.hook.backup.velero.io/container: fsfreeze
       post.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--unfreeze", "/config"]'
-      configmap.reloader.stakater.com/reload: "syncthing-config-file"
-      config-file:
-        enabled: true
-        type: custom
-        mountPath: /var/syncthing/config/config.xml
-        subPath: config.xml
-        volumeSpec:
-          configMap:
-            name: syncthing-config-file
+      configmap.reloader.stakater.com/reload: "syncthing-config"
+      # config-file:
+      #   enabled: true
+      #   type: custom
+      #   mountPath: /var/syncthing/config/config.xml
+      #   subPath: config.xml
+      #   volumeSpec:
+      #     configMap:
+      #       name: syncthing-config-file
     ingress:
       main:
         enabled: true
