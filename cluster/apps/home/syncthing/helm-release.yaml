@@ -26,7 +26,7 @@ spec:
       config:
         enabled: true
         existingClaim: syncthing-v1
-        # mountPath: /var/syncthing
+        mountPath: /var/syncthing/config
     podAnnotations:
       backup.velero.io/backup-volumes: config
       pre.hook.backup.velero.io/container: fsfreeze
