@@ -5,7 +5,7 @@ resources:
   # - esphome
   # - frigate
   - hajimari
-  # - home-assistant
+  - home-assistant
   # - mosquitto
   # - node-red
   # - vaultwarden
