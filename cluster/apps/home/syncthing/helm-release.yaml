@@ -18,7 +18,7 @@ spec:
       interval: 5m
   values:
     image:
-      repository: ghcr.io/syncthing/syncthing
+      repository: syncthing/syncthing
       tag: 1.17.0
     env:
       TZ: "America/New_York"
