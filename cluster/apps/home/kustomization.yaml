@@ -11,3 +11,4 @@ resources:
   # - vaultwarden
   # - zigbee2mqtt
   # - zwavejs2mqtt
+  - syncthing
