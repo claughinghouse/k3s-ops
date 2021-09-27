@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
   - secret.sops.yaml
   - config-pvc.yaml
-  - syncthing-configmap.yaml
   - helm-release.yaml
