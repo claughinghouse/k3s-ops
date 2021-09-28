@@ -33,7 +33,7 @@ spec:
       pre.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--freeze", "/config"]'
       post.hook.backup.velero.io/container: fsfreeze
       post.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--unfreeze", "/config"]'
-      configmap.reloader.stakater.com/reload: "syncthing-config"
+      # configmap.reloader.stakater.com/reload: "syncthing-config"
     ingress:
       main:
         enabled: true
