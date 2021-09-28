@@ -25,17 +25,8 @@ spec:
     persistence:
       config:
         enabled: true
-        type: custom
-        mountPath: /var/syncthing/config/config.xml
-        subPath: config.xml
-        volumeSpec:
-          configMap:
-            name: syncthing-config
-        readOnly: true
-      data:
-        enabled: true
         existingClaim: syncthing-v1
-        mountPath: /var/syncthing/Sync
+        mountPath: /var/syncthing/
     podAnnotations:
       backup.velero.io/backup-volumes: config
       pre.hook.backup.velero.io/container: fsfreeze
