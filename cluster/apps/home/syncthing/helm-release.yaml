@@ -36,12 +36,12 @@ spec:
           configMap:
             name: syncthing-config
     podAnnotations:
-      backup.velero.io/backup-volumes: config
+      backup.velero.io/backup-volumes: config,data
       pre.hook.backup.velero.io/container: fsfreeze
-      pre.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--freeze", "/config"]'
+      pre.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--freeze", "/config", "&&", "/sbin/fsfreeze", "--freeze", "/data"]'
       post.hook.backup.velero.io/container: fsfreeze
-      post.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--unfreeze", "/config"]'
-      # configmap.reloader.stakater.com/reload: "syncthing-config"
+      post.hook.backup.velero.io/command: '["/sbin/fsfreeze", "--unfreeze", "/config", "&&", "/sbin/fsfreeze", "--unfreeze", "/data"]'
+      configmap.reloader.stakater.com/reload: "syncthing-config"
     ingress:
       main:
         enabled: true
