@@ -27,7 +27,7 @@ spec:
         enabled: true
         existingClaim: syncthing-v1
         mountPath: /var/syncthing/
-      config-file:
+      config:
         enabled: true
         type: custom
         mountPath: /var/syncthing/config/config.xml
