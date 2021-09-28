@@ -23,10 +23,18 @@ spec:
     env:
       TZ: "America/New_York"
     persistence:
-      config:
+      data:
         enabled: true
         existingClaim: syncthing-v1
         mountPath: /var/syncthing/
+      config-file:
+        enabled: true
+        type: custom
+        mountPath: /var/syncthing/config/config.xml
+        subPath: config.xml
+        volumeSpec:
+          configMap:
+            name: syncthing-config
     podAnnotations:
       backup.velero.io/backup-volumes: config
       pre.hook.backup.velero.io/container: fsfreeze
