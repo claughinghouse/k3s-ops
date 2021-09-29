@@ -32,7 +32,7 @@ spec:
           region: us-west-001
           s3ForcePathStyle: true
           s3Url: https://${SECRET_B2_S3_URL}:443
-          # publicUrl: https://${SECRET_B2_S3_PUBLIC_URL}:443/file
+          publicUrl: https://${SECRET_B2_S3_PUBLIC_URL}:443
       resticTimeout: 4h
     initContainers:
       - name: velero-plugin-for-aws
