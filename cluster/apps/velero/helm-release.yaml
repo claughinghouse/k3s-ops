@@ -33,7 +33,7 @@ spec:
           s3ForcePathStyle: true
           s3Url: https://${SECRET_B2_S3_URL}:443
           publicUrl: https://${SECRET_B2_S3_PUBLIC_URL}:443
-          signatureVersion: "4"
+          # signatureVersion: "2"
       resticTimeout: 4h
     initContainers:
       - name: velero-plugin-for-aws
