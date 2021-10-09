@@ -22,8 +22,13 @@ spec:
       repository: ghcr.io/tarampampam/error-pages
       tag: 2.1.0
     controller:
+      enabled: true
+      type: deployment
+      strategy: RollingUpdate
       replicas: 2
     nameOverride: error-pages
+    env:
+      TEMPLATE_NAME: hacker-terminal
     service:
       main:
         ports:
