@@ -4,8 +4,8 @@ resources:
   - rbac.yaml
   - secret.sops.yaml
   - helm-release.yaml
-  - storage
-  - rook-direct-mount
-  - service-monitors
-  - snapshot-controller
-  - dashboard
+  # - storage
+  # - rook-direct-mount
+  # - service-monitors
+  # - snapshot-controller
+  # - dashboard
