@@ -1,8 +1,0 @@
----
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - helm-release.yaml
-  - csi-cephfs-secret.enc.yaml
-  - cephfs-snapshotclass.yaml
-  - csi-cephfs-sc.yaml
