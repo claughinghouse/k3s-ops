@@ -10,4 +10,10 @@ creation_rules:
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
-# sops -i -r --add-gcp-kms projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key /Users/cody/git/k8s-ops/old/namespaces/base/velero/velero/velero-secret.enc.yaml
+  - path_regex: terraform/.*\.sops\.ya?ml
+    unencrypted_regex: "^(kind)$"
+    pgp: >-
+      B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+
+  # sops -i -r --add-gcp-kms projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key /Users/cody/git/k8s-ops/old/namespaces/base/velero/velero/velero-secret.enc.yaml
