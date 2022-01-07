@@ -12,6 +12,9 @@ bin
 .task/
 # Ansible
 xanmanning.k3s*
+mrlesmithjr.zfs*
+geerlingguy.docker*
+geerlingguy.pip*
 # Terraform
 .terraform
 .terraform.tfstate*
@@ -20,6 +23,9 @@ terraform.tfstate*
 .decrypted~*
 *.agekey
 # Kubernetes
-kubeconfig
+kubeconfig*
+talosconfig
+# NAS
+secrets.json
 # Other
 report.html
