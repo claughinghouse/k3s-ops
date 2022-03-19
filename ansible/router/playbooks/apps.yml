@@ -9,5 +9,5 @@
       tags: adguardhome
     - role: coredns.router
       tags: coredns
-    - role: vector.router
-      tags: vector
+    # - role: vector.router
+    #   tags: vector
