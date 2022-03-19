@@ -1,31 +1,54 @@
 kind: Secret
-SECRET_PUBLIC_DOMAIN: ENC[AES256_GCM,data:xGZoye58Hrk=,iv:MscfpoOQyzeURl041v6rkxxuQC4wiSNBoQXMExw0RV0=,tag:h+v08YNbZbSRBRktbhKb4A==,type:str]
-SECRET_PRIVATE_DOMAIN: ENC[AES256_GCM,data:AWyN/cvDfq8=,iv:RPFJqs0L2/3WRvUr6NzM0uwvCd2kbMyAp9niI+uyl5U=,tag:Xiiaa21gKcWQVTLeCfPgow==,type:str]
-SECRET_MINIO_ACCESS_KEY: ENC[AES256_GCM,data:gd/B5VBPaK2NyVTo5/sLc3zq+Vs=,iv:dVMO2Nq8fdRHDjXBMiqO6PA1Vc2pkOzSqd8NYQScuzs=,tag:d6sA9wJiuzDFxOADNAwRZA==,type:str]
-SECRET_MINIO_SECRET_KEY: ENC[AES256_GCM,data:Puuw55iB9lSSlFKqyadzaPZoy11yvkiZcLSPrULzilA3Eg8IZ0Dg0A==,iv:jJyLAmcVmaFr8JnDkrqLQc2iinPElv2/KDyu2+WHldI=,tag:cU5JQf8qfoRvAX2jKO17sA==,type:str]
-SECRET_B2_APPLICATION_KEY_ID: ENC[AES256_GCM,data:bZEfw+7WpEcF/SpARQFpT5LMzavgykf+Fw==,iv:5ghUikzBl9OrFT3NtgTvr95nX7s5t2drqkp2QbP96G4=,tag:PqQKb8TARYZI8pWGhd3lpg==,type:str]
-SECRET_B2_APPLICATION_KEY: ENC[AES256_GCM,data:cVoIFaRiT3QJHf0nNokv+kMmwOGJK7GMoDNo2VYT6Q==,iv:t5Wni2l7ohUbDsrQiwZbRaKk/qYT43XspVKhxqsVrGw=,tag:ZoIrlM5dusW1Orlawp44vw==,type:str]
-SECRET_UPTIMEROBOT_HEARTBEAT_B2: ENC[AES256_GCM,data:AK1OjXoCfKHeVkpvVaJtg/GEPpRLsDdZi8hvEvA9CQ/pN/VzUYxKy5RIkfg0eu+Q22wTUd6SA2mKrucT6zoBsf1Iq1JZqu+7j5GInSwOjtbRv4e15g==,iv:T376ODWWdmXxuBhvYyBFeAgTKLLUMwy7Jqur+bv18WM=,tag:vlZFjTiu4vEtGpsYiPedAw==,type:str]
-SECRET_UPTIMEROBOT_HEARTBEAT_MINIO: ENC[AES256_GCM,data:yybwxNBS4IwmskoINVyKMMMLxYqU2tj1NgRrIGZQFm1vJem14LGNFYE4QQBaMLTmX/5ycNZblfgvCt5FYQSWDA7TvlfRohmogL/myoNswUNGH6AX5w==,iv:/AO7+yhVd4jtJwqDW/ECuDEx9tuYszONrphTAkr76Mo=,tag:cUrODbnbAsKQLH1ne7bxcQ==,type:str]
-SECRET_MAXMIND_ACCOUNT_ID: ENC[AES256_GCM,data:IMeZmWCq,iv:/32vhVZDJuI34MB1tCnFlP8M8gIQTDol7n/0dWJpWk0=,tag:LDqwTFne9CLigkx7cYzXsg==,type:int]
-SECRET_MAXMIND_LICENSE_KEY: ENC[AES256_GCM,data:Rk8N44BiDwSiCIWvHg9uNg==,iv:dHecGwgrmUpMEp9q4+jdjzbVLhAbbEPcKBR1seGa5WM=,tag:4ZlT7nsr7rPNEwkp4tEDRQ==,type:str]
+SECRET_PUBLIC_DOMAIN: ENC[AES256_GCM,data:EH1fHCiCUyMKmfP7iA==,iv:dZRyE0cqi94btjnQ0g+i9STrDteW1/gDDeBXVNjowgA=,tag:nrcmrUzpvyfJ+VOP2tzmAw==,type:str]
+SECRET_PRIVATE_DOMAIN: ENC[AES256_GCM,data:pWTbpCLx67+JponndkKaIT4=,iv:mhT7g7B7uHH0c+LGLX89GR3u/sr+nfehFZDpuRDPbM4=,tag:I8jdJeF649AJgTymcZ8x7w==,type:str]
+SECRET_MINIO_ACCESS_KEY: null
+SECRET_MINIO_SECRET_KEY: null
+SECRET_B2_APPLICATION_KEY_ID: ENC[AES256_GCM,data:kV+uWabKbuI+saWO0Ify+neipFomVhxWCw==,iv:BLEIG+8w8vjfjVvd1VCiNwbN90JOxTpgLLIG1gfSycg=,tag:sJKfeOo4/weyxbACSTm9Mg==,type:str]
+SECRET_B2_APPLICATION_KEY: ENC[AES256_GCM,data:m3Jn5TyPZcBHaMKb7U3dw1s7V/FGPFA3i0ZaCoiyVQ==,iv:IL9GGQcBNlI6ossTXF3Eafkb/pYamWD3z4L/W2hZ5+U=,tag:m86AX0YHwXhTXyNyJr5RkQ==,type:str]
+SECRET_UPTIMEROBOT_HEARTBEAT_B2: null
+SECRET_UPTIMEROBOT_HEARTBEAT_MINIO: null
+SECRET_MAXMIND_ACCOUNT_ID: null
+SECRET_MAXMIND_LICENSE_KEY: null
 sops:
     kms: []
-    gcp_kms: []
+    gcp_kms:
+        - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+          created_at: "2022-03-19T03:36:43Z"
+          enc: CiQA1r6bIJhfi+YRZ9zKxGG462AYrMhC8169wdfYXZyB5F0peroSSQCbI6iehRzivZEXD3+JNam1m+0NTTun3KMCTljc/JVixkkouGsUp3KNrNSzeTsfePZI3bwIJwasAUoWeOclTOJ0mDELSM+iEdY=
     azure_kv: []
     hc_vault: []
     age:
-        - recipient: age15uzrw396e67z9wdzsxzdk7ka0g2gr3l460e0slaea563zll3hdfqwqxdta
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPL282V0dyUU5XelBtQVlm
-            cTQ3M1Y3RXR5SitaM003WXpZMkllWlhTczJZCnE4bG9wU201UmJ4dmVnbTIxNzdp
-            ZFRGcDBpb0xVT1duYzBESUdNZkw2ZXcKLS0tIGdRckRMSkJBSlF6MDM4UEdOS0Uy
-            Z2ljNU1VRjVrV1QyT2ZkL3VtRXc5a28KWHsowxi06OYV/1Ur4xpy3xx/8pkT55Q+
-            53tXFhc/rqGGi7zcSJtmbZotyFVCdlK3ixDccuecpzOC5ohtsWPSjQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwOXhRV3ZEZnlrQzB4WFBS
+            MFZDVWFxYzFTNWdZdFQ4MGQ2R1pnVWJHVERVCnFhQUVYcjFQSVNhMWhSeVg1Nk0x
+            TDB4bHlXQVJpVVAvUGRTSHI1enFzVTAKLS0tIHF0akVHTHYxcStNZHNjd3grcm5N
+            L2lvN3JKN25UTmd1cVc1dHFmamdLRWMKhRAoidXTSnCVgMOnZLIY32M6vQdhnndn
+            hc8NjDo+MwkDZL5XRibkZHpdcAyLjf4rrlqC4o4TNuoxQko8rK6yTw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-01-07T17:39:05Z"
-    mac: ENC[AES256_GCM,data:UxVzVYR5HQVJT4NNAubD1GMlucPqozjUcJ6IK1aSrGVz8IT4YLP9R8EggtfiO4g3kkuyOgOf0cSYi4JN7Yf6cvqNCSW/c60i+9DSVzZwKZcedOFLvH28hz1pTqTgvfacONwVE1/6BzXh/faJi1WeI6w94L1BOOQ+bLZyV5w0NmU=,iv:AmT68y+l9Rm3kuOT+G873N4gtczq6sNsl75/V+NBGzM=,tag:UfytT8zAt7rFn9dILVFbpw==,type:str]
-    pgp: []
+    lastmodified: "2022-03-19T03:42:36Z"
+    mac: ENC[AES256_GCM,data:FB7okojSnbWLlqz6GN6r/PplK9tnvekkeMD+gcUK+ayFPBrqwWMieZ56Eo/31TyxuiQPZ12NSW8gZvGB0f+bKYRvCtWN9IHMC0g2GQ3Wuq2IJ1zn+H4ar/n3suMojpFdLFkeXjzlJm9yDNn/+J/l7MPialu7flhCRJWOVixPy7g=,iv:lq54cXfJjKy+Mji3dT96TRAWUvRCBB2hV3btLysFkF4=,tag:gFUk/s89/tVHQ6cOGM7thA==,type:str]
+    pgp:
+        - created_at: "2022-03-19T03:36:43Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ/+L/uzh//RUXB+vpU+JAHH7d8S2nc/4opMM/PQ7Fx3SA7+
+            /UKmqsU54to7EJ2OZOBv69OPgv+gPyhgvrC1/NJrE5J/03pqNWO2Z2Uvb5O4d9kP
+            2tFhfTlvTl3GFgTfX8G1ofelXNERoSgeuxnFSV9oVfsiYxyuXKkONcPJ4Kr9LJd3
+            315/E8szOGl6ZFcjAdI/+GXxqeC0eUl9eaDMQn/u1jWfB1PQmYxdI1x0qsPKtB8s
+            4PIKgJ+h2DkEHkmaCJ3bvSmc4KW1xPhhGgRRsQnUFUj6P655eLasXASX1ngaqL7d
+            rqDh05SEgTVLEXAlAu2quLSAmDKWKGWZHEwR+UeEcLhimP1cESGehTZvV+YmaBJi
+            /29YXkm2RUHYnuc9tLLUIpIedud7HoHoStQsK2Egh+McDOLTIYmW4D1tA0y9g1IV
+            h7MoCbegLxAuL7V2wheb43gOssgHNvDz8Kf3QjV5ERTQUPygBC/wPUV33tBKVEUp
+            +g9YuzxRPiSFq+z3Ivs7ianEVIUfPMFt6AkAn3d6uFRfejhOIXG9H1ZhVG4RT6Ju
+            VpCMuE9RJCduT46k9cgsYdJG3Ek+HbGqZH3c/KQFmzX35umlYkjbnHE8iKDsMv0W
+            CG0oZU+tMTndj7Ffb+XpaC4JmNAZNuHfvdy6+k9hVOo3t1QMWB5OGf2VeKgWn1zS
+            XgHBluwC5woM60LSIvtCWBYb1NKxEVt+o7gUOiN/I9EdtvYlV4hvjZQhTBDoDCig
+            rPI+S4cdnZYOtMg9SFwcDV3K1i6vJt4Rxa7uA1LDaPw7msjruNaOkaN0UI4ozMU=
+            =Twbw
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     unencrypted_regex: ^(kind)$
-    version: 3.7.1
+    version: 3.7.2
