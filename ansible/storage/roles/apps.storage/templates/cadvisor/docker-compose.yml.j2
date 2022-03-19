@@ -1,0 +1,17 @@
+---
+version: "3.8"
+
+services:
+  cadvisor:
+    image: gcr.io/google-containers/cadvisor:v0.36.0
+    container_name: cadvisor
+    restart: unless-stopped
+    network_mode: host
+    command:
+      - -port=8005
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk:/dev/disk/:ro
