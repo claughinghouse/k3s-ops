@@ -5,4 +5,3 @@
 
 Change `/usr/local/etc/pkg/repos/FreeBSD.conf` to yes
 `pkg update`
-
