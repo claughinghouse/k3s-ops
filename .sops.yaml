@@ -1,21 +1,26 @@
 ---
 creation_rules:
+
   - path_regex: ansible/.*\.sops\.ya?ml
     unencrypted_regex: "^(kind)$"
+    age: >-
+      age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
-
   - path_regex: cluster/.*\.ya?ml
     encrypted_regex: "^(data|stringData)$"
+    age: >-
+      age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
-
   - path_regex: terraform/.*\.sops\.ya?ml
     unencrypted_regex: "^(kind)$"
+    age: >-
+      age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
 
-  # sops -i -r --add-gcp-kms projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key /Users/cody/git/k8s-ops/old/namespaces/base/velero/velero/velero-secret.enc.yaml
+# sops -i -r --add-gcp-kms projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key /Users/cody/git/k8s-ops/old/namespaces/base/velero/velero/velero-secret.enc.yaml
