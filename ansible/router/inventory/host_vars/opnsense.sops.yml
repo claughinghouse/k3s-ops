@@ -7,8 +7,8 @@ SECRET_B2_APPLICATION_KEY_ID: ENC[AES256_GCM,data:kV+uWabKbuI+saWO0Ify+neipFomVh
 SECRET_B2_APPLICATION_KEY: ENC[AES256_GCM,data:m3Jn5TyPZcBHaMKb7U3dw1s7V/FGPFA3i0ZaCoiyVQ==,iv:IL9GGQcBNlI6ossTXF3Eafkb/pYamWD3z4L/W2hZ5+U=,tag:m86AX0YHwXhTXyNyJr5RkQ==,type:str]
 SECRET_UPTIMEROBOT_HEARTBEAT_B2: null
 SECRET_UPTIMEROBOT_HEARTBEAT_MINIO: null
-SECRET_MAXMIND_ACCOUNT_ID: null
-SECRET_MAXMIND_LICENSE_KEY: null
+SECRET_MAXMIND_ACCOUNT_ID: ENC[AES256_GCM,data:/7Im+Wc0,iv:uqJ7dVr8o/zrBnGVJFD3qV6Z/7TaX3JVcCZRsYfKV0M=,tag:pNZ0F6FPSIjSf8d+4ulmqA==,type:int]
+SECRET_MAXMIND_LICENSE_KEY: ENC[AES256_GCM,data:dmlSNl93g3KC7wLgjBBZng==,iv:kaYLLS+TF7Zgd8JFuNQtZGlK31Jkb6si7nHv3M9KYJc=,tag:P0fs0yBOVAd2QHKS0qIBJg==,type:str]
 sops:
     kms: []
     gcp_kms:
@@ -27,8 +27,8 @@ sops:
             L2lvN3JKN25UTmd1cVc1dHFmamdLRWMKhRAoidXTSnCVgMOnZLIY32M6vQdhnndn
             hc8NjDo+MwkDZL5XRibkZHpdcAyLjf4rrlqC4o4TNuoxQko8rK6yTw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-03-19T03:42:36Z"
-    mac: ENC[AES256_GCM,data:FB7okojSnbWLlqz6GN6r/PplK9tnvekkeMD+gcUK+ayFPBrqwWMieZ56Eo/31TyxuiQPZ12NSW8gZvGB0f+bKYRvCtWN9IHMC0g2GQ3Wuq2IJ1zn+H4ar/n3suMojpFdLFkeXjzlJm9yDNn/+J/l7MPialu7flhCRJWOVixPy7g=,iv:lq54cXfJjKy+Mji3dT96TRAWUvRCBB2hV3btLysFkF4=,tag:gFUk/s89/tVHQ6cOGM7thA==,type:str]
+    lastmodified: "2022-03-19T17:04:31Z"
+    mac: ENC[AES256_GCM,data:8aXj9MdNnKti4ppQYN62/4P1hBVIqWDTDBAua2c0yryPRcqGgxHrp2Z4ru0FAK7Pw3iIjqKDd++yJQG+ko1HPTfG/DAfF52LZCxFC16Nok0BDegBdWZAuwA+PpV4xzZj2UmDiId4pQnb0HTlAVuvXC0z7jN4TxE8pE6xmWPPb3Q=,iv:WOA9YunOq2dewcRI4Y0tGKErOdBws5/9DAw7l7Pr+mc=,tag:L/swWQipzaN4aeNwpyZvwQ==,type:str]
     pgp:
         - created_at: "2022-03-19T03:36:43Z"
           enc: |
