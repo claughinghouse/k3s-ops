@@ -3,7 +3,7 @@
 calico_encapsulation: "None"
 # -- BGP Peer IP
 # -- (usually your router IP address)
-calico_bgp_peer_ip: 192.168.42.1
+calico_bgp_peer_ip: 10.1.101.1
 # -- BGP Autonomous System Number
 # -- (must be the same across all BGP peers)
 calico_bgp_as_number: 64512
