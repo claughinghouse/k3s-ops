@@ -1,6 +1,0 @@
-{
-  "proxmox_api_url": "{{env `packer_proxmox_url`}}",
-  "proxmox_username": "{{env `packer_proxmox_username`}}",
-  "proxmox_token": "{{env `packer_proxmox_token`}}",
-  "proxmox_node": "pve1"
-}
