@@ -1,24 +1,47 @@
 kind: Secret
-SECRET_PRIVATE_DOMAIN: ENC[AES256_GCM,data:RkZ503r2W0o=,iv:7BTYJ9nN/rLMJuQHp9MlrtlybKbSwKaP7AQStd8RrsM=,tag:VP+iWPrQqO/icEa80+izdA==,type:str]
-SECRET_MINIO_ACCESS_KEY: ENC[AES256_GCM,data:QGX0RgNxEbLQtWw2Fff/Qhydmiw=,iv:aH/oqgrFw7XX64M3ZLYxed+N/W2VLEMqWqfj7Ic4A7o=,tag:TcFi0HTg7Lb5hSIB++CHPw==,type:str]
-SECRET_MINIO_SECRET_KEY: ENC[AES256_GCM,data:09Gah3D9EglVlsyn4SMVxDdKxEywhMM/VkuidCyDNMtG7aB8Zv4hXA==,iv:1iXv2Y5IUghDSGOaCHMaF0NweklKBXHxqSqwBhQjZvc=,tag:ZJ4UW5Z1KMTrKpYaTcnVVg==,type:str]
+SECRET_PRIVATE_DOMAIN: ENC[AES256_GCM,data:rfZeOCEdhf9UQvXFfIKSTUw=,iv:rdBoXxNwEO761PxoDWQ4CvURYrxMBsf8wGmoJ51Hilg=,tag:maXxZ3twgKd43/QvPLi4Jw==,type:str]
+SECRET_MINIO_ACCESS_KEY: null
+SECRET_MINIO_SECRET_KEY: null
 sops:
     kms: []
-    gcp_kms: []
+    gcp_kms:
+        - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+          created_at: "2022-03-20T18:18:19Z"
+          enc: CiQA1r6bINmlmGFGoIf+QH54hceRCXymAyLgPBOsGI5UV8WxxaQSSQCbI6ie0ouf3XzkWxdINCM9tkEZALIBT26xOJlvh1Xmqh1SOQKl7RrsfTFxjX0WTLxlw8GkGsOztLvrVN8ObW47c4F7QvVETIU=
     azure_kv: []
     hc_vault: []
     age:
-        - recipient: age15uzrw396e67z9wdzsxzdk7ka0g2gr3l460e0slaea563zll3hdfqwqxdta
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBtSE4xOWlaQ1NGSWtMWFU4
-            OVBWVWxvaDdJeHdoZmVaTTlpaGVHRHVlNVZvCmpoam54aWFuMy9SQmljSk9sY09p
-            QW0zMVpxZ2xDK0RzT0dQVjZtdjJYL2MKLS0tIGJhNlB5UWlJVXd5T2xGS3M5N29U
-            YWZhK0wzbks3c0NDb1pxaG1RRmUvTGsKKIzg749LvMf0rHCaCVN3UaNSXJlV/LQR
-            t2T/EcG5hBZyZaJIyVsRHdela1PqluQLA22zvZIJleqn7OnCuYVA1w==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCVWMzb3ByOGszTm9ZRWFO
+            M3B5K1Nlb2p3OE5xa0w1YklvMFZGUEVvL3djCmNnV0d6eVVJNHk0QThpaXIyYjRO
+            MGFrOXBReE1ZMDh4QUZNeis5MmJFUzAKLS0tIERPWCtoNHBvaXFaL2RIME1QdEdr
+            NW1lZVh0VlNnWkdEbGNBaFYvQW84ZE0K+bQ0p+RbzYYme5XZJdptoCBKGqmRRtOf
+            kkTAFawucd3EhTMAAmk7gp+4ew5Exhv48KvZrv9yjGNIgDlMMI291A==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-01-01T16:09:22Z"
-    mac: ENC[AES256_GCM,data:JqznHdX3qzXCJeO60Y3xwz9KLo2vWEaVm+/0mOv2HsZm8D3tyCQmLUU3VXwZ0iTfZKQWnLoZvRUBlYAQgqj9uFvOgJSZy34KbhpaCN7Evw2oUMVp7aQG0i0QIv50mf19CwOpBhJBbieR6g7ZAITJnwwsnOCZlJUrzhki+sNIMpE=,iv:XGq9GihGnc7U7xjWlruOg86JiAZrdRUuENxJk4e2lJA=,tag:PuXoXFV+qsqJO5hfIYhxHw==,type:str]
-    pgp: []
+    lastmodified: "2022-03-20T18:18:20Z"
+    mac: ENC[AES256_GCM,data:+KQ5E5otpDE7sox8oUyHkeXWeJpDZDEn+NUu40FcJf1QAfM24yYXssI8pYSF5/ClD3U7z1A6eF3r9uFrJAkkJ5fIwPqx658j/fpSNiUcR51p+OnsLas/HkjWguL/hFIgBC2VD9oUaUcEcjZr4dvbtf8gY1mk8KHA6ZxBtQ7+fhk=,iv:7yQ5En3DLgZhJ1/99FvNVUAHPhHHEDiHaddmcmsIUqw=,tag:6RhuPe7CQ8LR7vz7QUCi1g==,type:str]
+    pgp:
+        - created_at: "2022-03-20T18:18:19Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLARAAo+lOtMs7fPCLtwGx3LCRx1wnwVpT8pexmwJvsV0hr/dW
+            W+JEISQMhRpZyStuuPj6MfPIl+uoJXM8qEv7rAONX4F3La4ukAleIYAHvBugb/I/
+            FTPKw7+dLa97dszCQOtFuhyvxEIGTn0tgnDZYZnKtHlFDXKo7Cs8BkDx2meyAjj1
+            hu50rULfnXeeZ0SW+x8sP2KaqLHZhEgz6oz9xvOLoorQNBni/1Xsa6qchbvezcD9
+            lYmSZ0WyY7tgNRcdRwIKxsR8qePMlWAjaC5PLSl18WfPz/u7EXDm5wQvNqCemuFj
+            4NGy7Kh5D36FXr/Rizgv/sAj2eEhkF/h5aSFAMY+nK7hyFENc/nZlphH6Lm02MTy
+            IG3GNB6lFBNrhMadslz/HjTHkUm3e8ECuis7IbUTvzG6e4se7CVCuNM8AHT3qTWu
+            jDrJ7nD2Vc8253OKw10Agu74tZ5KNlXLRRoiQvBt1s2CWCCgL1Bn82W4vGgj6JKS
+            P+9GNZQdPQ0Sew+LpIXz45hlUy2AXrA9urg56uFRgcsXbUeJgg9+H1WqctydhZre
+            +eqgGWRtN7Ec9guM3rgCYgVFkRswOuSaVJ3MXUjhg1snufCEvn/SybBj3VvYNW7O
+            PBt6DERHtSA/8Qc7Xp6vuMcIzYdUZzMJe62izVPMg43kvlHnqygiUA0WD+gcgmHS
+            XgHcg0qXPAnF2GfJ5F4vjz1WdFZzrev75/r//z1wU4Wi8obh30IAIpWZdFv5kb2o
+            3EY9UPIVmbVxgosd7OkQX/G/vWkmsWU94uRx0nuXPf4o3+xSb9GSvkamaMkw5Eo=
+            =yZo/
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     unencrypted_regex: ^(kind)$
-    version: 3.7.1
+    version: 3.7.2
