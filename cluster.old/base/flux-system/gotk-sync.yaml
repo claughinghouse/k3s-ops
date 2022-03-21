@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/claughinghouse/home-ops
+  url: https://github.com/claughinghouse/k8s-ops
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -25,4 +25,4 @@ spec:
   decryption:
     provider: sops
     secretRef:
-      name: sops-age
+      name: sops-gpg

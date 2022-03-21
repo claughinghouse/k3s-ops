@@ -1,36 +1,57 @@
----
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: flux-system
-  name: cluster-settings
+    namespace: flux-system
+    name: cluster-settings
 data:
-  GATEWAY_ADDR: "10.1.6.1"
-  #
-  KUBE_VIP_ADDR: "192.168.69.5"
-  KUBE_VIP_IFACE: "ens18"
-  KUBE_VIP_PEER_AS: "64512"
-  KUBE_VIP_PEER_IP: "10.1.6.1"
-  #
-  NETWORK_K8S_CLUSTER_CIDR: "10.69.0.0/16"
-  NETWORK_K8S_SERVICE_CIDR: "10.96.0.0/16"
-  # NETWORK_MANAGEMENT_CIDR: "10.1.2.0/24"
-  NETWORK_SERVER_CIDR: "10.1.6.0/24"
-  # NETWORK_GUEST_CIDR: "192.168.100.0/24"
-  # NETWORK_IOT_CIDR: "192.168.150.0/24"
-  #
-  SVC_COREDNS_ADDRESS: "192.168.69.100"
-  SVC_BLOCKY_ADDR: "192.168.69.102"
-  SVC_EMQX_ADDR: "192.168.69.110"
-  SVC_MOSQUITTO_ADDR: "192.168.69.110"
-  SVC_HOME_ASSISTANT_ADDR: "192.168.69.103"
-  SVC_PLEX_ADDR: "192.168.69.104"
-  SVC_QBITTORRENT_ADDR: "192.168.69.106"
-  SVC_SYSLOG_ADDR: "192.168.69.111"
-  SVC_TRAEFIK_ADDR: "192.168.69.101"
-  SVC_JELLYFIN_ADDR: "192.168.69.105"
-  #
-  VPN_PORT: "51820"
-  VPN_GATEWAY_VPN_PORT: "51820"
-  # VPN_FORWARDED_PORT_1: "56059"
-  VPN_COUNTRY: "CH"
+    TIMEZONE: ENC[AES256_GCM,data:Tzm/55C2d24bp9D86oRMkA==,iv:qW/YMBSQMCUGua5ovqQI0FXBQH1HlAv5qX20sFSDq+o=,tag:kOK2TmUY4j6n5svItvbbag==,type:str]
+    #
+    SVC_MOSQUITTO_ADDR: ENC[AES256_GCM,data:WH6W9nAQ9TEsf4c7jpc=,iv:jCQHhsOWRuKaEk+BF8e/VWtwwRVBb8NT5YJ6w475mPE=,tag:Exul/lpGIYrT30Q91jDKDQ==,type:str]
+    SVC_HOME_ASSISTANT_ADDR: ENC[AES256_GCM,data:0rfruXz06cj8lrX2vTE=,iv:0toWeUSITupTS9gCKUZ6V7CHrCUsa15VU4jl5rmrjho=,tag:N8L7sgDzpoccG2u77kensQ==,type:str]
+    SVC_PLEX_ADDR: ENC[AES256_GCM,data:Yx6q4Rvifk2IZ0LGQoM=,iv:7uJMk4wVxsItNoPSvAOuPER1rmrPGLqitYWhLJsnUyk=,tag:WDmaak0D7hH5we4SjzXBvQ==,type:str]
+    SVC_QBITTORRENT_ADDR: ENC[AES256_GCM,data:uzE/wW5Tze4HrRD9x2o=,iv:XSz2P6jVkSp9S0MiSu3u7emJnI41Iy+CuNFzE97rgd8=,tag:D/0zN7Ww14Pv+Y6Q68pyfQ==,type:str]
+    SVC_SYSLOG_ADDR: ENC[AES256_GCM,data:vfkqJQkttr3AtIRDhP4=,iv:ZAh5pX0k1X6JMfY4mhbWl0ImIBB+EjWZo8M+W++d2mU=,tag:wsv6oWeO3XQAZvRWUBmbJQ==,type:str]
+    SVC_NGINX_ADDR: ENC[AES256_GCM,data:Eo4ymCiEQ/v7movUl/o=,iv:866pd4umEmnAFZSTnH67rXXImRAefAAsIzaLx8pze3w=,tag:tDnDBunkeB27MIb22t0O9w==,type:str]
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
+          created_at: "2022-03-21T15:36:03Z"
+          enc: CiQA1r6bIOKLrNJm3IW6Yp/ZKwclkvLtGJXSHGXVx5drwpwf9swSSQCbI6ielPlxFqbYECB3Zo5FyeFPFo5hcUy7gSKBwlo6GNmAsWyjzOWZSfQPy3CE98H9eUTL03WBQGwU4IfSyQR0+9jFEDQKbSA=
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA2SHVQV2hTODVSV0p2N1Fu
+            ZHF4Y0F5TGs3N1pOMk9odlU0QUZxNkJuWUQwClpvNXUwdXd5MllkWVV5RHZNMDFi
+            a3ZqZDM3VFlJdExQVXBYOXhNRDhvZDAKLS0tIGdsNndDVDBJTlVIUGoydzRZUmtj
+            c2lNcWN4Zk5EdUFJeTVtdzFFNEtIMW8K8FijI3hvkiBXzqLaisccAJHigV2meJkJ
+            FgVUiiqvcijMOJMky0f1Okq+pgMsI3deBOo+Qts7OkDPBBdEpZsDkw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-03-21T15:36:05Z"
+    mac: ENC[AES256_GCM,data:0AHVIPDZnOU2/AhOXy8uo5X+KmOtb0uNXecnCPV6GoVkJN3EUC3RRpnGL2CP09mdXBnVbhZZgng9AYLUhspUQUqjDAd72ZaHR6RAF+YC01kcJ1mE3s6Dt1I9Nl+J/YLxGiIA+SootGJiYbl0t27sw7IwhvLPar7QfQLW6X3SgCY=,iv:DjtqlzUJ01jK+cD5fU17Tv9N7i1Xv7LO2fnxtQsyCww=,tag:KP6N8+NfykVazF5uR/tAhA==,type:str]
+    pgp:
+        - created_at: "2022-03-21T15:36:03Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ//SijjK7LmxToUP8FhnVCGq7f+2y0O7XGL2bEiqJjnEdY9
+            rISyywEMr8YobjryPgSHNYHJnWa/OCq8puy+BZXbkUH1IXfw1KE/32nTGfN5lfmt
+            UKt7u/obFRDKBZKkgXHZgE78jzYCAEv2evSm4CAURlo7pY18KPa0HZACB5zBJX+f
+            U5khmWkNMMsPgMw94RxmMQZRm82E33e7ighL3ZHuq9Pv97tz5YOaLV8X3HGOuO/f
+            v/X1Ogia/Wb304/l4icnCmOt1LGuhrp/cbK2fBjuDDvK6z6dcvdENf4y6uQodCVW
+            xtT5TVR8NTZmcNh0IHXTTiCmBXM1skQ4THzwfTsfW33zSwWSzfj8HAB6bq7k+vTn
+            L5GqDDg2v3HRv4bJ+MhcbTsclKDjYeSHhjOYHBI6nmjuWiikGujgE4VcuTx0kbRI
+            MvmdO82UPj86yMvN/VbjhSRZ8VGVSVCVCys++H9ET2VbUTIgM3KKNcYVBpr8W7rG
+            sx7ZZrqjmPmcyAmIC17D7EFtSZtwQZyu8yslsEXfHCtUj3Dkk+sdez/gb8JWnYBZ
+            fjeLjwGf7u392kd3Qum6au3XydH/s3gzSMkRpIzbFn7Vrr0RtWLEwvO1IDLCQdHk
+            jcemkIJTFb3+NO9GHEU8eHQiaZO9SGywTjdr0PvZV717+fpuJTpnsCp4f49kXS7S
+            XgHSqiGY8uUJ6BzsNkmnQpZDdHLeJh4FLLFO5PXW9p9sJ7fCpM1txIVtLxVgMkax
+            ANpJI0vH2CGQ4Oi5CGb4BQWyKWwAcQIthIpBESsfh0fgM77dMS6xGzGAB0LkBeU=
+            =9F9u
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.2

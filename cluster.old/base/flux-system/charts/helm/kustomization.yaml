@@ -1,17 +1,11 @@
----
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - 1password-connect-charts.yaml
-  - actions-runner-controller-charts.yaml
   - authentik-charts.yaml
   - bitnami-charts.yaml
   - blakeshome-charts.yaml
-  - cilium-charts.yaml
   - coredns-charts.yaml
-  - crowdsec-charts.yaml
   - deliveryhero-charts.yaml
-  - emberstack-charts.yaml
   - emqx-charts.yaml
   - falco-security-charts.yaml
   - grafana-charts.yaml
@@ -34,7 +28,6 @@ resources:
   - rook-ceph-charts.yaml
   - stakater-charts.yaml
   - traefik-charts.yaml
-  - vector-charts.yaml
   - vernemq-charts.yaml
   - victoriametrics-charts.yaml
   - vmware-tanzu-charts.yaml

@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: authentik-charts
+  name: ingress-nginx-charts
   namespace: flux-system
 spec:
   interval: 15m
-  url: https://charts.goauthentik.io
+  url: https://kubernetes.github.io/ingress-nginx
   timeout: 3m
