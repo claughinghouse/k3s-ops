@@ -1,7 +1,7 @@
 terraform {
 
   backend "remote" {
-    organization = "claughinghouse"
+    organization = "home-ops"
     workspaces {
       name = "home-cloudflare-casa-tld"
     }
