@@ -28,7 +28,7 @@ k3s_use_unsupported_config: false
 # this is set to my haproxy address running on my router.
 # If you want to use kube-vip only
 # set this to "{{ kubevip_address }}"
-k3s_registration_address: 192.168.69.100
+k3s_registration_address: 10.1.101.100
 
 # /etc/rancher/k3s/config.yaml.d
 k3s_server_config_yaml_d_files:

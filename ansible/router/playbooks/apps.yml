@@ -7,7 +7,7 @@
   roles:
     - role: adguardhome.router
       tags: adguardhome
-    # - role: coredns.router
-    #   tags: coredns
+    - role: coredns.router
+      tags: coredns
     - role: vector.router
       tags: vector

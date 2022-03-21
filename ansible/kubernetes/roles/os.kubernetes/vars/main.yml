@@ -17,6 +17,7 @@ os_packages_install:
   - psmisc
   - software-properties-common
   - unzip
+  - qemu-guest-agent
 os_packages_remove:
   - apparmor
   - apport
