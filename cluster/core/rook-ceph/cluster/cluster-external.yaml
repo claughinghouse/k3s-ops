@@ -8,6 +8,9 @@ spec:
     enable: true
   crashCollector:
     disable: true
+  dependsOn:
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
   monitoring:
     enabled: true
     rulesNamespace: rook-ceph
