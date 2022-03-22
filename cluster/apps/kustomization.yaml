@@ -5,7 +5,7 @@ resources:
   - calico-system
   - cert-manager
   # - default
-  # - flux-system
+  - flux-system
   # - home
   # - kasten-io
   # - kube-system
