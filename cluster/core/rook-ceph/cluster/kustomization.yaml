@@ -5,4 +5,4 @@ resources:
   - secret.sops.yaml
   - configmap.sops.yaml
   - cluster-external.yaml
-  # - helm-release.yaml
+  - helm-release.yaml
