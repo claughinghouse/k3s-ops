@@ -13,4 +13,4 @@ resources:
   # - monitoring
   # - networking
   # - rook-ceph
-  # - system-upgrade
+  - system-upgrade
