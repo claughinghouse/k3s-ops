@@ -11,6 +11,6 @@ resources:
   # - kube-system
   # - media
   # - monitoring
-  # - networking
+  - networking
   # - rook-ceph
   - system-upgrade
