@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
   - secret.sops.yaml
   - configmap.sops.yaml
-  - helm-release.yaml
-  # - cluster-external.yaml
+  - ceph-cluster.yaml
   - storage-class.yaml
+  - volume-snapshot-class.yaml

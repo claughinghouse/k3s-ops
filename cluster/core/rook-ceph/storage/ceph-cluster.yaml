@@ -1,3 +1,4 @@
+---
 apiVersion: ceph.rook.io/v1
 kind: CephCluster
 metadata:
@@ -6,8 +7,16 @@ metadata:
 spec:
   external:
     enable: true
+  dataDirHostPath: /var/lib/rook
+  cephVersion:
+    image: quay.io/ceph/ceph:v16.2.6
   crashCollector:
     disable: true
+  healthCheck:
+    daemonHealth:
+      mon:
+        disabled: false
+        interval: 45s
   monitoring:
     enabled: true
     rulesNamespace: rook-ceph
