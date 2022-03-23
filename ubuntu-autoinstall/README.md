@@ -8,10 +8,6 @@ Bare-metal has it's advantages and disadvantages. I own 8 Intel NUCs and needed 
 
 ## Usage
 
-Docker will build two ISOs each with slightly different config for my cluster. The autoinstall files are in the [autoinstall](./autoinstall) directory.
-
-_If you know your NIC interfaces and block devices you want to install Ubuntu on then using my autoinstall files might just work for you too._
-
 ```fish
 # Make sure you are shelled into this directory and the proceed with the following...
 
