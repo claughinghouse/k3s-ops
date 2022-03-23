@@ -31,7 +31,6 @@ sops:
         - created_at: "2022-03-22T02:22:09Z"
           enc: |
             -----BEGIN PGP MESSAGE-----
-
             hQIMAyQ1SH08BnVLAQ//R6UwHQx9pf745JUrKJCAp7k0Vgoqf+PqrVchexDz2i+b
             YVPF64/qvw44QajOsCQiexAey8QLIhnmWK8XTe3DH8NdlpIgQxgyR77yANw3SVwm
             7qpOSfFLuyF24QGNazf2WNDFYpPRTtA2azD9VYkWKUGY69NOmlhPxVw+Vx0fadoX
