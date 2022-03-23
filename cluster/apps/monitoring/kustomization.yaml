@@ -8,7 +8,7 @@ resources:
   - karma
   # - kube-prometheus-stack
   # - loki
-  # - node-problem-detector
+  - node-problem-detector
   # - snmp-exporter
   # - thanos
   # - unifi-poller
