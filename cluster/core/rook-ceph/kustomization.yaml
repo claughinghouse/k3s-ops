@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - rbac.yaml
   - helm-release.yaml
+  - configmap.sops.yaml
+  - secret.sops.yaml
   - storage
   - rook-direct-mount
   - service-monitors
