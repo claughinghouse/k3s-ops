@@ -7,4 +7,3 @@ resources:
   - external-snapshotter
   - kube-prometheus-stack
   - tf-controller
-  # - rook-ceph
