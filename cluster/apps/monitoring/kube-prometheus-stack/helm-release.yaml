@@ -129,12 +129,12 @@ spec:
             targetLabel: instance
     kubeApiServer:
       enabled: true
-    # kubeControllerManager:
-    #   enabled: true
-    #   endpoints:
-    #     - 10.1.101.100
-    #     - 10.1.101.101
-    #     - 10.1.101.102
+    kubeControllerManager:
+      enabled: true
+      endpoints:
+        - 10.1.101.100
+        - 10.1.101.101
+        - 10.1.101.102
     kubeScheduler:
       enabled: true
       endpoints:
@@ -155,8 +155,8 @@ spec:
         - 10.1.101.102
       service:
         enabled: true
-        port: 2381
-        targetPort: 2381
+        # port: 2381
+        # targetPort: 2381
     prometheusOperator:
       prometheusConfigReloader:
         resources:
