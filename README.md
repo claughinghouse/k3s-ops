@@ -36,3 +36,4 @@ This is home to my personal Kubernetes cluster. [Flux](https://github.com/fluxcd
 ## :handshake:&nbsp; Community
 
 Thanks to all the people who donate their time to the [Kubernetes @Home](https://github.com/k8s-at-home/) community.
+debug
