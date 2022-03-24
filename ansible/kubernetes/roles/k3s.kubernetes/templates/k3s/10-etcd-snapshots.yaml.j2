@@ -3,7 +3,7 @@ etcd-s3: {{ k3s_etcd_s3 | bool | lower }}
 {% if k3s_etcd_s3 %}
 etcd-snapshot-schedule-cron: "{{ k3s_etcd_snapshot_schedule_cron }}"
 etcd-snapshot-retention: {{ k3s_etcd_snapshot_retention }}
-etcd-s3-endpoint: "{{ SECRET_S3_DOMAIN }}"
+etcd-s3-endpoint: "s3.{{ SECRET_S3_DOMAIN }}"
 etcd-s3-bucket: "{{ k3s_etcd_s3_bucket }}"
 etcd-s3-access-key: "{{ SECRET_S3_ACCESS_KEY }}"
 etcd-s3-secret-key: "{{ SECRET_S3_SECRET_KEY }}"
