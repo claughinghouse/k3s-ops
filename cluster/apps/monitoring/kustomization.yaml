@@ -6,7 +6,7 @@ resources:
   - gotify
   - grafana
   - karma
-  - kube-prometheus-stack
+  # - kube-prometheus-stack
   # - loki
   - node-problem-detector
   # - thanos
