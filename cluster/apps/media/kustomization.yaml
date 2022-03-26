@@ -5,7 +5,7 @@ resources:
   - gaps
   # - lidarr
   # - media-browser
-  # - overseerr
+  - overseerr
   # - plex
   # - prowlarr
   # - qbittorrent
