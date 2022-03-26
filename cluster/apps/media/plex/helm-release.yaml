@@ -72,6 +72,7 @@ spec:
             claimName: cephfs-media-pvc
         mountPath: /config/Backups
         readOnly: false
+        accessMode: ReadWriteMany
       transcode:
         enabled: true
         type: emptyDir
