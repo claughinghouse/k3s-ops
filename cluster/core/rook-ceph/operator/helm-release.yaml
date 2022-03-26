@@ -32,7 +32,7 @@ spec:
       enabled: true
     csi:
       enableCephfsDriver: true
-      enableCephfsSnapshotter: false
+      enableCephfsSnapshotter: true
     monitoring:
       enabled: true
     resources:
