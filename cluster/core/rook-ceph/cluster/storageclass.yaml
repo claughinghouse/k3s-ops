@@ -30,7 +30,7 @@ provisioner: rook-ceph.cephfs.csi.ceph.com # driver:namespace:operator
 parameters:
   clusterID: rook-ceph # namespace:cluster
   fsName: k8s-cephfs
-  pool: k8s-cephfs_data
+  pool: k8s-cephfs
   csi.storage.k8s.io/provisioner-secret-name: rook-csi-cephfs-provisioner
   csi.storage.k8s.io/provisioner-secret-namespace: rook-ceph # namespace:cluster
   csi.storage.k8s.io/controller-expand-secret-name: rook-csi-cephfs-provisioner
