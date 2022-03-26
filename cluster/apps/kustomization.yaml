@@ -10,7 +10,7 @@ resources:
   # - kasten-io
   - kube-system
   # - media
-  - monitoring
+  # - monitoring
   - networking
   - rook-ceph
   - system-upgrade
