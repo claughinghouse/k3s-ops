@@ -5,7 +5,7 @@ resources:
   - cephfs-pvc.yaml
   - gaps
   # - lidarr
-  - media-browser
+  # - media-browser
   - overseerr
   # - plex
   # - prowlarr
