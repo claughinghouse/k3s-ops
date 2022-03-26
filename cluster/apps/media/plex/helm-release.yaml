@@ -56,7 +56,7 @@ spec:
         existingClaim: plex-config-v1
       media:
         enabled: true
-        type: custom
+        type: pvc
         volumeSpec:
           - name: media
             persistentVolumeClaim:
@@ -65,7 +65,7 @@ spec:
         readOnly: true
       backup:
         enabled: true
-        type: custom
+        type: pvc
         volumeSpec:
           - name: media
             persistentVolumeClaim:
