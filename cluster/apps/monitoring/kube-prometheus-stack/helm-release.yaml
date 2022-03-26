@@ -129,12 +129,12 @@ spec:
             targetLabel: instance
     kubeApiServer:
       enabled: true
-    kubeControllerManager:
-      enabled: true
-      endpoints:
-        - 10.1.101.100
-        - 10.1.101.101
-        - 10.1.101.102
+    # kubeControllerManager:
+    #   enabled: true
+    #   endpoints:
+    #     - 10.1.101.100
+    #     - 10.1.101.101
+    #     - 10.1.101.102
     # kubeScheduler:
     #   enabled: true
     #   endpoints:
