@@ -45,7 +45,7 @@ spec:
         disable: true
       cephVersion:
         image: quay.io/ceph/ceph:v16.2.7
-      dataDirHostPath: /var/lib/rook
+      # dataDirHostPath: /var/lib/rook
       healthCheck:
         daemonHealth:
           mon:
