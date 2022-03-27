@@ -64,6 +64,7 @@ spec:
         mountPath: /media
         readOnly: true
         accessMode: ReadWriteMany
+        size: 10Gi
       # backup:
       #   enabled: true
       #   type: pvc
