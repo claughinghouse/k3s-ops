@@ -5,7 +5,7 @@ resources:
   - configmap.sops.yaml
   - secret.sops.yaml
   - helm-release.yaml
-  - cluster-external.yaml
-  - storageclass.yaml
-  - volume-snapshot-class.yaml
+  # - cluster-external.yaml
+  # - storageclass.yaml
+  # - volume-snapshot-class.yaml
   # - cephfs.yaml
