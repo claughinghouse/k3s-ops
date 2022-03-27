@@ -11,5 +11,5 @@ resources:
   - node-problem-detector
   - thanos
   - unifi-poller
-  - uptimerobot-heartbeat
+  # - uptimerobot-heartbeat
   # - vector
