@@ -8,4 +8,4 @@ resources:
   - cluster-external.yaml
   - storageclass.yaml
   - volume-snapshot-class.yaml
-  - cephfs.yaml
+  # - cephfs.yaml

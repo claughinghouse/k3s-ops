@@ -20,6 +20,7 @@ parameters:
   csi.storage.k8s.io/fstype: ext4
 reclaimPolicy: Delete
 allowVolumeExpansion: true
+
 ---
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
