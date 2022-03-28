@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - cluster
   - operator
+  - cephfs-pvc.yaml
