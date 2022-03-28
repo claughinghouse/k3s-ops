@@ -6,6 +6,6 @@ resources:
   - secret.sops.yaml
   - cluster-external.yaml
   - helm-release.yaml
-  # - storageclass.yaml
-  # - volume-snapshot-class.yaml
-  # - cephfs.yaml
+  - storageclass.yaml
+  - volume-snapshot-class.yaml
+  - cephfs.yaml
