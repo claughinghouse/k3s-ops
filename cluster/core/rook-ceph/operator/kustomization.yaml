@@ -6,5 +6,6 @@ resources:
   - configmap.sops.yaml
   - secret.sops.yaml
   - cluster-external.yaml
+  - cephfs.yaml
   - storageclass.yaml
   - volume-snapshot-class.yaml
