@@ -6,3 +6,4 @@ resources:
   - configmap.sops.yaml
   - secret.sops.yaml
   - cluster-external.yaml
+  - storageclass.yaml
