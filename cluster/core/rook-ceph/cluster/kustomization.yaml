@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
   # - helm-release.yaml
   # - storageclass.yaml
-  - volume-snapshot-class.yaml
   # - cephfs.yaml

@@ -7,3 +7,4 @@ resources:
   - secret.sops.yaml
   - cluster-external.yaml
   - storageclass.yaml
+  - volume-snapshot-class.yaml
