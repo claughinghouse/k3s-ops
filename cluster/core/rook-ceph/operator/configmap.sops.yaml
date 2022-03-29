@@ -4,7 +4,7 @@ metadata:
     name: rook-ceph-mon-endpoints
     namespace: rook-ceph
 data:
-    data: ENC[AES256_GCM,data:0u9M7ampfcDiEvBGcun0JQnUHalpHcB4TnETYEX3zO+cZmhLsQR0rxC3YmQRVDpMj/8QYeVrw5XviwAjxl/ez8hUvEo200gaK7/W8MLCgFH/6j8=,iv:/0+DDodwmuLhMX65wNY+aDOz8xtuZ/yo2b9deaUbQow=,tag:1Dh9axvZiLoTT3AxYzPXqg==,type:str]
+    data: ENC[AES256_GCM,data:xKCiaezDQ0eEWw9bi2Yrnu7iP9/e7FZ2XQSsElsBzDPzDwX9vIUgQEGxzx9JtnDTS/nKM9wUBZvPHzZLDRuSv3lIhzY19FeGvENSxqy9WoCUvsk=,iv:NPKAPQ8/ugSAJBDF+tk4sssmRQbT2tgQuY/RFWfmYL0=,tag:JABJIZ4cxUSvsLjsHEeZnw==,type:str]
     mapping: ENC[AES256_GCM,data:cRk=,iv:+kcEDTEDfOMSF96s74CoaxhhHbixcaGJv2IGCPX4qzE=,tag:JUyabrDEJtZJDxdg0J3EOQ==,type:str]
     maxMonId: ENC[AES256_GCM,data:Jg==,iv:+oTiYV1c3yiEIDAC2I01NpaeDILrHey2GH7YGu92gsQ=,tag:JsVruAyUasB4avVrZ5rEXQ==,type:str]
 sops:
@@ -25,8 +25,8 @@ sops:
             NmxVRGNUQ3hNMm1ITUgyd1VxY3Q5VEUK5jSCe9uc8EmO5zIREDrprrBGo3vRQQq4
             3dGFgLC5lbaXlm14x7kRtFMP1eASVRBQMyCreCa4gYkaU8RKEPpyZQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-03-29T18:19:25Z"
-    mac: ENC[AES256_GCM,data:tsqaJGulBI5j7HzkeyDSfvdx4uZwo6nlWvIB3Bp4yK+05UQSmrPTQ/ACGaeLoC+4seVy62wcHUMkUDfGgSkGknoAHJ1VjbAbHfQWDIa+KqEsf/V0Hvh9/KI3megEoGIFp1NuJuF2/Vprmr84jtkDa4a/xEYFdO6o/cPEIWmp3XI=,iv:obtPO1YHzImI5R+pN6o6f+RQKrWFfyEKz42hvw6+BKo=,tag:2NSZe6+2ZRYxBgVrCMEMkQ==,type:str]
+    lastmodified: "2022-03-29T21:35:16Z"
+    mac: ENC[AES256_GCM,data:TbIxoxV5UZ2yPltAgEwtnv2sbCrLGFpUK0K+hixZKDcS9w0OpL8no4r92IQ2QQvaaJ+VL0y83bzDqPaHEYeG7ko+uoMLdc49KGywm/Zd+0EE49ydRPw/QTMkmyptrEGxpKfyd3YZ2CTm/hve2r80aZIfsYoI4UOeQwPFRbTKA1Y=,iv:a2SD4LEbFxBti+a2zCSZ6Xv6kLECtDYxBJ1tDtrTvbc=,tag:ZcZztZbg6z2A2slxruUxEQ==,type:str]
     pgp:
         - created_at: "2022-03-22T02:22:09Z"
           enc: |
