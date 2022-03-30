@@ -42,6 +42,8 @@ spec:
             valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
             follow_redirects: true
             preferred_ip_protocol: "ip4"
+          tls_config:
+            insecure_skip_verify: true
         icmp:
           prober: icmp
           timeout: 30s
