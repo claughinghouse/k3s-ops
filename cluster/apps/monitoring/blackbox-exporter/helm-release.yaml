@@ -57,13 +57,13 @@ spec:
       targets:
         - module: http_2xx
           name: opnsense-http
-          url: "https://opnsense/"
+          url: "https://opnsense.localdomain/"
         - module: http_2xx
           name: unifi-http
           url: "https://unifi.${SECRET_UNIFI_DOMAIN}"
         - module: icmp
           name: opnsense-icmp
-          url: opnsense
+          url: opnsense.localdomain
     prometheusRule:
       enabled: true
       additionalLabels:
