@@ -42,17 +42,11 @@ spec:
                 text: >-
                   {{ range .Alerts -}}
                     **Alert:** {{ .Annotations.title }}{{ if .Labels.severity }} - `{{ .Labels.severity }}`{{ end }}
-
                   **Description:** {{ if ne .Annotations.description ""}}{{ .Annotations.description }}{{else}}N/A{{ end }}
-
                   **Details:**
                     {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
                     {{ end }}
                   {{ end }}
-          # - name: "nodered"
-          #   webhook_configs:
-          #     - url: "http://node-red.home:1880/power-outage"
-          #       send_resolved: true
         route:
           group_by: ["alertname", "job"]
           group_wait: 30s
