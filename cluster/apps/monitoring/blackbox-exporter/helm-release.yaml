@@ -57,7 +57,7 @@ spec:
       targets:
         - module: http_2xx
           name: opnsense-http
-          url: "https://opnsense.${SECRET_PRIVATE_DOMAIN}"
+          url: "https://opnsense/"
         - module: http_2xx
           name: unifi-http
           url: "https://unifi.${SECRET_UNIFI_DOMAIN}"
