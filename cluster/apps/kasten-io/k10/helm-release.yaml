@@ -37,6 +37,8 @@ spec:
       tokenAuth:
         enabled: true
     clusterName: k8s
+    kanister:
+      backupTimeout: 600
     ingress:
       create: true
       class: nginx
