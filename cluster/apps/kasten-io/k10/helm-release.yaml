@@ -32,7 +32,7 @@ spec:
       email: claughinghouse@@sers.noreply.github.com
     global:
       persistence:
-        storageClass: rook-ceph-block
+        storageClass: ceph-block
     auth:
       tokenAuth:
         enabled: true
