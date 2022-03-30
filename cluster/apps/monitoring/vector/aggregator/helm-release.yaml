@@ -104,7 +104,7 @@ spec:
             max_bytes: 2049000
           out_of_order_action: rewrite_timestamp
           labels:
-            hostname: opnsense
+            hostname: opnsense.localdomain
         loki_opnsense_filterlog:
           type: loki
           inputs:
@@ -116,20 +116,20 @@ spec:
             max_bytes: 2049000
           out_of_order_action: rewrite_timestamp
           labels:
-            hostname: opnsense
+            hostname: opnsense.localdomain
     podMonitor:
       enabled: true
     service:
       enabled: true
       type: LoadBalancer
-  # postRenderers:
-  #   - kustomize:
-  #       patchesJson6902:
-  #         - target:
-  #             kind: Service
-  #             name: vector-aggregator
-  #           patch:
-  #             - op: add
-  #               path: /spec/externalIPs
-  #               value:
-  #                 - "${SVC_SYSLOG_ADDR}"
+  postRenderers:
+    - kustomize:
+        patchesJson6902:
+          - target:
+              kind: Service
+              name: vector-aggregator
+            patch:
+              - op: add
+                path: /spec/externalIPs
+                value:
+                  - "${SVC_SYSLOG_ADDR}"
