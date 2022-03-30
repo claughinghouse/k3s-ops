@@ -14,6 +14,6 @@
   tags:
     - geoip
 
-# - import_tasks: vector.yml
-#   tags:
-#     - vector
+- import_tasks: vector.yml
+  tags:
+    - vector
