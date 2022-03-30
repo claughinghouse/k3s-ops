@@ -12,7 +12,7 @@ spec:
       objectStoreType: S3
       path: "${SECRET_KASTEN_BUCKET_PATH}"
       pathType: Directory
-      region: ${SECRET_S3_REGION}"
+      region: "${SECRET_S3_REGION}"
     credential:
       secretType: AwsAccessKey
       secret:
