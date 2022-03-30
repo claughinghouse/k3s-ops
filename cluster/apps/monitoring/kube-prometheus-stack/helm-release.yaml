@@ -202,9 +202,9 @@ spec:
             honor_timestamps: true
             static_configs:
               - targets:
-                  - "opnsense.${SECRET_PUBLIC_DOMAIN}:9153"
+                  - "opnsense.${SECRET_PRIVATE_DOMAIN}:9153"
           - job_name: node-exporter
             honor_timestamps: true
             static_configs:
               - targets:
-                  - "opnsense.${SECRET_PUBLIC_DOMAIN}:9100"
+                  - "opnsense.${SECRET_PRIVATE_DOMAIN}:9100"
