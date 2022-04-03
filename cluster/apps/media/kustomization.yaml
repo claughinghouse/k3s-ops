@@ -7,7 +7,7 @@ resources:
   - media-browser
   - overseerr
   # - plex
-  # - prowlarr
+  - prowlarr
   # - qbittorrent
   # - radarr
   # - radarr-uhd
