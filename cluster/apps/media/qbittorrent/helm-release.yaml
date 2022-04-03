@@ -83,11 +83,8 @@ spec:
         existingClaim: qbittorrent-config-v1
       media:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "expanse.${SECRET_PRIVATE_DOMAIN}"
-            path: /tycho/Media
+        type: hostPath
+        hostPath: /mnt/media
         mountPath: /media
     resources:
       requests:
