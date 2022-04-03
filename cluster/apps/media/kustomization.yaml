@@ -14,7 +14,7 @@ resources:
   # - readarr
   # - sabnzbd
   # - sonarr
-  # - sonarr-uhd
+  - sonarr-uhd
   - tautulli
   # - trash-updater
   # - unpackerr
