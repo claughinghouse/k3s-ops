@@ -10,7 +10,7 @@ resources:
   - prowlarr
   - qbittorrent
   # - radarr
-  # - radarr-uhd
+  - radarr-uhd
   - readarr
   # - sabnzbd
   - sonarr
