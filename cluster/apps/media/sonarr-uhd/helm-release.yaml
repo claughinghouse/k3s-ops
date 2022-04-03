@@ -65,7 +65,7 @@ spec:
       media:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/tv
+        hostPath: /mnt/media/tv-uhd
         mountPath: /media
         readOnly: true
       backup:
