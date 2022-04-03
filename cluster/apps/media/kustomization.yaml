@@ -9,7 +9,7 @@ resources:
   # - plex
   - prowlarr
   - qbittorrent
-  # - radarr
+  - radarr
   - radarr-uhd
   - readarr
   # - sabnzbd

@@ -71,7 +71,7 @@ spec:
       backup:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/backups/readarr
+        hostPath: /mnt/media/backups/radarr-uhd
         mountPath: /config/Backups
         readOnly: false
     resources:

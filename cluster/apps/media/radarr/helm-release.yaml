@@ -64,19 +64,14 @@ spec:
         existingClaim: radarr-config-v1
       media:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "expanse.${SECRET_PRIVATE_DOMAIN}"
-            path: /tycho/Media
+        type: hostPath
+        hostPath: /mnt/media
         mountPath: /media
+        readOnly: true
       backup:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "expanse.${SECRET_PRIVATE_DOMAIN}"
-            path: /tycho/Apps/External/Backups/radarr
+        type: hostPath
+        hostPath: /mnt/media/backups/radarr
         mountPath: /config/Backups
         readOnly: false
     resources:
