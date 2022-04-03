@@ -77,6 +77,8 @@ spec:
         - name: config
           persistentVolumeClaim:
             claimName: media-browser-config-v1
-        - name: media
-          persistentVolumeClaim:
-            claimName: cephfs-media-pvc
+        - media:
+          enabled: true
+          type: hostPath
+          hostPath: /mnt/media
+          mountPath: /media
