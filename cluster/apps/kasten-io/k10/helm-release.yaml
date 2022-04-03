@@ -29,7 +29,7 @@ spec:
     eula:
       accept: true
       company: claughinghouse
-      email: claughinghouse@@sers.noreply.github.com
+      email: claughinghouse@users.noreply.github.com
     global:
       persistence:
         storageClass: ceph-block
