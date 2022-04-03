@@ -23,6 +23,7 @@ spec:
       tag: v1.25.8.5663-e071c3d62
     env:
       TZ: "${TIMEZONE}"
+      ALLOWED_NETWORKS: 10.0.0.0/8
     podSecurityContext:
       supplementalGroups:
         - 44
