@@ -59,7 +59,6 @@ spec:
         type: hostPath
         hostPath: /mnt/media/sabnzbd
         mountPath: /media
-        readOnly: false
     resources:
       requests:
         memory: 250Mi
