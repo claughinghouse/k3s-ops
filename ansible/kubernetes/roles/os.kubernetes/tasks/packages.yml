@@ -21,6 +21,11 @@
   retries: 5
   until: apt_upgrade is success
 
+- name: Add Ceph Pacific repo
+  ansible.builtin.apt_repository:
+    repo: deb https://download.ceph.com/debian-pacific/ {{ ansible_distribution_release }} main
+    state: present
+
 - name: Install common packages
   ansible.builtin.apt:
     name: "{{ os_packages_install | default([]) }}"

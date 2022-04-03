@@ -1,0 +1,30 @@
+---
+- name: Create CephFS mount path
+  ansible.builtin.file:
+    path: /mnt/media
+    state: directory
+    mode: 0777
+
+- name: Copy ceph config
+  ansible.builtin.template:
+    src: ceph/ceph.conf.j2
+    dest: /etc/ceph/ceph.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copy ceph client keyring
+  ansible.builtin.template:
+    src: ceph/ceph.client.keyring.j2
+    dest: /etc/ceph/ceph.client.keyring
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Mount CephFS
+  mount:
+    name: /mnt/media
+    src: ":/k8s/media"
+    fstype: ceph
+    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
+    state: mounted

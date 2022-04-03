@@ -19,6 +19,10 @@
   tags:
     - filesystem
 
+- import_tasks: ceph.yml
+  tags:
+    - ceph
+
 - import_tasks: security.yml
   tags:
     - security
