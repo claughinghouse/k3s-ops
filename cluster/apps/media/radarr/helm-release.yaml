@@ -65,7 +65,7 @@ spec:
       media:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media
+        hostPath: /mnt/media/movies
         mountPath: /media
         readOnly: true
       backup:
