@@ -27,7 +27,6 @@ spec:
     alertmanager:
       config:
         global:
-          slack_api_url: "${SECRET_ALERT_MANAGER_DISCORD_WEBHOOK}"
           resolve_timeout: 5m
         receivers:
           - name: "null"
@@ -37,16 +36,18 @@ spec:
                 icon_url: https://avatars3.githubusercontent.com/u/3380462
                 username: "Prometheus Bot"
                 send_resolved: true
-                title: |-
-                  [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if ne .CommonAnnotations.summary ""}}{{ .CommonAnnotations.summary }}{{ else }}{{ .CommonLabels.alertname }}{{ end }}
-                text: >-
-                  {{ range .Alerts -}}
-                    **Alert:** {{ .Annotations.title }}{{ if .Labels.severity }} - `{{ .Labels.severity }}`{{ end }}
-                  **Description:** {{ if ne .Annotations.description ""}}{{ .Annotations.description }}{{else}}N/A{{ end }}
-                  **Details:**
-                    {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
-                    {{ end }}
-                  {{ end }}
+                # html: true
+                # title: |-
+                #   [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if ne .CommonAnnotations.summary ""}}{{ .CommonAnnotations.summary }}{{ else }}{{ .CommonLabels.alertname }}{{ end }}
+                # message: |-
+                #   {{ range .Alerts -}}
+                #   <b>Alert:</b> {{ .Annotations.title }}{{ if .Labels.severity }} - {{ .Labels.severity }}{{ end }}
+                #   <b>Description:</b> {{ if ne .Annotations.description ""}}{{ .Annotations.description }}{{else}}N/A{{ end }}
+                #   <b>Details:</b>
+                #   {{ range .Labels.SortedPairs }}
+                #   • <u>{{ .Name }}:</u> `{{ .Value }}`
+                #   {{ end }}
+                #   {{ end }}
         route:
           group_by: ["alertname", "job"]
           group_wait: 30s
@@ -55,24 +56,17 @@ spec:
           receiver: "discord"
           routes:
             - receiver: "null"
-              match:
-                alertname: InfoInhibitor
-            - receiver: "null"
-              match:
-                alertname: Watchdog
+              matchers:
+                - alertname =~ "InfoInhibitor|Watchdog"
             - receiver: "discord"
-              match_re:
-                severity: critical
+              matchers:
+                - severity = "critical"
               continue: true
-            # - receiver: "nodered"
-            #   match:
-            #     alertname: UPSOnBattery
-            #   continue: true
         inhibit_rules:
-          - source_match:
-              severity: "critical"
-            target_match:
-              severity: "warning"
+          - source_matchers:
+              - severity = "critical"
+            target_matchers:
+              - severity = "warning"
             equal: ["alertname", "namespace"]
       ingress:
         enabled: true
@@ -151,15 +145,6 @@ spec:
         enabled: true
         port: 2381
         targetPort: 2381
-    prometheusOperator:
-      prometheusConfigReloader:
-        resources:
-          requests:
-            cpu: 100m
-            memory: 50Mi
-          limits:
-            cpu: 200m
-            memory: 100Mi
     prometheus:
       ingress:
         enabled: true
