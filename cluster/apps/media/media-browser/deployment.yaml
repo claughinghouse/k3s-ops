@@ -78,6 +78,6 @@ spec:
           persistentVolumeClaim:
             claimName: media-browser-config-v1
         - name: media
-          enabled: true
-          type: hostPath
-          hostPath: /mnt/media
+          hostPath:
+            path: /mnt/media
+            type: DirectoryOrCreate
