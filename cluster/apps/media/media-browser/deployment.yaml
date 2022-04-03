@@ -81,4 +81,3 @@ spec:
           enabled: true
           type: hostPath
           hostPath: /mnt/media
-          mountPath: /media
