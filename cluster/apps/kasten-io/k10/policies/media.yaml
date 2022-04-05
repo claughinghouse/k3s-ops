@@ -36,7 +36,7 @@ spec:
     weekly: 4
   selector:
     matchExpressions:
-      - key: kubernetes.io/metadata.name
+      - key: k10.kasten.io/appNamespace
         operator: In
         values:
           - media
