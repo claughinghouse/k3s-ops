@@ -38,7 +38,7 @@ spec:
     persistence:
       data:
         enabled: true
-        existingClaim: resilio-sync-config-v1
+        existingClaim: syncthing-config-v1
         mountPath: /var/syncthing
       sync:
         enabled: true
