@@ -1,0 +1,45 @@
+apiVersion: config.kio.kasten.io/v1alpha1
+kind: Policy
+metadata:
+  name: home
+  namespace: kasten-io
+spec:
+  actions:
+    - action: backup
+      backupParameters:
+        filters:
+          includeResources:
+            - group: ""
+              version: ""
+              resource: persistentvolumeclaims
+              name: ""
+              matchExpressions:
+                - key: kasten.io/backup-volume
+                  operator: In
+                  values:
+                    - enabled
+        profile:
+          name: b2-k3s-k10
+          namespace: kasten-io
+    - action: export
+      exportParameters:
+        exportData:
+          enabled: true
+        frequency: "@daily"
+        # migrationToken:
+        #   name: home-migration-token
+        #   namespace: kasten-io
+        profile:
+          name: b2-k3s-k10
+          namespace: kasten-io
+      retention: {}
+  frequency: "@daily"
+  retention:
+    daily: 7
+    weekly: 4
+  selector:
+    matchExpressions:
+      - key: k10.kasten.io/appNamespace
+        operator: In
+        values:
+          - home
