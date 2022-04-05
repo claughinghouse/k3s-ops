@@ -7,3 +7,4 @@ resources:
   - node-red
   # - zigbee2mqtt
   # - zwavejs2mqtt
+  - resilio-sync
