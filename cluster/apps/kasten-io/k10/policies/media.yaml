@@ -3,14 +3,17 @@ kind: Policy
 metadata:
   name: media
   namespace: kasten-io
-
 spec:
   actions:
     - action: backup
       backupParameters:
         filters:
           includeResources:
-            - matchExpressions:
+            - group: ""
+              version: ""
+              resource: persistentvolumeclaims
+              name: ""
+              matchExpressions:
                 - key: kasten.io/backup-volume
                   operator: In
                   values:
