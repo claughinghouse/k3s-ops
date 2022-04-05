@@ -26,9 +26,9 @@ spec:
         exportData:
           enabled: true
         frequency: "@daily"
-        # migrationToken:
-        #   name: home-migration-token
-        #   namespace: kasten-io
+        migrationToken:
+          name: home-migration-token
+          namespace: kasten-io
         profile:
           name: b2-k3s-k10
           namespace: kasten-io
