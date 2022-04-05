@@ -23,9 +23,9 @@ spec:
         exportData:
           enabled: true
         frequency: "@daily"
-        # migrationToken:
-        #   name: media-migration-token-tqhcm
-        #   namespace: kasten-io
+        migrationToken:
+          name: media-migration-token
+          namespace: kasten-io
         profile:
           name: b2-k3s-k10
           namespace: kasten-io
