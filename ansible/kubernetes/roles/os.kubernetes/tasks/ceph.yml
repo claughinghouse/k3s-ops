@@ -33,7 +33,7 @@
     src: ":/k8s/media"
     fstype: ceph
     opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
-    state: mounted
+    state: remounted
 
 - name: Mount home CephFS
   mount:
@@ -41,4 +41,4 @@
     src: ":/k8s/home"
     fstype: ceph
     opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
-    state: mounted
+    state: remounted
