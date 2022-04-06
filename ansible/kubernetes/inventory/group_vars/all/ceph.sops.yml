@@ -1,6 +1,6 @@
 kind: Secret
 SECRET_CEPH_USER: ENC[AES256_GCM,data:poH5EYav,iv:wx/jqbNSg/OQNDGgCPKTDLSVXLPMO3oAGywSkonpSKw=,tag:TOxYRDnwslOuvzvIBmxqYQ==,type:str]
-SECRET_CEPH_SECRET: ENC[AES256_GCM,data:SX6SMzc310JGXINNsCn6pf3SrfBuKH6IllR55oyTVXA1w6G7aH7ziw==,iv:V5+LUG/3oQCKnQGtNcdvx5Hv1rcG63TtBsdBx1ou6YY=,tag:F6A5o6+bO8B+FFVdYnRDiQ==,type:str]
+SECRET_CEPH_SECRET: ENC[AES256_GCM,data:9/Pp7Wl3tKla+zZdM466G8EVxxJroGu/v+rLgKhjfmmP3k57Ndpweg==,iv:BqqQ6h6bUlc4RHXL2NFOLbkQiWH8iTb98yAp/k2zV/c=,tag:P7DaVXkvdTjNJ/DXfISuDw==,type:str]
 SECRET_CEPH_MONS: ENC[AES256_GCM,data:BmRBEMazn6GbySkTW8S4AimPVJb1YSQymwmKGVD1T/w/9H+bmTjUQs13aiHgasttobcGxYaXqkCgr1i8PkpFQnk=,iv:hn1bTtM7nWQhzpgW1sdsRtgJTphF2ImT1WAMX5p6HjA=,tag:tItyFacrv7MC8ESfD2zwtA==,type:str]
 SECRET_CEPH_FSID: ENC[AES256_GCM,data:W2Lh8OVVR8adNJGaQ46ZGEtimLA0A2IDUMzQsoiqcClAXFYp,iv:jpduVR3Ms0HRJ5QjrmJJzISAmNbY1MccPJ2frdQFS0k=,tag:mG7EArrhy0OWCNorpB8bVA==,type:str]
 SECRET_CEPH_MON_HOST: ENC[AES256_GCM,data:wsgimJLKnv7NhPUlfh66C7oWE6UCeCrynWHgGNOo752UUtu28GHeKpWq81fTJlZhvBONhYVT1iXqtSR84Cs4RE3gokBqcZXQiFNLquray8jMJyju6yXUlNifWmOYHpo8LHD7uPYOwlNbr9MUNUYMP9e/bK02sDM/uJyx7nKipdTEMudqZs3aEGWHtj4xZNzY9QWUT7tyW/vlzivtOL1YERuMDyCZfwiX730S+PCM6w==,iv:rI+MPRjZCa2NfM8HNElM2C8Og9JmERbZKTcFndg5AU0=,tag:HQLuCjurrwgOkHtyFM2ruQ==,type:str]
@@ -22,8 +22,8 @@ sops:
             WVM5TmpVWUxuQjJ0L055RVVselRBaHMK+6wOvkyhVPG8+Kb+uW8NPhealUmsmNh1
             bOMWmR93ePBe1bDhHfKUgZG3ITiGu2PCekBxyKDrF4pliqL9X9/luA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-04-02T18:27:57Z"
-    mac: ENC[AES256_GCM,data:1y5QI277vrp8DVhwiUBgZX3AKGJTNuXIQAyprIB4o9ZAxzSgVWB1vu3XiABxOOZuCOGkAOzrAEVOl19dK06OTlMFmeRtRX+MCQevAM+y8xU1vyNly5s8WwL9/AH5XPb/u0tImyTiPdCc/6c9GZGlcXlntuof80825u02zp7+YQw=,iv:Spg8UQ7F8/SaiIgdtkBvrWzziEmHgesas7443o7WZZc=,tag:cdHuG+tUppbLMIdxPOYUCQ==,type:str]
+    lastmodified: "2022-04-06T15:20:41Z"
+    mac: ENC[AES256_GCM,data:lBNFPd8NYvr7pUlRdQvtCBQtgD/UG/Kww1J44JyfTNTBHSh+1QNL6zH+d195JcNLJ2Yb7Rjd1RCwtT++DLgU2+6dod+QoIQ6yS2vgLjOAYYtRG+OPILWmaMDvGMjYcCO6Sn4z9GxoUCTnWpH77FdAVQE1++XA7sAXj4O1ho0DyU=,iv:d8lnweJMg7yq3YLU6AXSiAdqPasxEw6vrNewpXWx42I=,tag:BvtemKzLSJAxedW8vaPTLQ==,type:str]
     pgp:
         - created_at: "2022-04-02T17:32:05Z"
           enc: |
