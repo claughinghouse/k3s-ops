@@ -1,7 +1,13 @@
 ---
-- name: Create CephFS mount path
+- name: Create CephFS media mount path
   ansible.builtin.file:
     path: /mnt/media
+    state: directory
+    mode: 0777
+
+- name: Create CephFS home mount path
+  ansible.builtin.file:
+    path: /mnt/home
     state: directory
     mode: 0777
 
@@ -21,10 +27,18 @@
     group: root
     mode: 0644
 
-- name: Mount CephFS
+- name: Mount media CephFS
   mount:
     name: /mnt/media
     src: ":/k8s/media"
+    fstype: ceph
+    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
+    state: mounted
+
+- name: Mount home CephFS
+  mount:
+    name: /mnt/home
+    src: ":/k8s/home"
     fstype: ceph
     opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
     state: mounted

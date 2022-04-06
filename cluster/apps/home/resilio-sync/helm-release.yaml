@@ -42,15 +42,15 @@ spec:
       media:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/home/resilio-sync/media
+        hostPath: /mnt/home/resilio-sync/media
         mountPath: /media
       downloads:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/home/resilio-sync/downloads
+        hostPath: /mnt/home/resilio-sync/downloads
         mountPath: /downloads
       sync:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/home/resilio-sync/sync
+        hostPath: /mnt/home/resilio-sync/sync
         mountPath: /sync

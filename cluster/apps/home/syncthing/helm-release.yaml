@@ -43,5 +43,5 @@ spec:
       sync:
         enabled: true
         type: hostPath
-        hostPath: /mnt/media/home/syncthing/sync
+        hostPath: /mnt/home/syncthing/sync
         mountPath: /sync
