@@ -30,8 +30,8 @@ spec:
           name: media-migration-token
           namespace: kasten-io
         profile:
-          name: media
-          # name: b2-k3s-k10
+          # name: media
+          name: b2-k3s-k10
           namespace: kasten-io
       retention: {}
   frequency: "@daily"
