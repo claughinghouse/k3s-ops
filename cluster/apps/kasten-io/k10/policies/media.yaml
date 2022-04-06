@@ -1,39 +1,86 @@
-apiVersion: config.kio.kasten.io/v1alpha1
+# apiVersion: config.kio.kasten.io/v1alpha1
+# kind: Policy
+# metadata:
+#   name: media
+#   namespace: kasten-io
+# spec:
+#   actions:
+#     - action: backup
+#       backupParameters:
+#         filters:
+#           includeResources:
+#             - group: ""
+#               version: ""
+#               resource: persistentvolumeclaims
+#               name: ""
+#               matchExpressions:
+#                 - key: kasten.io/backup-volume
+#                   operator: In
+#                   values:
+#                     - enabled
+#         profile:
+#           name: b2-k3s-k10
+#           namespace: kasten-io
+#     - action: export
+#       exportParameters:
+#         exportData:
+#           enabled: true
+#         frequency: "@daily"
+#         migrationToken:
+#           name: media-migration-token
+#           namespace: kasten-io
+#         profile:
+#           # name: media
+#           name: b2-k3s-k10
+#           namespace: kasten-io
+#       retention: {}
+#   frequency: "@daily"
+#   retention:
+#     daily: 7
+#     weekly: 4
+#   selector:
+#     matchExpressions:
+#       - key: k10.kasten.io/appNamespace
+#         operator: In
+#         values:
+#           - media
+
 kind: Policy
+apiVersion: config.kio.kasten.io/v1alpha1
 metadata:
   name: media
   namespace: kasten-io
+  uid: 290d5378-3168-4f62-8ac2-d727cb31ca44
+  resourceVersion: "5110698"
+  generation: 4
+  creationTimestamp: 2022-04-06T20:20:42Z
+  managedFields:
+    - manager: Go-http-client
+      operation: Update
+      apiVersion: config.kio.kasten.io/v1alpha1
+      time: 2022-04-06T20:22:12Z
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:actions: {}
+          f:createdBy: {}
+          f:frequency: {}
+          f:lastModifyHash: {}
+          f:modifiedBy: {}
+          f:retention:
+            .: {}
+            f:daily: {}
+            f:weekly: {}
+          f:selector:
+            .: {}
+            f:matchExpressions: {}
+        f:status:
+          .: {}
+          f:hash: {}
+          f:specModifiedTime: {}
+          f:validation: {}
 spec:
-  actions:
-    - action: backup
-      backupParameters:
-        filters:
-          includeResources:
-            - group: ""
-              version: ""
-              resource: persistentvolumeclaims
-              name: ""
-              matchExpressions:
-                - key: kasten.io/backup-volume
-                  operator: In
-                  values:
-                    - enabled
-        profile:
-          name: b2-k3s-k10
-          namespace: kasten-io
-    - action: export
-      exportParameters:
-        exportData:
-          enabled: true
-        frequency: "@daily"
-        migrationToken:
-          name: media-migration-token
-          namespace: kasten-io
-        profile:
-          # name: media
-          name: b2-k3s-k10
-          namespace: kasten-io
-      retention: {}
   frequency: "@daily"
   retention:
     daily: 7
@@ -44,3 +91,41 @@ spec:
         operator: In
         values:
           - media
+  actions:
+    - action: backup
+      backupParameters:
+        filters:
+          includeResources:
+            - resource: persistentvolumeclaims
+              matchExpressions:
+                - key: kasten.io/backup-volume
+                  operator: In
+                  values:
+                    - enabled
+        hooks:
+          onSuccess:
+            blueprint: media
+            actionName: post-export
+        profile:
+          name: media
+          namespace: kasten-io
+    - action: export
+      exportParameters:
+        frequency: "@daily"
+        receiveString: bIzAPpoanmEL6ytiqQtmrvViGXM4cnG1jRur8kwaNb4EF9wclGuXW8KUXfG1ivURcRbozKuNGU+u7zELhTr93hJ8iV0ZadnKd4+VzriTlJTW8vxhwyNIYB+zv6DpBYlJfLYu70wS1fkZibOQ7NzL4FK4C83C6nFft23sYGq/mtCpw4Q0XGaos1/WsGj4CE5qwIZKXIyI93tE00o3MTiL9929XXSzHSjrpihO/IrbWJdep4bOOnTYbsUDs6SuidqyZJbfIPjMK9NzS3Dooksp7mDI4OOZKrOO0AGGCGY4RmB3X3GFpilw4G2rtZ2Yt+9kyEsTPNVahDQX2og8nyyNEe9AtO4TJ18A5ZsojZC9t6j5txvUmtHYvDohkR46pMkQ0pgW31Lw8ooRAhk1
+        profile:
+          name: media
+          namespace: kasten-io
+        migrationToken:
+          name: media-migration-token-h2h96
+          namespace: kasten-io
+        exportData:
+          enabled: true
+      retention: {}
+  createdBy: kasten-io:k10-k10
+  modifiedBy: kasten-io:k10-k10
+  lastModifyHash: 2816063053
+status:
+  validation: Success
+  hash: 2677034251
+  specModifiedTime: 2022-04-06T20:22:12Z
