@@ -4,9 +4,9 @@ kind: PersistentVolume
 metadata:
   name: k10-backups
 spec:
-  storageClassName: k10-backup-cephfs
-  capacity:
-    storage: 1Mi
+  # storageClassName: k10-backup-cephfs
+  # capacity:
+  #   storage: 1Mi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
