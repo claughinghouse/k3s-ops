@@ -36,18 +36,35 @@ spec:
                 icon_url: https://avatars3.githubusercontent.com/u/3380462
                 username: "Prometheus Bot"
                 send_resolved: true
-                # html: true
-                # title: |-
-                #   [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if ne .CommonAnnotations.summary ""}}{{ .CommonAnnotations.summary }}{{ else }}{{ .CommonLabels.alertname }}{{ end }}
-                # message: |-
-                #   {{ range .Alerts -}}
-                #   <b>Alert:</b> {{ .Annotations.title }}{{ if .Labels.severity }} - {{ .Labels.severity }}{{ end }}
-                #   <b>Description:</b> {{ if ne .Annotations.description ""}}{{ .Annotations.description }}{{else}}N/A{{ end }}
-                #   <b>Details:</b>
-                #   {{ range .Labels.SortedPairs }}
-                #   • <u>{{ .Name }}:</u> `{{ .Value }}`
-                #   {{ end }}
-                #   {{ end }}
+                priority: |-
+                  {{ if eq .Status "firing" }}1{{ else }}0{{ end }}
+                title: |-
+                  [{{ .Status | toUpper -}}
+                  {{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{- end -}}
+                  ] {{ .CommonLabels.alertname }}
+                message: |-
+                  {{- range .Alerts }}
+                    {{- if ne .Labels.severity "" }}
+                      <b>Severity:</b> <i>{{ .Labels.severity }}</i>
+                    {{- else }}
+                      <b>Severity:</b> <i>N/A</i>
+                    {{- end }}
+                    {{- if ne .Annotations.description "" }}
+                      <b>Description:</b> <i>{{ .Annotations.description }}</i>
+                    {{- else if .Annotations.summary "" }}
+                      <b>Description:</b> <i>{{ .Annotations.summary }}</i>
+                    {{- else if .Annotations.message "" }}
+                      <b>Description:</b> <i>{{ .Annotations.message }}</i>
+                    {{- else }}
+                      <b>Description:</b> <i>N/A</i>
+                    {{- end }}
+                    {{- if gt (len .Labels.SortedPairs) 0 }}
+                      <b>Details:</b>
+                      {{- range .Labels.SortedPairs }}
+                        • <b>{{ .Name }}:</b> <i>{{ .Value }}</i>
+                      {{- end }}
+                    {{- end }}
+                  {{- end }}
         route:
           group_by: ["alertname", "job"]
           group_wait: 30s
