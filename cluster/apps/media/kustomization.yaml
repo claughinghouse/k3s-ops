@@ -18,3 +18,4 @@ resources:
   - tautulli
   # - trash-updater
   # - unpackerr
+  - youtube-dl
