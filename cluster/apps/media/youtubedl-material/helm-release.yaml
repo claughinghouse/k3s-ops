@@ -43,4 +43,4 @@ spec:
         enabled: true
         type: hostPath
         hostPath: /mnt/media/youtube-dl
-        mountPath: /video
+        mountPath: /app/video
