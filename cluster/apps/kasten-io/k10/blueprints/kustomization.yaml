@@ -5,5 +5,5 @@ resources:
   - secret.sops.yaml
   # - pod-spec-override.yaml
   # - home.yaml
-  # - media.yaml
+  - media.yaml
   # - k10-disaster-recovery.yaml
