@@ -58,10 +58,10 @@ spec:
         profile:
           namespace: kasten-io
           name: b2-k3s-k10
-        hooks:
-          onSuccess:
-            blueprint: media
-            actionName: post-export
+        # hooks:
+        #   onSuccess:
+        #     blueprint: media
+        #     actionName: post-export
         filters:
           includeResources:
             - resource: persistentvolumeclaims
