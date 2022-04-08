@@ -44,5 +44,5 @@ actions:
             - "24"
             - "--checkers"
             - "24"
-            - "/mnt/k10-backups/media"
+            - "/mnt/media"
             - "b2:k10-media-f18a3c6d/"
