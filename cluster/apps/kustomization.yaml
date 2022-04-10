@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - calico-system
   - cert-manager
-  # - default
+  - default
   - flux-system
   - home
   # - kasten-io
