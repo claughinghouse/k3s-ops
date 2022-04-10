@@ -35,7 +35,7 @@ spec:
         enabled: true
         ingressClassName: "nginx"
         hosts:
-          - host: &host "${SECRET_GHOST_DOMAIN}"
+          - host: &host ${SECRET_GHOST_DOMAIN}
             paths:
               - path: /
                 pathType: Prefix
