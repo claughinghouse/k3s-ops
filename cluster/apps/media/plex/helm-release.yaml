@@ -84,11 +84,11 @@ spec:
     #                 - "true"
     podAnnotations:
       configmap.reloader.stakater.com/reload: "plex-promtail"
-    # resources:
-    #   requests:
-    #     gpu.intel.com/i915: 1
-    #     cpu: 1000m
-    #     memory: 1000Mi
-    #   limits:
-    #     gpu.intel.com/i915: 1
-    #     memory: 16000Mi
+    resources:
+      requests:
+        # gpu.intel.com/i915: 1
+        cpu: 1000m
+        memory: 1000Mi
+      limits:
+        # gpu.intel.com/i915: 1
+        memory: 16000Mi
