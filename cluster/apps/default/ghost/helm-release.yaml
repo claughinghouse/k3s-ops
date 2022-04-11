@@ -63,5 +63,4 @@ spec:
         rootPassword: "${SECRET_GHOST_PASS}"
       primary:
         persistance:
-          enabled: true
           existingClaim: ghost-db-v1
