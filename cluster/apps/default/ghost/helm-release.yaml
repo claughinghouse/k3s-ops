@@ -64,4 +64,4 @@ spec:
         rootPassword: "${SECRET_GHOST_PASS}"
       primary:
         persistance:
-          existingClaim: data-ghost-mariadb-0
+          existingClaim: ghost-db-v1
