@@ -23,7 +23,7 @@ spec:
       tag: 4.41.3
     env:
       TZ: "${TIMEZONE}"
-      url: "http://${SECRET_GHOST_DOMAIN}"
+      url: "https://${SECRET_GHOST_DOMAIN}"
       database__client: mysql
       database__connection__host: ghost-mariadb
       database__connection__user: "${SECRET_GHOST_DB_USER}"
@@ -38,7 +38,6 @@ spec:
           external-dns.alpha.kubernetes.io/hostname: ${SECRET_GHOST_DOMAIN}
           external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_GHOST_DOMAIN}"
           external-dns/is-public: "true"
-          # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
         hosts:
           - host: &host "www.${SECRET_GHOST_DOMAIN}"
             paths:
