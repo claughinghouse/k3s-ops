@@ -23,7 +23,6 @@ spec:
     remediation:
       retries: 3
   values:
-    fullnameOverride: prometheus
     alertmanager:
       config:
         global:
@@ -39,9 +38,9 @@ spec:
                 html: true
                 priority: |-
                   {{ if eq .Status "firing" }}1{{ else }}0{{ end }}
-                url_title: View in Alert Manager
+                url_title: View alert in Karma
                 url: |-
-                  {{ .ExternalURL }}/#/alerts?receiver={{ .Receiver | urlquery }}
+                  https://karma.${SECRET_PUBLIC_DOMAIN}/?q=%40receiver%3D{{ .Receiver | urlquery }}&q=%40state%3Dactive
                 title: |-
                   [{{ .Status | toUpper -}}
                   {{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{- end -}}
@@ -106,10 +105,6 @@ spec:
               resources:
                 requests:
                   storage: 1Gi
-    kube-state-metrics:
-      fullnameOverride: kube-state-metrics
-    prometheus-node-exporter:
-      fullnameOverride: node-exporter
       prometheus:
         monitor:
           enabled: true
