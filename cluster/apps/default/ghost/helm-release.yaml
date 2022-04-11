@@ -38,7 +38,7 @@ spec:
           external-dns.alpha.kubernetes.io/hostname: ${SECRET_GHOST_DOMAIN}, www.${SECRET_GHOST_DOMAIN}
           external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_GHOST_DOMAIN}"
           external-dns/is-public: "true"
-          nginx.ingress.kubernetes.io/from-to-www-redirect: "false"
+          nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
         hosts:
           - host: &host "${SECRET_GHOST_DOMAIN}"
             paths:
