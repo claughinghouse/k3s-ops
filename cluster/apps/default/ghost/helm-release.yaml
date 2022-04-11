@@ -48,14 +48,14 @@ spec:
         existingClaim: ghost-config-v1
         mountPath: /var/lib/ghost/content
     mariadb:
-    enabled: true
-    architecture: standalone
-    auth:
-      database: "${SECRET_GHOST_DB}"
-      username: "${SECRET_GHOST_DB_USER}"
-      password: "${SECRET_GHOST_DB_PASS}"
-      rootPassword: "${SECRET_GHOST_PASS}"
-    primary:
-      persistance:
-        enabled: true
-        existingClaim: ghost-db-v1
+      enabled: true
+      architecture: standalone
+      auth:
+        database: "${SECRET_GHOST_DB}"
+        username: "${SECRET_GHOST_DB_USER}"
+        password: "${SECRET_GHOST_DB_PASS}"
+        rootPassword: "${SECRET_GHOST_PASS}"
+      primary:
+        persistance:
+          enabled: true
+          existingClaim: ghost-db-v1

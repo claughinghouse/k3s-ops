@@ -13,18 +13,18 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: ceph-block
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: ghost-db-v1
-  namespace: default
-  labels:
-    kasten.io/backup-volume: "enabled"
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
-  storageClassName: ceph-block
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: ghost-db-v1
+#   namespace: default
+#   labels:
+#     kasten.io/backup-volume: "enabled"
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
+#   storageClassName: ceph-block
