@@ -13,8 +13,8 @@ resources:
   - radarr-uhd
   - readarr
   - sabnzbd
-  # - sonarr
-  # - sonarr-uhd
+  - sonarr
+  - sonarr-uhd
   - tautulli
   # - trash-updater
   # - unpackerr
