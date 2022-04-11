@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ghost-db-v1
+  name: data-ghost-mariadb-0
   namespace: default
   labels:
     kasten.io/backup-volume: "enabled"
