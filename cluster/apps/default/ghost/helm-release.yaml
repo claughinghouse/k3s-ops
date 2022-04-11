@@ -23,7 +23,7 @@ spec:
       tag: 4.41.3
     env:
       TZ: "${TIMEZONE}"
-      url: "https://${SECRET_GHOST_DOMAIN}"
+      url: "https://www.${SECRET_GHOST_DOMAIN}"
       database__client: mysql
       database__connection__host: ghost-mariadb
       database__connection__user: "${SECRET_GHOST_DB_USER}"
