@@ -16,6 +16,6 @@ resources:
   - sonarr
   - sonarr-uhd
   - tautulli
-  # - trash-updater
-  # - unpackerr
+  - trash-updater
+  - unpackerr
   - youtubedl-material

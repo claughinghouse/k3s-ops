@@ -43,11 +43,8 @@ spec:
         enabled: false
       complete:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "expanse.${SECRET_PRIVATE_DOMAIN}"
-            path: /tycho/Media/Downloads/qbittorrent/complete
+        type: hostPath
+        hostPath: /mnt/media/sabnzbd/complete
         mountPath: /complete
     resources:
       requests:
