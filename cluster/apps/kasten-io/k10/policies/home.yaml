@@ -35,7 +35,7 @@ spec:
           name: b2-k3s-k10
           namespace: kasten-io
         migrationToken:
-          name: home-migration-token
+          name: k10-migration-token
           namespace: kasten-io
         exportData:
           enabled: true

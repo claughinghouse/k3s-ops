@@ -25,7 +25,7 @@ spec:
       exportParameters:
         frequency: "@daily"
         migrationToken:
-          name: media-migration-token
+          name: k10-migration-token
           namespace: kasten-io
         profile:
           name: b2-k3s-k10
@@ -75,7 +75,7 @@ spec:
       exportParameters:
         frequency: "@daily"
         migrationToken:
-          name: media-migration-token
+          name: k10-migration-token
           namespace: kasten-io
         profile:
           name: b2-k3s-k10
