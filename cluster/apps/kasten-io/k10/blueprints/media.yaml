@@ -24,6 +24,8 @@ actions:
                     mountPath: /config
                   - name: media
                     mountPath: /mnt/media
+                securityContext:
+                  privileged: true
             volumes:
               - name: rclone-conf
                 secret:
@@ -31,6 +33,7 @@ actions:
               - name: media
                 hostPath:
                   path: /mnt/media
+                readOnly: true
           command:
             - "rclone"
             - "-v"
