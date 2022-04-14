@@ -42,3 +42,54 @@ spec:
         operator: In
         values:
           - media
+
+---
+apiVersion: config.kio.kasten.io/v1alpha1
+kind: Policy
+metadata:
+  name: media-test
+  namespace: kasten-io
+spec:
+  frequency: "@daily"
+  paused: false
+  actions:
+    - action: backup
+      backupParameters:
+        profile:
+          namespace: kasten-io
+          name: b2-k3s-k10
+        hooks:
+          onSuccess:
+            blueprint: media
+            actionName: post-export
+        filters:
+          includeResources:
+            - resource: persistentvolumeclaims
+              matchExpressions:
+                - key: kasten.io/backup-volume
+                  operator: In
+                  values:
+                    - enabled
+          excludeResources: []
+    - action: export
+      exportParameters:
+        frequency: "@daily"
+        migrationToken:
+          name: media-migration-token
+          namespace: kasten-io
+        profile:
+          name: b2-k3s-k10
+          namespace: kasten-io
+        receiveString: null
+        exportData:
+          enabled: true
+      retention: {}
+  retention:
+    daily: 7
+    weekly: 4
+  selector:
+    matchExpressions:
+      - key: k10.kasten.io/appNamespace
+        operator: In
+        values:
+          - media
