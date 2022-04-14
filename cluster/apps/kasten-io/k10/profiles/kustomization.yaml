@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - secret.sops.yaml
   - backblaze-b2.yaml
-  # - k10-disaster-recovery.yaml
+  - k10-disaster-recovery.yaml
   - k10-media-backups.yaml
