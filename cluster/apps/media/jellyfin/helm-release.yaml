@@ -49,3 +49,11 @@ spec:
         hostPath: /mnt/media
         mountPath: /media
         readOnly: true
+      transcode:
+        enabled: true
+        type: emptyDir
+        accessMode: ReadWriteOnce
+        emptyDir:
+          enabled: true
+          medium: "Memory"
+          sizeLimit: 10Gi
