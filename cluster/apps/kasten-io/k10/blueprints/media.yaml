@@ -22,10 +22,10 @@ actions:
                 volumeMounts:
                   - name: rclone-conf
                     mountPath: /config
-                  - name: media
+                  - name: k10-backups
                     mountPath: /mnt/media
-                securityContext:
-                  privileged: true
+                # securityContext:
+                #   privileged: true
             volumes:
               - name: rclone-conf
                 secret:
