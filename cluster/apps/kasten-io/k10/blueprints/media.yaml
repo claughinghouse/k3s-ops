@@ -30,10 +30,9 @@ actions:
               - name: rclone-conf
                 secret:
                   secretName: rclone-conf
-              - name: media
-                hostPath:
-                  path: /mnt/media
-                readOnly: true
+              - name: k10-backups
+                persistentVolumeClaim:
+                  claimName: k10-media-backups
           command:
             - "rclone"
             - "-v"
@@ -48,4 +47,4 @@ actions:
             - "--checkers"
             - "24"
             - "/mnt/media"
-            - "b2:k10-media-f18a3c6d/"
+            - "b2:k10-media-f18a3c6d"

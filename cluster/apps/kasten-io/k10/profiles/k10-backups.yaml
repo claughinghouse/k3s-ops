@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: k10-media-backups
+spec:
+  storageClassName: k10-backup-hostpath
+  capacity:
+    storage: 1Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/media
+  readOnly: true
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: k10-media-backups
+  namespace: kasten-io
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: k10-backup-hostpath
+  resources:
+    requests:
+      storage: 1Mi
