@@ -12,7 +12,7 @@ spec:
           name: b2-k3s-k10
           namespace: kasten-io
   createdBy: kasten-io:k10-k10
-  frequency: "@hourly"
+  frequency: '@hourly'
   retention:
     daily: 1
     hourly: 4
