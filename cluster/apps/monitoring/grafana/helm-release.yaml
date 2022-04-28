@@ -91,19 +91,24 @@ spec:
               sslmode: disable
     dashboards:
       default:
-        # Ref: https://grafana.com/grafana/dashboards/13502
-        minio:
-          gnetId: 13502
-          revision: 10
-          datasource: Prometheus
-        # Ref: https://grafana.com/grafana/dashboards/11315
-        unifi-client-insights:
-          gnetId: 11315
-          revision: 8
+        # Ref: https://grafana.com/grafana/dashboards/11310
+        unifi-dpi-insights:
+          gnetId: 11310
+          revision: 4
           datasource: Prometheus
         # Ref: https://grafana.com/grafana/dashboards/11311
         unifi-network-sites:
           gnetId: 11311
+          revision: 4
+          datasource: Prometheus
+        # Ref: https://grafana.com/grafana/dashboards/11312
+        unifi-usw-insights:
+          gnetId: 11312
+          revision: 8
+          datasource: Prometheus
+        # Ref: https://grafana.com/grafana/dashboards/11313
+        unifi-usg-insights:
+          gnetId: 11313
           revision: 4
           datasource: Prometheus
         # Ref: https://grafana.com/grafana/dashboards/11314
@@ -111,9 +116,9 @@ spec:
           gnetId: 11314
           revision: 9
           datasource: Prometheus
-        # Ref: https://grafana.com/grafana/dashboards/11312
-        unifi-usw-insights:
-          gnetId: 11312
+        # Ref: https://grafana.com/grafana/dashboards/11315
+        unifi-client-insights:
+          gnetId: 11315
           revision: 8
           datasource: Prometheus
     sidecar:
