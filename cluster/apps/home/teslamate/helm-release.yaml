@@ -57,10 +57,9 @@ spec:
         mountPath: /opt/app/import
     postgresql:
       enabled: true
-      image:
-        postgresqlUsername: "${SECRET_TESLAMATE_DB_USER}"
-        postgresqlPassword: "${SECRET_TESLAMATE_DB_PASS}"
-        postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
+      postgresqlUsername: "${SECRET_TESLAMATE_DB_USER}"
+      postgresqlPassword: "${SECRET_TESLAMATE_DB_PASS}"
+      postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
       persistence:
         enabled: true
         existingClaim: teslamate-db-v1
