@@ -78,7 +78,7 @@ spec:
           - name: TeslaMate
             type: postgres
             access: proxy
-            url: http://teslamate-postgres.home:5432/
+            url: teslamate-postgresql.home
             database: "${SECRET_TESLAMATE_DB}"
             user: "${SECRET_TESLAMATE_USER}"
             secureJsonData:
