@@ -75,6 +75,16 @@ spec:
             type: loki
             access: proxy
             url: http://loki:3100
+          - name: TeslaMate
+            type: postgres
+            access: proxy
+            url: http://teslamate-postgres.home:5432/
+            database: "${SECRET_TESLAMATE_DB}"
+            user: "${SECRET_TESLAMATE_USER}"
+            secureJsonData:
+              password: "${SECRET_TESLAMATE_PASS}"
+            jsonData:
+              sslmode: disable
     dashboards:
       default:
         # Ref: https://grafana.com/grafana/dashboards/13502
