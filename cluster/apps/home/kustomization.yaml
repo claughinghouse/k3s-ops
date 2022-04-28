@@ -9,4 +9,4 @@ resources:
   # - zwavejs2mqtt
   - resilio-sync
   - syncthing
-  - teslamate
+  # - teslamate
