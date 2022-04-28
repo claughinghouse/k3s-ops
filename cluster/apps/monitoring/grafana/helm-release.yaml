@@ -80,9 +80,9 @@ spec:
             access: proxy
             url: teslamate-postgresql.home:5432
             database: "${SECRET_TESLAMATE_DB}"
-            user: "${SECRET_TESLAMATE_USER}"
+            user: "${SECRET_TESLAMATE_DB_USER}"
             secureJsonData:
-              password: "${SECRET_TESLAMATE_PASS}"
+              password: "${SECRET_TESLAMATE_DB_PASS}"
             jsonData:
               sslmode: disable
     dashboards:
