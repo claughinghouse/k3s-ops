@@ -31,6 +31,8 @@ spec:
       MQTT_HOST: "mosquitto.home"
       MQTT_USERNAME: "${SECRET_TESLAMATE_MQTT_USERNAME}"
       MQTT_PASSWORD: "${SECRET_TESLAMATE_MQTT_PASSWORD}"
+    podAnnotations:
+      secret.reloader.stakater.com/reload: teslamate
     service:
       main:
         ports:
