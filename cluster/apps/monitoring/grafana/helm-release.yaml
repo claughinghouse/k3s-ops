@@ -29,6 +29,8 @@ spec:
       GF_PANELS_DISABLE_SANITIZE_HTML: true
       GF_LOG_FILTERS: rendering:debug
       GF_DATE_FORMATS_FULL_DATE: "MMM Do, YYYY hh:mm:ss a"
+    podAnnotations:
+      configmap.reloader.stakater.com/reload: "grafana"
     adminPassword: "${SECRET_GRAFANA_PASSWORD}"
     grafana.ini:
       server:
@@ -124,14 +126,13 @@ spec:
         enabled: true
         searchNamespace: ALL
     plugins:
+      - grafana-clock-panel
+      - grafana-piechart-panel
+      - grafana-worldmap-panel
       - natel-discrete-panel
       - pr0ps-trackmap-panel
-      - grafana-piechart-panel
       - vonage-status-panel
-      - grafana-worldmap-panel
-      - grafana-clock-panel
       - panodata-map-panel
-      - natel-plotly-panel
     serviceMonitor:
       enabled: true
     ingress:
