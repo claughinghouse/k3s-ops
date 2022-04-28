@@ -29,6 +29,8 @@ spec:
       DATABASE_NAME: "{{ .Values.postgresql.postgresqlDatabase }}"
       DISABLE_MQTT: "false"
       MQTT_HOST: "mqtt://mosquitto"
+      MQTT_USERNAME: "${SECRET_MQTT_USERNAME}"
+      MQTT_PASSWORD: "${SECRET_MQTT_PASSWORD}"
     service:
       main:
         ports:
