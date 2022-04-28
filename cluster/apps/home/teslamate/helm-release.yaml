@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: teslamate/teslamate
-      tag: 1.23.7
+      tag: 1.26.1
     env:
       TZ: "${TIMEZONE}"
       DATABASE_HOST: '{{ include "common.names.fullname" .}}-postgresql'
