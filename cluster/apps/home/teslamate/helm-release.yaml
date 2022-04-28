@@ -27,10 +27,10 @@ spec:
       DATABASE_USER: "{{ .Values.postgresql.postgresqlUsername }}"
       DATABASE_PASS: "{{ .Values.postgresql.postgresqlPassword }}"
       DATABASE_NAME: "{{ .Values.postgresql.postgresqlDatabase }}"
-      DISABLE_MQTT: "true"
+      DISABLE_MQTT: "false"
       MQTT_HOST: "mosquitto.home"
-      MQTT_USERNAME: "${SECRET_MQTT_USERNAME}"
-      MQTT_PASSWORD: "${SECRET_MQTT_PASSWORD}"
+      MQTT_USERNAME: "${SECRET_TESLAMATE_MQTT_USERNAME}"
+      MQTT_PASSWORD: "${SECRET_TESLAMATE_MQTT_PASSWORD}"
     service:
       main:
         ports:
@@ -56,14 +56,9 @@ spec:
     postgresql:
       enabled: true
       image:
-        # repository: postgres
-        tag: "14"
-        # postgresqlUsername: "${SECRET_TESLAMATE_USER}"
-        # postgresqlPassword: "${SECRET_TESLAMATE_PASS}"
-        # postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
-        postgresqlUsername: postgres
-        postgresqlPassword: teslamate-pass
-        postgresqlDatabase: teslamate
+        postgresqlUsername: "${SECRET_TESLAMATE_USER}"
+        postgresqlPassword: "${SECRET_TESLAMATE_PASS}"
+        postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
       persistence:
         enabled: true
         existingClaim: teslamate-db-v1
