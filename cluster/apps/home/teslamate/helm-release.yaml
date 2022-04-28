@@ -56,7 +56,7 @@ spec:
     postgresql:
       enabled: true
       image:
-        repository: postgres
+        # repository: postgres
         tag: "13.6"
       postgresqlUsername: "${SECRET_TESLAMATE_USER}"
       postgresqlPassword: "${SECRET_TESLAMATE_PASS}"
