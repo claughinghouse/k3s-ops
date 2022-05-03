@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: ghost
-      version: 1.4.0
+      version: 1.4.1
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home-charts
@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: ghost
-      tag: 4.46
+      tag: 4.44.0
     env:
       TZ: "${TIMEZONE}"
       url: "https://${SECRET_GHOST_DOMAIN}"
