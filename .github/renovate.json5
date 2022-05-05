@@ -20,7 +20,7 @@
   ],
   "onboarding": false,
   "requireConfig": false,
-  "gitAuthor": "midnight-bot-6658 <182125+midnight-bot-6658[bot]@users.noreply.github.com>",
+  "gitAuthor": "midnight-bot <182125+midnight-bot[bot]@users.noreply.github.com>",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": [
     "prIgnoreNotification"
