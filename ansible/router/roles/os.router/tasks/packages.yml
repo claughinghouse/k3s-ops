@@ -25,7 +25,7 @@
       - security/cyrus-sasl2
       - security/cyrus-sasl2-gssapi
       - sysutils/htop
-      - sysutils/neofetch
+      # - sysutils/neofetch
       - sysutils/screen
       - sysutils/tmux
       - sysutils/viddy
