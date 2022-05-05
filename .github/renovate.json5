@@ -8,14 +8,16 @@
     ":separatePatchReleases",
     "docker:enableMajor",
     ":enablePreCommit",
-    "github>claughinghouse/home-ops//.github/renovate/allowedVersions",
-    "github>claughinghouse/home-ops//.github/renovate/autoMerge",
-    "github>claughinghouse/home-ops//.github/renovate/labels",
-    "github>claughinghouse/home-ops//.github/renovate/semanticCommits"
+    "github>claughinghouse/home-ops//.github/renovate/allowedVersions.json5",
+    "github>claughinghouse/home-ops//.github/renovate/autoMerge.json5",
+    "github>claughinghouse/home-ops//.github/renovate/labels.json5",
+    "github>claughinghouse/home-ops//.github/renovate/semanticCommits.json5"
   ],
   "platform": "github",
-  "username": "midnight-bot-6658[bot]",
-  "repositories": ["claughinghouse/home-ops"],
+  "username": "midnight-bot[bot]",
+  "repositories": [
+    "claughinghouse/home-ops"
+  ],
   "onboarding": false,
   "requireConfig": false,
   "gitAuthor": "midnight-bot-6658 <182125+midnight-bot-6658[bot]@users.noreply.github.com>",
@@ -69,11 +71,12 @@
         "hack/.+\\.sh$"
       ],
       "matchStrings": [
-        "datasource=(?<datasource>.*?)\n *url: https:\/\/github\\.com\/(?<depName>.*?)\\.git\n *ref:\n *tag: (?<currentValue>.*)\n",
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n.*?_version: \"(?<currentValue>.*)\"\n",
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n.*?_VERSION=\"(?<currentValue>.*)\"\n"
+        "datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?\n *url: https:\/\/github\\.com\/(?<depName>.*?)\\.git\n *ref:\n *tag: (?<currentValue>.*)\n",
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?_version: \"(?<currentValue>.*)\"\n",
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?_VERSION=\"(?<currentValue>.*)\"\n"
       ],
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     },
     // Read and process Custom Resource Definitions
     {
@@ -119,15 +122,6 @@
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<compatibility>.*)$",
       "matchPackageNames": [
         "docker.io/blakeblackshear/frigate"
-      ]
-    },
-    {
-      "matchDatasources": [
-        "docker"
-      ],
-      "versioning": "regex:^RELEASE\\.(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)T.*Z(-(?<compatibility>.*))?$",
-      "matchPackageNames": [
-        "quay.io/minio/minio"
       ]
     },
     // packages with loose versioning
