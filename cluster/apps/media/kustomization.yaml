@@ -19,4 +19,4 @@ resources:
   - tautulli
   - trash-updater
   - unpackerr
-  - youtubedl-material
+  # - youtubedl-material
