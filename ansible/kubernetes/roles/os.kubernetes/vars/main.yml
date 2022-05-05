@@ -10,15 +10,15 @@ os_ssh_authorized_keys:
 os_packages_install:
   - apt-transport-https
   - ca-certificates
+  - ceph-common
   - curl
   - htop
   - nano
   - ntpdate
   - psmisc
+  - qemu-guest-agent
   - software-properties-common
   - unzip
-  - qemu-guest-agent
-  - ceph-common
 os_packages_remove:
   - apparmor
   - apport
