@@ -15,6 +15,7 @@ spec:
       ttlSecondsAfterFinished: 300
       template:
         spec:
+          automountServiceAccountToken: false
           restartPolicy: OnFailure
           initContainers:
             - name: render-config
@@ -33,7 +34,7 @@ spec:
                 - name: shared
                   mountPath: /shared
           containers:
-            - name: trash-updater-sonarr
+            - name: sonarr
               image: ghcr.io/k8s-at-home/trash-updater:v1.8.2
               imagePullPolicy: IfNotPresent
               env:
@@ -51,24 +52,24 @@ spec:
                 - name: shared
                   mountPath: /config
                   readOnly: true
-            # - name: trash-updater-radarr
-            #   image: ghcr.io/k8s-at-home/trash-updater:v1.8.2
-            #   imagePullPolicy: IfNotPresent
-            #   env:
-            #     - name: TZ
-            #       value: "${TIMEZONE}"
-            #     - name: DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
-            #       value: "1"
-            #   command:
-            #     - /app/trash
-            #   args:
-            #     - radarr
-            #     - --config
-            #     - /config/trash.yaml
-            #   volumeMounts:
-            #     - name: shared
-            #       mountPath: /config
-            #       readOnly: true
+            - name: radarr
+              image: ghcr.io/k8s-at-home/trash-updater:v1.8.2
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: TZ
+                  value: "${TIMEZONE}"
+                - name: DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
+                  value: "1"
+              command:
+                - /app/trash
+              args:
+                - radarr
+                - --config
+                - /config/trash.yaml
+              volumeMounts:
+                - name: shared
+                  mountPath: /config
+                  readOnly: true
           volumes:
             - name: config
               configMap:
