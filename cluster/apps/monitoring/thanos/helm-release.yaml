@@ -17,10 +17,15 @@ spec:
       interval: 5m
   install:
     createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  dependsOn:
+    - name: kube-prometheus-stack
+      namespace: monitoring
   values:
-    image:
-      registry: public.ecr.aws
-      repository: bitnami/thanos
     query:
       enabled: true
       replicaLabels:

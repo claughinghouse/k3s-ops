@@ -18,21 +18,21 @@ spec:
   install:
     createNamespace: true
     remediation:
-      retries: 3
+      retries: 5
   upgrade:
     remediation:
-      retries: 3
+      retries: 5
   values:
-    replicas: 1
+    replicas: 3
     env:
       GF_EXPLORE_ENABLED: true
       GF_PANELS_DISABLE_SANITIZE_HTML: true
       GF_LOG_FILTERS: rendering:debug
       GF_DATE_FORMATS_FULL_DATE: "MMM Do, YYYY hh:mm:ss a"
-      GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: "natel-discrete-panel,pr0ps-trackmap-panel,panodata-map-panel"
-    podAnnotations:
-      configmap.reloader.stakater.com/reload: "grafana"
-    adminPassword: "${SECRET_GRAFANA_PASSWORD}"
+      GF_SECURITY_ALLOW_EMBEDDING: true
+      GF_SECURITY_COOKIE_SAMESITE: grafana
+    admin:
+      existingSecret: grafana-admin-creds
     grafana.ini:
       server:
         root_url: "https://grafana.${SECRET_PUBLIC_DOMAIN}"
@@ -125,33 +125,52 @@ spec:
       dashboards:
         enabled: true
         searchNamespace: ALL
-        folderAnnotation: grafana_folder
-        provider:
-          foldersFromFilesStructure: true
+        # folderAnnotation: grafana_folder
+        # provider:
+        #   foldersFromFilesStructure: true
       datasources:
         enabled: true
         searchNamespace: ALL
     plugins:
-      - grafana-clock-panel
-      - grafana-piechart-panel
-      - grafana-worldmap-panel
       - natel-discrete-panel
       - natel-plotly-panel
+
       - pr0ps-trackmap-panel
+      - grafana-piechart-panel
       - vonage-status-panel
+      - grafana-worldmap-panel
+      - grafana-clock-panel
       - https://github.com/panodata/panodata-map-panel/releases/download/0.16.0/panodata-map-panel-0.16.0.zip;grafana-map-panel
+
     serviceMonitor:
       enabled: true
     ingress:
       enabled: true
       ingressClassName: "nginx"
+      annotations:
+        nginx.ingress.kubernetes.io/affinity: "cookie"
+        nginx.ingress.kubernetes.io/session-cookie-name: "grafana"
+        nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+        nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
       hosts:
         - &host "grafana.${SECRET_PUBLIC_DOMAIN}"
       tls:
         - hosts:
             - *host
-    serviceAccount:
-      create: true
-      autoMount: true
     persistence:
       enabled: false
+      # type: statefulset
+      # storageClassName: "ceph-block"
+      # size: 10Gi
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                  - key: app.kubernetes.io/name
+                    operator: In
+                    values:
+                      - grafana
+              topologyKey: kubernetes.io/hostname

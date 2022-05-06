@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 if [[ -z "${UPTIMEROBOT_HEARTBEAT_URL}" ]]; then
