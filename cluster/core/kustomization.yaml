@@ -5,5 +5,5 @@ resources:
   - cert-manager
   - kyverno
   - namespaces
-  # - rook-ceph
+  - rook-ceph
   - starboard-system
