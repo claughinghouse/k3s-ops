@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - home-assistant
   - mosquitto
-  - node-red
+  # - node-red
   # - zigbee2mqtt
   # - zwavejs2mqtt
   - resilio-sync
