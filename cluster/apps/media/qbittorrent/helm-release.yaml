@@ -70,10 +70,10 @@ spec:
           repository: ghcr.io/k8s-at-home/prometheus-qbittorrent-exporter
           tag: v1.2.0
       serviceMonitor:
-        interval: 5m
-        scrapeTimeout: 1m
+        interval: 1m
+        scrapeTimeout: 10s
       prometheusRule:
-        enabled: false
+        enabled: true
     podSecurityContext:
       supplementalGroups:
         - 100
@@ -88,7 +88,7 @@ spec:
         mountPath: /media
     resources:
       requests:
-        cpu: 100m
         memory: 250Mi
+        cpu: 500m
       limits:
         memory: 6000Mi
