@@ -28,8 +28,8 @@ spec:
     - name: cert-manager
       namespace: cert-manager
   values:
-    # crds:
-    #   enabled: true
+    crds:
+      enabled: false
     csi:
       enableCephfsDriver: true
       enableCephfsSnapshotter: true
