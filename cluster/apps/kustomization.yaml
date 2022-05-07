@@ -5,10 +5,10 @@ resources:
   - cert-manager
   - default
   - flux-system
-  # - home
+  - home
   - kasten-io
   - kube-system
-  # - media
+  - media
   - monitoring
   - networking
   - rook-ceph
