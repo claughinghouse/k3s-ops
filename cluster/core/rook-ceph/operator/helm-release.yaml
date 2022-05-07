@@ -17,19 +17,19 @@ spec:
         namespace: flux-system
   install:
     createNamespace: true
-    # crds: CreateReplace
+    crds: CreateReplace
     remediation:
       retries: 3
   upgrade:
-    # crds: CreateReplace
+    crds: CreateReplace
     remediation:
       retries: 3
   dependsOn:
     - name: cert-manager
       namespace: cert-manager
   values:
-    # crds:
-    #   enabled: true
+    crds:
+      enabled: false
     csi:
       enableCephfsDriver: true
       enableCephfsSnapshotter: true
