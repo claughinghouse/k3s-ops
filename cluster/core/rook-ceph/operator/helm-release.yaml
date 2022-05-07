@@ -28,13 +28,13 @@ spec:
     - name: cert-manager
       namespace: cert-manager
   values:
-    crds:
-      enabled: false
+    # crds:
+    #   enabled: true
     csi:
       enableCephfsDriver: true
       enableCephfsSnapshotter: true
-    # monitoring:
-    #   enabled: true
+    monitoring:
+      enabled: true
     resources:
       requests:
         cpu: 100m
