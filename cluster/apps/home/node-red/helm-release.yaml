@@ -54,7 +54,7 @@ spec:
           - hosts:
               - *host
     persistence:
-      config:
+      data:
         enabled: true
         existingClaim: node-red-config-v1
         mountPath: "/data"
