@@ -46,10 +46,10 @@ spec:
     metrics:
       enabled: true
       serviceMonitor:
-        interval: 3m
+        interval: 5m
         scrapeTimeout: 1m
       prometheusRule:
-        enabled: true
+        enabled: false
       exporter:
         image:
           repository: ghcr.io/onedr0p/exportarr
@@ -76,7 +76,7 @@ spec:
         readOnly: false
     resources:
       requests:
+        cpu: 100m
         memory: 250Mi
-        cpu: 500m
       limits:
         memory: 2000Mi
