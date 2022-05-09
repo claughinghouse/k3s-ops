@@ -22,7 +22,7 @@
 - name: Copy ceph client keyring
   ansible.builtin.template:
     src: ceph/ceph.client.keyring.j2
-    dest: /etc/ceph/ceph.client.keyring
+    dest: /etc/ceph/ceph.client.{{ SECRET_CEPH_USER }}.keyring
     owner: root
     group: root
     mode: 0644
@@ -32,7 +32,7 @@
     name: /mnt/media
     src: ":/k8s/media"
     fstype: ceph
-    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
+    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.{{ SECRET_CEPH_USER }}.keyring,_netdev,noatime
     state: mounted
 
 - name: Mount home CephFS
@@ -40,5 +40,5 @@
     name: /mnt/home
     src: ":/k8s/home"
     fstype: ceph
-    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.keyring,_netdev,noatime
+    opts: name={{ SECRET_CEPH_USER }},secretfile=/etc/ceph/ceph.client.{{ SECRET_CEPH_USER }}.keyring,_netdev,noatime
     state: mounted

@@ -43,21 +43,21 @@ spec:
     podSecurityContext:
       supplementalGroups:
         - 100
-    # metrics:
-    #   enabled: true
-    #   serviceMonitor:
-    #     interval: 5m
-    #     scrapeTimeout: 1m
-    #   prometheusRule:
-    #     enabled: false
-    #   exporter:
-    #     image:
-    #       repository: ghcr.io/onedr0p/exportarr
-    #       tag: v1.0.0
-    #     env:
-    #       port: 9794
-    #       additionalMetrics: true
-    #       unknownQueueItems: true
+    metrics:
+      enabled: true
+      serviceMonitor:
+        interval: 3m
+        scrapeTimeout: 1m
+      prometheusRule:
+        enabled: true
+      # exporter:
+      #   image:
+      #     repository: ghcr.io/onedr0p/exportarr
+      #     tag: v1.0.0
+      #   env:
+      #     port: 9794
+      #     additionalMetrics: true
+      #     unknownQueueItems: true
     persistence:
       config:
         enabled: true
@@ -76,7 +76,7 @@ spec:
         readOnly: false
     resources:
       requests:
-        cpu: 100m
         memory: 250Mi
+        cpu: 500m
       limits:
         memory: 2000Mi
