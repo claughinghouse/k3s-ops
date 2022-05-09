@@ -42,16 +42,16 @@ spec:
         tls:
           - hosts:
               - *host
-    persistence:
-      config:
-        enabled: true
-        existingClaim: tautulli-config-v1
-      # backup:
-      #   enabled: true
-      #   type: hostPath
-      #   hostPath: /mnt/media/backups/tautilli
-      #   mountPath: /config/Backups
-      #   readOnly: false
+    # persistence:
+    #   config:
+    #     enabled: true
+    #     existingClaim: tautulli-config-v1
+    #   backup:
+    #     enabled: true
+    #     type: hostPath
+    #     hostPath: /mnt/media/backups/tautilli
+    #     mountPath: /config/Backups
+    #     readOnly: false
     resources:
       requests:
         memory: 250Mi
