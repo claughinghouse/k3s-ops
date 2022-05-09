@@ -46,6 +46,7 @@ spec:
       config:
         enabled: true
         existingClaim: tautulli-config-v1
+        readOnly: false
       backup:
         enabled: true
         type: hostPath
