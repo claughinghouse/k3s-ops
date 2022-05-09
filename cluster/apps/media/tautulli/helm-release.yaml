@@ -46,13 +46,12 @@ spec:
       config:
         enabled: true
         existingClaim: tautulli-config-v1
-        readOnly: false
-      backup:
-        enabled: true
-        type: hostPath
-        hostPath: /mnt/media/backups/tautilli
-        mountPath: /config/Backups
-        readOnly: false
+      # backup:
+      #   enabled: true
+      #   type: hostPath
+      #   hostPath: /mnt/media/backups/tautilli
+      #   mountPath: /config/Backups
+      #   readOnly: false
     resources:
       requests:
         memory: 250Mi
