@@ -5,8 +5,8 @@ resources:
   - cert-manager
   - default
   - flux-system
-  # - home
-  # - kasten-io
+  - home
+  - kasten-io
   - kube-system
   - media
   - monitoring
