@@ -42,10 +42,10 @@ spec:
         tls:
           - hosts:
               - *host
-    # persistence:
-    #   config:
-    #     enabled: true
-    #     existingClaim: tautulli-config-v1
+    persistence:
+      config:
+        enabled: true
+        existingClaim: tautulli-config-v1
     #   backup:
     #     enabled: true
     #     type: hostPath
