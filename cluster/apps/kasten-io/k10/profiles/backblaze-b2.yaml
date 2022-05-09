@@ -10,7 +10,7 @@ spec:
       endpoint: "s3.${SECRET_S3_DOMAIN}"
       name: "${SECRET_KASTEN_BUCKET}"
       objectStoreType: S3
-      path: "${SECRET_KASTEN_BUCKET_PATH}"
+      # path: "${SECRET_KASTEN_BUCKET_PATH}"
       pathType: Directory
       region: "${SECRET_S3_REGION}"
     credential:
