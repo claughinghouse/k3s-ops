@@ -1,4 +1,4 @@
- {
+{
     "ansible.ansibleLint.arguments": "-c .github/linters/.ansible-lint",
     "discord.enabled": true,
     "files.associations": {
