@@ -8,7 +8,7 @@ creation_rules:
     pgp: >-
       B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     gcp_kms: projects/selfhosted-207922/locations/global/keyRings/sops/cryptoKeys/sops-key
-  - path_regex: cluster/.*\.ya?ml
+  - path_regex: cluster/.*\.sops\.ya?ml
     encrypted_regex: "^(data|stringData)$"
     age: >-
       age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
