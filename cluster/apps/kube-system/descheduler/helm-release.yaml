@@ -5,7 +5,7 @@ metadata:
   name: descheduler
   namespace: kube-system
 spec:
-  interval: 15m
+  interval: 5m
   chart:
     spec:
       chart: descheduler
@@ -14,20 +14,15 @@ spec:
         kind: HelmRepository
         name: descheduler-charts
         namespace: flux-system
-      interval: 15m
+      interval: 5m
   install:
     createNamespace: true
   values:
     kind: Deployment
-    replicas: 3
-    leaderElection:
-      enabled: true
-      leaseDuration: 15s
-      renewDeadline: 10s
-      retryPeriod: 2s
-      resourceLock: "leases"
-      resourceName: "descheduler"
-      resourceNamescape: "kube-system"
+    # TODO(descheduler): scale app on next app release
+    # replicas: 3
+    # leaderElection:
+    #   enabled: true
     deschedulerPolicy:
       strategies:
         RemoveDuplicates:
@@ -63,21 +58,5 @@ spec:
             podsHavingTooManyRestarts:
               podRestartThreshold: 100
               includingInitContainers: true
-    service:
-      enabled: true
-    serviceMonitor:
-      enabled: true
     podAnnotations:
-      configmap.reloader.stakater.com/reload: descheduler
-    affinity:
-      podAntiAffinity:
-        preferredDuringSchedulingIgnoredDuringExecution:
-          - weight: 100
-            podAffinityTerm:
-              labelSelector:
-                matchExpressions:
-                  - key: app.kubernetes.io/name
-                    operator: In
-                    values:
-                      - descheduler
-              topologyKey: kubernetes.io/hostname
+      configmap.reloader.stakater.com/reload: "descheduler"
