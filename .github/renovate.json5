@@ -5,29 +5,25 @@
     ":disableRateLimiting",
     ":dependencyDashboard",
     ":semanticCommits",
-    ":separatePatchReleases",
     "docker:enableMajor",
     ":enablePreCommit",
     "github>claughinghouse/home-ops//.github/renovate/allowedVersions.json5",
     "github>claughinghouse/home-ops//.github/renovate/autoMerge.json5",
+    "github>claughinghouse/home-ops//.github/renovate/commitMessage.json5",
+    "github>claughinghouse/home-ops//.github/renovate/groups.json5",
     "github>claughinghouse/home-ops//.github/renovate/labels.json5",
     "github>claughinghouse/home-ops//.github/renovate/semanticCommits.json5"
   ],
   "platform": "github",
   "username": "midnight-bot-6658[bot]",
-  "repositories": [
-    "claughinghouse/home-ops"
-  ],
+  "repositories": ["claughinghouse/home-ops"],
   "onboarding": false,
   "requireConfig": false,
   "gitAuthor": "midnight-bot <182125+midnight-bot[bot]@users.noreply.github.com>",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-  "suppressNotifications": [
-    "prIgnoreNotification"
-  ],
+  "suppressNotifications": ["prIgnoreNotification"],
   "rebaseWhen": "conflicted",
   "commitBodyTable": true,
-  // set up ignored deps
   "ignoreDeps": [
     "ghcr.io/fluxcd/helm-controller",
     "ghcr.io/fluxcd/image-automation-controller",
@@ -36,157 +32,59 @@
     "ghcr.io/fluxcd/notification-controller",
     "ghcr.io/fluxcd/source-controller"
   ],
-  // set up renovate managers
   "docker-compose": {
-    "fileMatch": [
-      "ansible/.+/docker-compose.*\\.ya?ml(\\.j2)?$"
-    ]
+    "fileMatch": ["ansible/.+/docker-compose.*\\.ya?ml(\\.j2)?$"]
   },
   "flux": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
-    ]
+    "fileMatch": ["cluster/.+\\.ya?ml$"]
   },
   "helm-values": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
-    ]
-  },
-  "helmv3": {
-    "fileMatch": [
-      "charts/.+/Chart\\.ya?ml$"
-    ]
+    "fileMatch": ["cluster/.+\\.ya?ml$"]
   },
   "kubernetes": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
-    ]
+    "fileMatch": ["cluster/.+\\.ya?ml$"]
   },
   "regexManagers": [
-    // Read and process GitHub Releases
     {
+      "description": "Process various dependencies",
       "fileMatch": [
-        "cluster/.+\\.ya?ml$",
         "ansible/.+\\.ya?ml$",
+        "cluster/.+\\.ya?ml$",
         "hack/.+\\.sh$"
       ],
       "matchStrings": [
-        "datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?\n *url: https:\/\/github\\.com\/(?<depName>.*?)\\.git\n *ref:\n *tag: (?<currentValue>.*)\n",
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?_version: \"(?<currentValue>.*)\"\n",
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?_VERSION=\"(?<currentValue>.*)\"\n"
+        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?\"(?<currentValue>.*)\"\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     },
-    // Read and process Custom Resource Definitions
     {
-      "fileMatch": [
-        "cluster/.+\\.ya?ml$"
-      ],
+      "description": "Process GitRepository CRD dependencies - Chart and Github Release are the same version",
+      "fileMatch": ["cluster/crds/.+\\.ya?ml$"],
       "matchStrings": [
-        "registryUrl=(?<registryUrl>.*?)\n *tag: (?<depName>[a-zA-Z-]+)-(?<currentValue>.*)\n",
-        "registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*?)\n.*\\/(?<currentValue>.*?)\\/"
+        "registryUrl=(?<registryUrl>\\S+) chart=(?<depName>\\S+)\n.*?(?<currentValue>[^-\\s]*)\n"
       ],
       "datasourceTemplate": "helm"
     },
-    // Read and process Custom Resources
     {
-      "fileMatch": [
-        "cluster/.+\\.ya?ml$"
-      ],
+      "description": "Process Kustomization CRD dependencies - Image and Github Release are the same version",
+      "fileMatch": ["cluster/crds/.+\\.ya?ml$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n .*: (?<currentValue>.*=?)"
+        "datasource=(?<datasource>\\S+) image=(?<depName>\\S+)\n.*?-\\s(.*?)\/(?<currentValue>[^/]+)\/[^/]+\n"
       ],
       "datasourceTemplate": "docker"
     }
   ],
   "packageRules": [
-    // setup datasources
     {
-      "matchDatasources": [
-        "helm"
-      ],
-      "ignoreDeprecated": true
-    },
-    {
-      "matchDatasources": [
-        "docker"
-      ],
-      "commitMessageExtra": "to {{newVersion}}"
-    },
-    // packages with custom versioning
-    {
-      "matchDatasources": [
-        "docker"
-      ],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<compatibility>.*)$",
-      "matchPackageNames": [
-        "docker.io/blakeblackshear/frigate"
-      ]
-    },
-    // packages with loose versioning
-    {
-      "matchDatasources": [
-        "docker",
-        "github-releases"
-      ],
+      "description": "Use loose versioning for certain dependencies",
+      "matchDatasources": ["docker", "github-releases"],
       "versioning": "loose",
       "matchPackageNames": [
         "ghcr.io/k8s-at-home/plex",
         "ghcr.io/k8s-at-home/qbittorrent",
         "Hypfer/Valetudo"
       ]
-    },
-    // group packages
-    {
-      "groupName": "rook-ceph-suite",
-      "matchDatasources": [
-        "docker",
-        "helm"
-      ],
-      "matchPackagePatterns": [
-        "^rook.ceph"
-      ],
-      "additionalBranchPrefix": "",
-      "separateMinorPatch": true
-    },
-    {
-      "groupName": "external-snapshotter-suite",
-      "matchDatasources": [
-        "docker",
-        "github-releases"
-      ],
-      "matchPackagePatterns": [
-        "external-snapshotter",
-        "snapshot-controller"
-      ],
-      "additionalBranchPrefix": "",
-      "separateMinorPatch": true
-    },
-    {
-      "groupName": "system-upgrade-controller-suite",
-      "matchDatasources": [
-        "docker",
-        "github-tags"
-      ],
-      "matchPackagePatterns": [
-        "rancher/system-upgrade-controller"
-      ],
-      "additionalBranchPrefix": "",
-      "separateMinorPatch": true
-    },
-    {
-      "groupName": "vector-suite",
-      "matchDatasources": [
-        "docker",
-        "github-releases",
-        "helm"
-      ],
-      "matchPackagePatterns": [
-        "vector"
-      ],
-      "additionalBranchPrefix": "",
-      "separateMinorPatch": true
     }
   ]
 }
