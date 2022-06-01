@@ -68,7 +68,7 @@ spec:
     serviceMonitor:
       enabled: true
     podAnnotations:
-      configmap.reloader.stakater.com/reload: *app
+      configmap.reloader.stakater.com/reload: descheduler
     affinity:
       podAntiAffinity:
         preferredDuringSchedulingIgnoredDuringExecution:
@@ -79,5 +79,5 @@ spec:
                   - key: app.kubernetes.io/name
                     operator: In
                     values:
-                      - *app
+                      - descheduler
               topologyKey: kubernetes.io/hostname
