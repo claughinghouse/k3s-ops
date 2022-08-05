@@ -23,10 +23,10 @@ spec:
       tag: 1.27.1
     env:
       TZ: "${TIMEZONE}"
-      DATABASE_HOST: '{{ include "common.names.fullname" .}}-postgresql'
-      DATABASE_USER: "postgres"
-      DATABASE_PASS: "{{ .Values.postgresql.auth.postgresPassword }}"
-      DATABASE_NAME: "{{ .Values.postgresql.auth.database }}"
+      # DATABASE_HOST: '{{ include "common.names.fullname" .}}-postgresql'
+      # DATABASE_USER: "postgres"
+      # DATABASE_PASS: "{{ .Values.postgresql.auth.postgresPassword }}"
+      # DATABASE_NAME: "{{ .Values.postgresql.auth.database }}"
       MQTT_HOST: "mosquitto.home"
       MQTT_USERNAME: "${SECRET_TESLAMATE_MQTT_USERNAME}"
       MQTT_PASSWORD: "${SECRET_TESLAMATE_MQTT_PASSWORD}"
@@ -54,11 +54,21 @@ spec:
         enabled: true
         existingClaim: teslamate-config-v1
         mountPath: /opt/app/import
+    # postgresql:
+    #   enabled: true
+    #   postgresqlUsername: "${SECRET_TESLAMATE_DB_USER}"
+    #   postgresqlPassword:
+    #   postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
+    #   persistence:
+    #     enabled: true
+    #     existingClaim: teslamate-db-v1
+
     postgresql:
       enabled: true
-      postgresqlUsername: "${SECRET_TESLAMATE_DB_USER}"
-      postgresqlPassword: "${SECRET_TESLAMATE_DB_PASS}"
-      postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
-      persistence:
-        enabled: true
-        existingClaim: teslamate-db-v1
+      auth:
+        postgresPassword: "${SECRET_TESLAMATE_DB_PASS}"
+        database: "${SECRET_TESLAMATE_DB}"
+      primary:
+        persistence:
+          enabled: true
+          existingClaim: teslamate-db-v1
