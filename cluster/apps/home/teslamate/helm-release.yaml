@@ -72,3 +72,5 @@ spec:
         persistence:
           enabled: true
           existingClaim: teslamate-db-v1
+      image:
+        tag: postgres:11.16
