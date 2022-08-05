@@ -24,9 +24,9 @@ spec:
     env:
       TZ: "${TIMEZONE}"
       DATABASE_HOST: '{{ include "common.names.fullname" .}}-postgresql'
-      DATABASE_USER: "{{ .Values.postgresql.postgresqlUsername }}"
-      DATABASE_PASS: "{{ .Values.postgresql.postgresqlPassword }}"
-      DATABASE_NAME: "{{ .Values.postgresql.postgresqlDatabase }}"
+      # DATABASE_USER: "{{ .Values.postgresql.postgresUsername }}"
+      DATABASE_PASS: "{{ .Values.postgresql.auth.postgresPassword }}"
+      DATABASE_NAME: "{{ .Values.postgresql.auth.database }}"
       MQTT_HOST: "mosquitto.home"
       MQTT_USERNAME: "${SECRET_TESLAMATE_MQTT_USERNAME}"
       MQTT_PASSWORD: "${SECRET_TESLAMATE_MQTT_PASSWORD}"
