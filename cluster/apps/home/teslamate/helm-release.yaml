@@ -27,6 +27,7 @@ spec:
       # DATABASE_USER: "postgres"
       # DATABASE_PASS: "{{ .Values.postgresql.auth.postgresPassword }}"
       # DATABASE_NAME: "{{ .Values.postgresql.auth.database }}"
+      ENCRYPTION_KEY: "${SECRET_TESLAMATE_ENCRYPTION_KEY}"
       MQTT_HOST: "mosquitto.home"
       MQTT_USERNAME: "${SECRET_TESLAMATE_MQTT_USERNAME}"
       MQTT_PASSWORD: "${SECRET_TESLAMATE_MQTT_PASSWORD}"
