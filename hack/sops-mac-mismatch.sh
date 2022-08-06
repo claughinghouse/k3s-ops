@@ -10,4 +10,3 @@ do
         EDITOR="vim -es +'norm Go' +':wq'" sops --ignore-mac "${file}"
     fi
 done
-Footer
