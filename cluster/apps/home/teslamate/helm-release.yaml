@@ -54,15 +54,6 @@ spec:
         enabled: true
         existingClaim: teslamate-config-v1
         mountPath: /opt/app/import
-    # postgresql:
-    #   enabled: true
-    #   postgresqlUsername: "${SECRET_TESLAMATE_DB_USER}"
-    #   postgresqlPassword:
-    #   postgresqlDatabase: "${SECRET_TESLAMATE_DB}"
-    #   persistence:
-    #     enabled: true
-    #     existingClaim: teslamate-db-v1
-
     postgresql:
       enabled: true
       auth:
