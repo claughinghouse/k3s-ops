@@ -27,3 +27,9 @@ kubeconfig*
 talosconfig*
 *.pub
 *.key
+# Extras
+config.xml
+*.pid
+# Node
+node_modules
+package-lock.json
