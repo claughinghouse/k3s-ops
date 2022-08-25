@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: ghost
-      tag: 5.10.1
+      tag: 5.11.0
     env:
       TZ: "${TIMEZONE}"
       url: "https://${SECRET_GHOST_DOMAIN}"
