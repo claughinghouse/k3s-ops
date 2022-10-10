@@ -23,12 +23,12 @@ spec:
       annotations:
         kubernetes.io/ingress.class: "nginx"
       hosts:
-        - host: &host "loki.${SECRET_PUBLIC_DOMAIN}"
+        - host: "loki.${SECRET_PUBLIC_DOMAIN}"
           paths:
             - /
       tls:
         - hosts:
-            - *host
+            - "loki.${SECRET_PUBLIC_DOMAIN}"
     serviceMonitor:
       enabled: true
     # extraArgs:
