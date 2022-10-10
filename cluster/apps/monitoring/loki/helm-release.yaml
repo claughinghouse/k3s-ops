@@ -27,8 +27,7 @@ spec:
           paths:
             - /
       tls:
-        - hosts:
-            - "loki.${SECRET_PUBLIC_DOMAIN}"
+        - hosts: "loki.${SECRET_PUBLIC_DOMAIN}"
     serviceMonitor:
       enabled: true
     # extraArgs:
