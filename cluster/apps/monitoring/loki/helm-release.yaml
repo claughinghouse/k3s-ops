@@ -18,16 +18,16 @@ spec:
   install:
     createNamespace: true
   values:
-    ingress:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: "nginx"
-      hosts:
-        - host: "loki.${SECRET_PUBLIC_DOMAIN}"
-          paths:
-            - /
-      tls:
-        - hosts: "loki.${SECRET_PUBLIC_DOMAIN}"
+    # ingress:
+    #   enabled: true
+    #   annotations:
+    #     kubernetes.io/ingress.class: "nginx"
+    #   hosts:
+    #     - host: "loki.${SECRET_PUBLIC_DOMAIN}"
+    #       paths:
+    #         - /
+    #   tls:
+    #     - hosts: "loki.${SECRET_PUBLIC_DOMAIN}"
     serviceMonitor:
       enabled: true
     # extraArgs:
