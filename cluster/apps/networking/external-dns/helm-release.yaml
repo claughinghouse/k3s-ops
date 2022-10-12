@@ -43,7 +43,7 @@ spec:
     domainFilters:
       - "${SECRET_PUBLIC_DOMAIN}"
       - "${SECRET_GHOST_DOMAIN}"
-      # - "${SECRET_GHOST_PUBLIC_DOMAIN}"
+      - "${SECRET_GHOST_PUBLIC_DOMAIN}"
     resources:
       requests:
         memory: 100Mi
