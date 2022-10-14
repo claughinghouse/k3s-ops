@@ -91,15 +91,16 @@ data:
     # Remember, these rules route traffic from cloudflared to a local service. To route traffic
     # from the internet to cloudflared, run `cloudflared tunnel route dns <tunnel> <hostname>`.
     # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
-    noTLSVerify: true
-    originServerName: ${SECRET_PUBLIC_DOMAIN}
     ingress:
     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
     - hostname: ${SECRET_GHOST_PUBLIC_DOMAIN}
       service: https://ingress-nginx-controller:443
       originRequest:
         noTLSVerify: true
-        # originServerName: ${SECRET_PUBLIC_DOMAIN}
+    - hostname: ${SECRET_GHOST_DOMAIN}
+      service: https://ingress-nginx-controller:443
+      originRequest:
+        noTLSVerify: true
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
     # in the connection from cloudflared to your local service, not from the internet to cloudflared.
