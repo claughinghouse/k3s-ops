@@ -96,7 +96,7 @@ data:
     ingress:
     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
     - hostname: ${SECRET_GHOST_PUBLIC_DOMAIN}
-      service: https://ingress-nginx-controller.networking.svc.cluster.local:443
+      service: https://ingress-nginx-controller:443
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
     # in the connection from cloudflared to your local service, not from the internet to cloudflared.
