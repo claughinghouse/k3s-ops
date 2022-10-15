@@ -37,7 +37,7 @@ spec:
         annotations:
           external-dns.alpha.kubernetes.io/hostname: ${SECRET_GHOST_PUBLIC_DOMAIN}
           external-dns.alpha.kubernetes.io/target: ${SECRET_GHOST_PUBLIC_DOMAIN}
-          external-dns/is-public: "true"
+          external-dns/is-public: "false"
           nginx.ingress.kubernetes.io/from-to-www-redirect: "false"
           nginx.ingress.kubernetes.io/http2-push-preload: "true"
         hosts:
