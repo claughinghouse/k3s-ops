@@ -7,6 +7,7 @@ resources:
   - echo-server
   - external-dns
   - ingress-nginx
+  - k8s-gateway
   - opnsense
   - theme-park
   - wildcard-certificate
