@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cloudflared
-          image: cloudflare/cloudflared:2022.11.0
+          image: cloudflare/cloudflared:2022.11.1
           args:
             - tunnel
             # Points cloudflared to the config file, which configures what
@@ -97,7 +97,7 @@ data:
       service: https://ingress-nginx-controller:443
       originRequest:
         noTLSVerify: true
-    - hostname: ${SECRET_GHOST_DOMAIN}
+    - hostname: old.${SECRET_GHOST_DOMAIN}
       service: https://ingress-nginx-controller:443
       originRequest:
         noTLSVerify: true
