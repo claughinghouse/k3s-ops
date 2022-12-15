@@ -1,5 +1,3 @@
-
-
 {
   "extends": [
     "config:base",
@@ -19,34 +17,47 @@
   ],
   "platform": "github",
   "username": "midnight-bot-6658[bot]",
-  "repositories": ["claughinghouse/home-ops"],
+  "repositories": [
+    "claughinghouse/home-ops"
+  ],
   "onboarding": false,
   "requireConfig": false,
   "gitAuthor": "midnight-bot <182125+midnight-bot[bot]@users.noreply.github.com>",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-  "suppressNotifications": ["prIgnoreNotification"],
+  "suppressNotifications": [
+    "prIgnoreNotification"
+  ],
   "rebaseWhen": "conflicted",
   "commitBodyTable": true,
-  "ignorePaths": ["archive/**"],
-  "schedule": [
-    "before 2am"
+  "ignorePaths": [
+    "archive/**"
   ],
   "docker-compose": {
-    "fileMatch": ["ansible/.+/docker-compose.*\\.ya?ml(\\.j2)?$"]
+    "fileMatch": [
+      "ansible/.+/docker-compose.*\\.ya?ml(\\.j2)?$"
+    ]
   },
   "flux": {
-    "fileMatch": ["cluster/.+\\.ya?ml$"]
+    "fileMatch": [
+      "cluster/.+\\.ya?ml$"
+    ]
   },
   "helm-values": {
-    "fileMatch": ["cluster/.+\\.ya?ml$"]
+    "fileMatch": [
+      "cluster/.+\\.ya?ml$"
+    ]
   },
   "kubernetes": {
-    "fileMatch": ["cluster/.+\\.ya?ml$"]
+    "fileMatch": [
+      "cluster/.+\\.ya?ml$"
+    ]
   },
   "regexManagers": [
     {
       "description": "Process CRD dependencies",
-      "fileMatch": ["cluster/.+\\.ya?ml$"],
+      "fileMatch": [
+        "cluster/.+\\.ya?ml$"
+      ],
       "matchStrings": [
         // GitRepository where 'Git release/tag' matches 'Helm' version
         "registryUrl=(?<registryUrl>\\S+) chart=(?<depName>\\S+)\n.*?(?<currentValue>[^-\\s]*)\n",
@@ -69,7 +80,9 @@
     },
     {
       "description": "Process raw GitHub URLs",
-      "fileMatch": ["cluster/.+\\.ya?ml$"],
+      "fileMatch": [
+        "cluster/.+\\.ya?ml$"
+      ],
       "matchStrings": [
         "https:\\/\\/raw.githubusercontent.com\\/(?<depName>[\\w\\d\\-_]+\\/[\\w\\d\\-_]+)\\/(?<currentValue>[\\w\\d\\.\\-_]+)\\/.*"
       ],
@@ -80,7 +93,10 @@
   "packageRules": [
     {
       "description": "Use loose versioning for certain dependencies",
-      "matchDatasources": ["docker", "github-releases"],
+      "matchDatasources": [
+        "docker",
+        "github-releases"
+      ],
       "versioning": "loose",
       "matchPackageNames": [
         "ghcr.io/onedr0p/plex",
@@ -90,9 +106,13 @@
     },
     {
       "description": "Use custom versioning for Minio",
-      "matchDatasources": ["docker"],
+      "matchDatasources": [
+        "docker"
+      ],
       "versioning": "regex:^RELEASE\\.(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)T.*Z(-(?<compatibility>.*))?$",
-      "matchPackageNames": ["quay.io/minio/minio"]
+      "matchPackageNames": [
+        "quay.io/minio/minio"
+      ]
     }
   ]
 }
