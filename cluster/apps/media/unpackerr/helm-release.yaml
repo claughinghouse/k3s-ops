@@ -21,7 +21,7 @@ spec:
     fullnameOverride: *app
     image:
       repository: docker.io/golift/unpackerr
-      tag: 0.10.1
+      tag: 0.11.1
     env:
       TZ: "${TIMEZONE}"
       UN_SONARR_0_URL: http://sonarr:8989
