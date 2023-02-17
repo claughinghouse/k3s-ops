@@ -10,7 +10,7 @@ terraform {
   required_providers {
     b2 = {
       source  = "Backblaze/b2"
-      version = "0.8.1"
+      version = "0.8.2"
     }
     sops = {
       source  = "carlpett/sops"
