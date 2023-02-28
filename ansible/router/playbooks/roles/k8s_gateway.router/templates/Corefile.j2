@@ -9,7 +9,7 @@ local
 prometheus 10.1.101.1:9153
 }
 
-(localhostz) {
+(localhost) {
 # dnsmasq is only enabled for setting hostnames in Opnsense
 hosts /var/etc/dnsmasq-hosts {
 ttl 1
@@ -18,13 +18,13 @@ fallthrough
 }
 }
 
-(k8s_gatewayz) {
+(k8s_gateway) {
 forward . 192.168.69.108:53
 }
 
 . {
 import common
-import localhostz
+import localhost
 forward . tls://1.1.1.1 tls://1.0.0.1 {
 tls_servername cloudflare-dns.com
 }
@@ -35,18 +35,18 @@ lameduck 5s
 
 {{ SECRET_PUBLIC_DOMAIN }} {
 import common
-import localhostz
-import k8s_gatewayz
+import localhost
+import k8s_gateway
 }
 
 {{ SECRET_PRIVATE_DOMAIN }} {
 import common
-import localhostz
-import k8s_gatewayz
+import localhost
+import k8s_gateway
 }
 
 {# {{ SECRET_EMAIL_DOMAIN }} {
 import common
-import localhostz
-import k8s_gatewayz
+import localhost
+import k8s_gateway
 } #}
