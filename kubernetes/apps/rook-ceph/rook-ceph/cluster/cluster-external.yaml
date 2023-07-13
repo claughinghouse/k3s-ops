@@ -5,8 +5,8 @@ metadata:
   name: rook-ceph
   namespace: rook-ceph # namespace:cluster
 spec:
-  # external:
-  #   enable: true
+  external:
+    enable: true
   crashCollector:
     disable: true
   dataDirHostPath: /var/lib/rook
