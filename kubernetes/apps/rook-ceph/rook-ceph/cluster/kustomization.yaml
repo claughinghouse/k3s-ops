@@ -6,6 +6,6 @@ namespace: rook-ceph
 resources:
   - ./helmrelease.yaml
   - ./secret.sops.yaml
-  # - ./configmap.sops.yaml
+  - ./configmap.sops.yaml
   - ./cluster-external.yaml
   - ./storageclass.yaml
