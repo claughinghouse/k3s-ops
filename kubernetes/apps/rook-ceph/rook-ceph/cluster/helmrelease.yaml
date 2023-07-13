@@ -28,20 +28,27 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    crds:
+      enabled: false
+    csi:
+      enableCephfsDriver: true
+      enableCephfsSnapshotter: true
     monitoring:
       enabled: true
-      createPrometheusRules: true
-    ingress:
-      dashboard:
-        ingressClassName: nginx
-        host:
-          name: &host rook.${SECRET_DOMAIN_NAME}
-          path: /
-        tls:
-          - hosts:
-              - *host
-    toolbox:
-      enabled: true
+    # monitoring:
+    #   enabled: true
+    #   createPrometheusRules: true
+    # ingress:
+    #   dashboard:
+    #     ingressClassName: nginx
+    #     host:
+    #       name: &host rook.${SECRET_DOMAIN_NAME}
+    #       path: /
+    #     tls:
+    #       - hosts:
+    #           - *host
+    # toolbox:
+    #   enabled: true
     # cephClusterSpec:
     #   external:
     #     enable: true
