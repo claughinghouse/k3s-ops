@@ -43,8 +43,8 @@ spec:
     toolbox:
       enabled: true
     cephClusterSpec:
-      # external:
-      #   enable: true
+      external:
+        enable: true
       # crashCollector:
       #   disable: true
       # dataDirHostPath: /var/lib/rook
