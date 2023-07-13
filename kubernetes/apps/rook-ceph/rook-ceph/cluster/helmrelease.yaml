@@ -42,23 +42,23 @@ spec:
               - *host
     toolbox:
       enabled: true
-    cephClusterSpec:
-      external:
-        enable: true
-      # crashCollector:
-      #   disable: true
-      # dataDirHostPath: /var/lib/rook
-      # cephVersion:
-      #   image: quay.io/ceph/ceph:v17.2.6
-      # healthCheck:
-      #   daemonHealth:
-      #     mon:
-      #       disabled: false
-      #       interval: 45s
-      dashboard:
-        enabled: true
-        urlPrefix: /
-        ssl: false
+    # cephClusterSpec:
+    #   external:
+    #     enable: true
+    # crashCollector:
+    #   disable: true
+    # dataDirHostPath: /var/lib/rook
+    # cephVersion:
+    #   image: quay.io/ceph/ceph:v17.2.6
+    # healthCheck:
+    #   daemonHealth:
+    #     mon:
+    #       disabled: false
+    #       interval: 45s
+    # dashboard:
+    #   enabled: true
+    #   urlPrefix: /
+    #   ssl: false
 
     # cephBlockPools:
     #   - name: ceph-blockpool
