@@ -28,5 +28,10 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    crds:
+      enabled: false
+    csi:
+      enableCephfsDriver: true
+      enableCephfsSnapshotter: true
     monitoring:
       enabled: true
