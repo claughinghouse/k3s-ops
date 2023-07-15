@@ -44,7 +44,6 @@ spec:
           reclaimPolicy: Delete
           allowVolumeExpansion: true
           parameters:
-            clusterID: rook-ceph
             pool: k8s
             imageFormat: "2"
             imageFeatures: layering
