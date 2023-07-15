@@ -8,4 +8,4 @@ resources:
   - ./secret.sops.yaml
   - ./configmap.sops.yaml
   - ./cluster-external.yaml
-  - ./storageclass.yaml
+  # - ./storageclass.yaml
