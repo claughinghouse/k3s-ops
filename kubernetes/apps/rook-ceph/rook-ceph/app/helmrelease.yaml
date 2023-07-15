@@ -29,7 +29,7 @@ spec:
     keepHistory: false
   values:
     crds:
-      enabled: false
+      enabled: true
     csi:
       enableCephfsDriver: true
       enableCephfsSnapshotter: true
