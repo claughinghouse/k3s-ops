@@ -5,4 +5,4 @@ resources:
   - github.com/rancher/system-upgrade-controller?ref=v0.13.0
 images:
   - name: rancher/system-upgrade-controller
-    newTag: v0.11.0
+    newTag: v0.13.0
