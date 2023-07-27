@@ -9,7 +9,7 @@ spec:
   # renovate: datasource=github-releases
   url: https://github.com/grafana/agent.git
   ref:
-    tag: v0.35.1
+    tag: v0.35.2
   ignore: |
     # exclude all
     /*
