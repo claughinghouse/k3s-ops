@@ -6,4 +6,4 @@ namespace: networking
 resources:
   - ./dnsendpoint-crd.yaml
   - ./cloudflare
-  - ./bind
+  # - ./bind
