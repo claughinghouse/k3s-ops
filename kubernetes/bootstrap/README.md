@@ -5,7 +5,9 @@
 ### Install Flux
 
 ```sh
+sops --decrypt -i kubernetes/bootstrap/flux/gotk-components.yaml
 kubectl apply --server-side --kustomize ./kubernetes/bootstrap/flux
+sops --encrypt kubernetes/bootstrap/flux/gotk-components.yaml
 ```
 
 ### Apply Cluster Configuration
