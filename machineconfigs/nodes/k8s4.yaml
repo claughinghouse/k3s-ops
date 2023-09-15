@@ -1,0 +1,72 @@
+---
+machine:
+  install:
+    wipe: true
+    disk: none
+    diskSelector:
+      model: INTEL SSD*
+    image: ghcr.io/siderolabs/installer:v1.5.0
+  network:
+    hostname: ENC[AES256_GCM,data:jcc+tQ==,iv:xJZE+5rm8awgP8T6vd4qAL8yT4CUVaExJrxiKe/ZYS4=,tag:8/x5ds4sqq4hRNs9soz9Ww==,type:str]
+    nameservers:
+      - 1.1.1.1
+      - 8.8.8.8
+      - 1.0.0.1
+      - 8.8.4.4
+    interfaces:
+      - interface: eno4
+        dhcp: false
+        vlans:
+          - vlanId: 4000
+            addresses:
+              - ENC[AES256_GCM,data:iZL94Gz2yVIx6VojgHbyRvE=,iv:rC4wlct68ErLg9CUB/C2q07n5i1xY2KboSXR8j/W2Tg=,tag:/1vYAElS/hV0kF9rupzAMA==,type:str]
+            routes:
+              - network: 0.0.0.0/0
+                gateway: ENC[AES256_GCM,data:xDc/r3aEwMN03Ce6kKI=,iv:VcI9YNkU0ktNlHVCbZtGLM7TGjfEMuXjzRuh0Isfhvs=,tag:gB/6z8ILv4xmMp3aZeB8vw==,type:str]
+sops:
+  shamir_threshold: 2
+  key_groups:
+    - hc_vault: []
+      age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNa2s2MTdtbDBPWitSdElR
+            aFM0V1BFU1NmSVRyL0t4UGQ0dG5lUGt4STNjCnBrNTB5YmFwbmtHaEkxOGRxSVdZ
+            blhlMnArbHRJMFpPTldQME5jK2lRNWsKLS0tIG9wKzNKdzRUTDI5ZllWcHVvbW5D
+            WkFjdldlMm10MXJSaFhVSlY3V3JUNGsKbT+/TkxscpMgby9xTQbvkjDGdvX29fJ3
+            K6q1jhwQwmfEWMd4+GjOSuBgZfzsweJhqSmqHj3DpHwzCrKwx0BnrLw=
+            -----END AGE ENCRYPTED FILE-----
+    - pgp:
+        - created_at: "2023-09-15T19:23:49Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ/+L3lUCNr2UcYmsOHpXwNAfu6yYHrVKrzl9OXuJFyBmktX
+            8Pg2Jd1okQ+F3TjJMWMbGhMUa2cSzT+V/Ca95GsbHFVC72H/VHWh8KaljGqkNSA3
+            cT68Zal9UovZLGtmXJgv8G4o8S9L1xEHyUqlUKhZ0wr2OiJtrmBaOmPQpFfUyDVb
+            dEoKeahqxrTeRX6imYV6WQAxeAxnnSz5CtfSgGz6NiUTIq2obGG7TKn3NwL+KKCg
+            yrlMlO0dAGoLAO9kUJnRW+k4TVCA9eD1F06yBPhpraw6J9S1We8qKltj3HSTJBsU
+            sf7G58bF79WnQvz2pQ6aztQ/oN3HJcCL8/3GDZ6GWvJZTyu+xxW/m8hY4C/BE7/Q
+            Jvb30ol2qoAmX4NRtvcM4L7qqdj3/5NEdnjCF6QraLa+OZkivKltQBR1cohiXgDR
+            3H3w5y0jWY5IuJj+tj/qK9Ikb6duTks93EG5W/DzIgW8IfMNAZ1hG+Qkua3ZZG0R
+            KbP3AJ0x05pGah15HYQVY1YVLwck3KMsQBR1iRRP7rkZ9bgkzuRwIu/TtUgrTOau
+            5CPwqx4qzldNftyBEUzLrG5Bgu+3GkKoUDAHGbkWWXwTykPFgtedgo2/OrNaRMKL
+            YfKmG3/bWY2I2IOsU0g0CgZ2Dz+WJNliwH/hmGNjUfIjLwEyxd/OspL2B5Xh0rfS
+            XwGWrzvBMzkOfckyqlFQ+w/5tf6d6bWlHhRI9mcNGmfj2EhZfPbokPP44SBn9XX3
+            CQl7XxA4Dhl1KyfBj74MPYfazkUj6zVi4xYtLrhVaV9dkaJoJFmWtlky7W+kWPvp
+            =35Ib
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+      hc_vault: []
+      age: []
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age: []
+  lastmodified: "2023-09-15T19:23:49Z"
+  mac: ENC[AES256_GCM,data:Oau+/Xl4FfdL9/NScg9TMNCrOZ1tjsZr7JM3dYnqtWU3ld6bzmyQYSbqII7SosQ0JucLO1CJTt2HlPgzc/zIm9o6OEFf+0nm4agACWJVTWHopbO59o4zJSSavTDzF72HizK/Y7wgksrX85Rf4bKbUjNL85IYtYPRnYHr8S05eyI=,iv:GSt/mrwRsJCmwHvp5NYmtvjMVKue03r0zAR+ncgREUE=,tag:wodKp7EulSeO9xu6wDxSMQ==,type:str]
+  pgp: []
+  encrypted_regex: ^(crt|certSANs|dnsDomain|endpoint|secret|bootstraptoken|clusterName|hostname|secretboxEncryptionSecret|token|key|password|addresses|gateway)$
+  version: 3.7.3

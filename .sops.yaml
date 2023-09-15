@@ -31,3 +31,31 @@ creation_rules:
           - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
       - pgp:
           - B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  - path_regex: machineconfigs/.*.yaml
+    encrypted_regex: ^(crt|certSANs|dnsDomain|endpoint|secret|bootstraptoken|clusterName|hostname|secretboxEncryptionSecret|token|key|password|addresses|gateway|id)$
+    key_groups:
+      - age:
+          - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+      - pgp:
+          - B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  - path_regex: secrets.yaml
+    encrypted_regex: ^(secret|bootstraptoken|secretboxencryptionsecret|token|key)$
+    key_groups:
+      - age:
+          - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+      - pgp:
+          - B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  - path_regex: kubeconfig
+    encrypted_regex: ^client-key-data$
+    key_groups:
+      - age:
+          - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+      - pgp:
+          - B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  - path_regex: talosconfig
+    encrypted_regex: ^key$
+    key_groups:
+      - age:
+          - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+      - pgp:
+          - B3BB654B6CAAA312F49C37DF9CEFDEA122154047

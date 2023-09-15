@@ -1,0 +1,51 @@
+cluster:
+  clusterName: ENC[AES256_GCM,data:rIIZ,iv:zSm8JEjh8iOlMD3O8TL1jZ0spaqcAHDzTPp4qqv7Yx0=,tag:A3oZkfCFTvjL2/eBQJLsdg==,type:str]
+  network:
+    dnsDomain: ENC[AES256_GCM,data:hwYfQzWjwQdWnFvsDhBrqoQ=,iv:zED2n3WKbQ0GuJyOhydQqT+zG7rnmCwOuXMsnS+wB+Q=,tag:x7Zi9mOkyaN7HFnhkXMn0g==,type:str]
+sops:
+  shamir_threshold: 2
+  key_groups:
+    - hc_vault: []
+      age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2NzRuYm1TbDZqQnppUXpB
+            K2ZtbVBwSUwvYnJ4L3NJZG5qTVp2aEdwc3dBCm4yRVdwV2FTc1dQWEFjb1ptUjF4
+            RGNiYnlHaWRlN0RqeXIrR0hBZlpxNlEKLS0tIDhFb29sRDlvMS9jK0JvbmpsTEF0
+            OFRQb3dQb1JZTkVTc05EamdlNmRncGcKe1CaydIPZG+VoG1L8sLOBUEu7FoYKBao
+            yz+Yr8Lmzz8Us0fPQYFVYR5IIYwkswmc/41ifZJh88LmD+bcWNLoNpk=
+            -----END AGE ENCRYPTED FILE-----
+    - pgp:
+        - created_at: "2023-09-15T19:22:33Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ//XF/oL1GU8L+nAQLYvoYMc5p9sLKUsmpSc0F1AoRqp3t2
+            s4KcPOsj2CUW9toT8vGH0Eec4+vmhLxknfFErPxaaop4+4d2btOgQDMoWUm4dKrw
+            n+Ks4Rt3IV3XRUXLuqcDtvxpd/qGbORcOP0Zyo5aDrAh8UPiqV6vaB12g7D+bkXX
+            WnECi7I/dZPwO3Xk05Y5uJtZEbuYU0EHjktZoTFiKgz83I22D+mqRGHk9EYolkW1
+            V4E6ppeja4et0z65OjMcf0UMONN2vHAkxQcZrSfBhQ1r0e8PVc4kgwKngq0igFQ7
+            E/zMI9woG+hcqbWkXEbKDu1jtXXBQtBcrZVkxhwo1UqCfSFCyTEAwmXy/olM49oI
+            d6f94BgfBFIgyH03LQmumUTXersedu/eEII4X9+wCO//vVSdhGs1xIHeS88YQQ65
+            sYiOpWu2HMP7z4ehJDMjXBdIDhF8a5A42DAJOF4xBn8wZjAmp9kGZMDOdT6hOtYh
+            6Vo+ZABLtVSqY/Z6MVXt2m4mBn3a44EDEbUNZfk6QQNN0cDPpXUM4BUGReJH1Ffi
+            ZK6GfXFmZBfUws4ILHI1cVKEJQfs1zXX07WDDFBwlQD6me09Da7wKeNywkW7wefG
+            nMx1hdKIHYtrGMN5V+IvL+XMrdr7YyrFG2fgF2ntcmiCzMEbnKYOZjHh/+AjYpnS
+            XwH6B6J9f5LFjWitPl7NeRK9TSp31ySGG3E/0Evzr1LnAGrh5FV1KK8+flDI+Ofj
+            fFghHE672MvOjJ8uihl/g7PKZmzZ09KZBiykl3gpvWg2zcjT47mV/R0m16rodhM0
+            =QvkY
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+      hc_vault: []
+      age: []
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age: []
+  lastmodified: "2023-09-15T19:22:34Z"
+  mac: ENC[AES256_GCM,data:BOWs0E7XGA0s6WEAqrXl6rbQ6Bnw6upxPw3KSh/oaXIX2f0csNuJUP2Ky3e1xCplNKn16Z5tGyDEwnxB07T13NF+SYFZvtZi8C4VHI+slTiAuK/kQ5OwqMkW1QPzaVIEosIMFzAC+zZevVUrIAHnbIX/oH86L+/XYIC1KtXa1o4=,iv:CkIqwbfFhcbpPhHbkuScLgrOs0q9zJPxJ+WzK0BqLN4=,tag:RRlZfQAcj1BDnkcD88GRow==,type:str]
+  pgp: []
+  encrypted_regex: ^(crt|certSANs|dnsDomain|endpoint|secret|bootstraptoken|clusterName|secretboxEncryptionSecret|token|key|password|addresses|gateway)$
+  version: 3.7.3
