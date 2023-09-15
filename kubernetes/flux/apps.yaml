@@ -20,16 +20,3 @@ spec:
     substituteFrom:
       - kind: Secret
         name: cluster-secrets
-  patches:
-    - patch: |-
-        apiVersion: kustomize.toolkit.fluxcd.io/v1
-        kind: Kustomization
-        spec:
-          decryption:
-            provider: sops
-            secretRef:
-              name: sops-age
-          postBuild:
-            substituteFrom:
-              - kind: Secret
-                name: cluster-secrets
