@@ -6,7 +6,7 @@ metadata:
   name: home-kubernetes
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 5m
   url: ssh://git@github.com/claughinghouse/home-ops
   ref:
     branch: main
@@ -25,7 +25,7 @@ metadata:
   name: cluster
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 5m
   path: ./kubernetes/flux
   prune: true
   wait: false
@@ -40,4 +40,3 @@ spec:
     substituteFrom:
       - kind: Secret
         name: cluster-secrets
-        optional: false
