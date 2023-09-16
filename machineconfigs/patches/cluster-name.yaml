@@ -1,8 +1,7 @@
----
 cluster:
-  clusterName: ENC[AES256_GCM,data:rIIZ,iv:zSm8JEjh8iOlMD3O8TL1jZ0spaqcAHDzTPp4qqv7Yx0=,tag:A3oZkfCFTvjL2/eBQJLsdg==,type:str]
+  clusterName: ENC[AES256_GCM,data:ZdU3nygfVwMH09YHGEFV7dQ=,iv:vN6s/PlIzYU49/Tq1IMKFMomdMCrQmhKlqjxLU41Qb8=,tag:ZYlVTzvQoUFCtYRBKDXk/g==,type:str]
   network:
-    dnsDomain: ENC[AES256_GCM,data:hwYfQzWjwQdWnFvsDhBrqoQ=,iv:zED2n3WKbQ0GuJyOhydQqT+zG7rnmCwOuXMsnS+wB+Q=,tag:x7Zi9mOkyaN7HFnhkXMn0g==,type:str]
+    dnsDomain: ENC[AES256_GCM,data:+M65hYmZYwWisgo6EQzZgR49dTXz26g=,iv:4fdmY5rmMCUpiB23rh5qoXKeu62FtRoFlGaaezT8uiA=,tag:fdSjlI34tNvPp/OltDaFFA==,type:str]
 sops:
   shamir_threshold: 2
   key_groups:
@@ -11,31 +10,31 @@ sops:
         - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2NzRuYm1TbDZqQnppUXpB
-            K2ZtbVBwSUwvYnJ4L3NJZG5qTVp2aEdwc3dBCm4yRVdwV2FTc1dQWEFjb1ptUjF4
-            RGNiYnlHaWRlN0RqeXIrR0hBZlpxNlEKLS0tIDhFb29sRDlvMS9jK0JvbmpsTEF0
-            OFRQb3dQb1JZTkVTc05EamdlNmRncGcKe1CaydIPZG+VoG1L8sLOBUEu7FoYKBao
-            yz+Yr8Lmzz8Us0fPQYFVYR5IIYwkswmc/41ifZJh88LmD+bcWNLoNpk=
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBrclZSZE5lWDdyWGVGM09o
+            ZzY0R0JPZ3BGTW1PZkxBdGJJbUxZdXVKd2lFCjBnTXVhcHpsc0tjWm95dVQwT0xP
+            eUlRMWNRZnVOZFNOdEhZb1AwcmxwU0UKLS0tIGI1Nyt0UHJpMmsrRjAwWFdDNUNN
+            UW1uV256UEVIZjNCbnhDbC9MbFArc0UKd88DZE86BxNuzP6Qu6eryB5pKBt3uu1l
+            +91n6rVkshxErIQMHLGBHv9SzzK6gSHCHTKI/QIlrYpLRZLPquWuzaI=
             -----END AGE ENCRYPTED FILE-----
     - pgp:
-        - created_at: "2023-09-15T19:22:33Z"
+        - created_at: "2023-09-16T01:43:26Z"
           enc: |
             -----BEGIN PGP MESSAGE-----
 
-            hQIMAyQ1SH08BnVLAQ//XF/oL1GU8L+nAQLYvoYMc5p9sLKUsmpSc0F1AoRqp3t2
-            s4KcPOsj2CUW9toT8vGH0Eec4+vmhLxknfFErPxaaop4+4d2btOgQDMoWUm4dKrw
-            n+Ks4Rt3IV3XRUXLuqcDtvxpd/qGbORcOP0Zyo5aDrAh8UPiqV6vaB12g7D+bkXX
-            WnECi7I/dZPwO3Xk05Y5uJtZEbuYU0EHjktZoTFiKgz83I22D+mqRGHk9EYolkW1
-            V4E6ppeja4et0z65OjMcf0UMONN2vHAkxQcZrSfBhQ1r0e8PVc4kgwKngq0igFQ7
-            E/zMI9woG+hcqbWkXEbKDu1jtXXBQtBcrZVkxhwo1UqCfSFCyTEAwmXy/olM49oI
-            d6f94BgfBFIgyH03LQmumUTXersedu/eEII4X9+wCO//vVSdhGs1xIHeS88YQQ65
-            sYiOpWu2HMP7z4ehJDMjXBdIDhF8a5A42DAJOF4xBn8wZjAmp9kGZMDOdT6hOtYh
-            6Vo+ZABLtVSqY/Z6MVXt2m4mBn3a44EDEbUNZfk6QQNN0cDPpXUM4BUGReJH1Ffi
-            ZK6GfXFmZBfUws4ILHI1cVKEJQfs1zXX07WDDFBwlQD6me09Da7wKeNywkW7wefG
-            nMx1hdKIHYtrGMN5V+IvL+XMrdr7YyrFG2fgF2ntcmiCzMEbnKYOZjHh/+AjYpnS
-            XwH6B6J9f5LFjWitPl7NeRK9TSp31ySGG3E/0Evzr1LnAGrh5FV1KK8+flDI+Ofj
-            fFghHE672MvOjJ8uihl/g7PKZmzZ09KZBiykl3gpvWg2zcjT47mV/R0m16rodhM0
-            =QvkY
+            hQIMAyQ1SH08BnVLAQ/+P7TL7ibV5O/e+TNveK1t+JaQ+3a1DwHHzYV7glO2ycxS
+            LvBVYfWuBCI+ftU3Kgdoe7jFEYhztN+0z6PixacVvF6JrT2aEL+BVutHupArA9jK
+            B0QaNzaOjKS5F/u8dBViDRVn5il0BsGbfKi9YGL3xQvvY9c5FlyyQd3mFBugTCwS
+            lyQoUMEQi/EMKLdcc1fjdIscu135KVD3uzEa4nvrHEkzYIDp8fDavqBCy+qSl5ig
+            oGe2q9rnPsjKcK2T89+DdLiswWEa9ZSsdZThhoZ4zyTZLLY1pDa9f1aRcF7MWli4
+            HNcuI0NiMiReZdY1O77iPrcs25B3TsMBZGlVwtutm8mYKUZEc1drvpZZmx1qXKFt
+            V2uiBE3H6eS6OUs5wOEpqdaQM2RMd5mo+wJ1nlhGi1kjfg+g52UMLArSK1GiK//d
+            5NE1oDcDkrEBY0EF3QGSI14/sfe65AZqh/mxusr5G74f3UsilMjf0nF45b3T3IQS
+            j9qLtx2p3x7drJa0pBoUFCQ5ediIOFYJEgn6YzX3Sh2y47IUWWFiyFR6F44ifCWk
+            diXh8s51Tm7Vtrd89WVFajWOYZhiKql/jL+kr3X23qTw/RX5n1AA11tPvDWoQDZw
+            LIdaCLPM+GylMHLQOPn+5xHmmdOV2zzGJQs+rTcFb3DXT6s9y2a86mnhekEOKtnS
+            XwGNcHFu1shiLseUOf21oK2M7VTfpE55wQfVuocRVlqOq4BmysFpzEYdls2A5NH4
+            ilnQ81n/tNqtrk1PsWMP0ZqQgwjZJAcJGdnf8xwkiEvOS1O2g9VCiA9IbSs0UER6
+            =cLIC
             -----END PGP MESSAGE-----
           fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
       hc_vault: []
@@ -45,8 +44,8 @@ sops:
   azure_kv: []
   hc_vault: []
   age: []
-  lastmodified: "2023-09-15T19:22:34Z"
-  mac: ENC[AES256_GCM,data:BOWs0E7XGA0s6WEAqrXl6rbQ6Bnw6upxPw3KSh/oaXIX2f0csNuJUP2Ky3e1xCplNKn16Z5tGyDEwnxB07T13NF+SYFZvtZi8C4VHI+slTiAuK/kQ5OwqMkW1QPzaVIEosIMFzAC+zZevVUrIAHnbIX/oH86L+/XYIC1KtXa1o4=,iv:CkIqwbfFhcbpPhHbkuScLgrOs0q9zJPxJ+WzK0BqLN4=,tag:RRlZfQAcj1BDnkcD88GRow==,type:str]
+  lastmodified: "2023-09-16T01:43:27Z"
+  mac: ENC[AES256_GCM,data:04l2/EYf9qbb591+YbNzk0N+tUrk2Tfyqn+H0PFc31o40jT30UyZHhlu8MTIv8LZxsVHUK3FX/Ofc4LsnXNdHm83bzD9QlEa80WdhvqlLcW2UQdoYI0WXW39Z64gEfvPwxhzG09syDF6Yf7Gh8+G5kD9TkK8qAOcZUmv3mISGuc=,iv:ZCXOtlw/VTXRSc8eCqMOFT7fmlyLxjLP2HYJyb6Bh4U=,tag:JfiNaYBs+EbU0o0IVmVGaw==,type:str]
   pgp: []
-  encrypted_regex: ^(crt|certSANs|dnsDomain|endpoint|secret|bootstraptoken|clusterName|secretboxEncryptionSecret|token|key|password|addresses|gateway)$
+  encrypted_regex: ^(crt|certSANs|dnsDomain|endpoint|secret|bootstraptoken|clusterName|hostname|secretboxEncryptionSecret|token|key|password|addresses|gateway|id)$
   version: 3.7.3
