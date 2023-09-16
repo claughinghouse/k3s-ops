@@ -25,3 +25,9 @@ sops --decrypt kubernetes/flux/vars/cluster-secrets.sops.yaml | kubectl apply -f
 ```sh
 kubectl apply --server-side --kustomize ./kubernetes/flux/config
 ```
+
+### Reset Talos
+
+```sh
+talosctl reset --system-labels-to-wipe STATE --system-labels-to-wipe EPHEMERAL --graceful=false --reboot --nodes $NODE_IP
+```
