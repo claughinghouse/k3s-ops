@@ -6,7 +6,7 @@ metadata:
   name: cilium
   namespace: flux-system
 spec:
-  path: ./kubernetes/apps/kube-system/cilium/app
+  path: ./kubernetes/flux/kube-system/cilium/app
   prune: false # never should be deleted
   sourceRef:
     kind: GitRepository
