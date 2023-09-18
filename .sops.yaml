@@ -66,3 +66,11 @@ creation_rules:
           - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
       - pgp:
           - B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+  # Encrypt firewall rules
+  - path_regex: kubernetes/.*\.ya?ml
+    encrypted_regex: "^(data|stringData|fromCIDR)$"
+    key_groups:
+      - age:
+          - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+      - pgp:
+          - B3BB654B6CAAA312F49C37DF9CEFDEA122154047

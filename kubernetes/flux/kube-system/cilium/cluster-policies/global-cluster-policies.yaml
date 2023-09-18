@@ -1,10 +1,10 @@
-apiVersion: "cilium.io/v2"
+apiVersion: cilium.io/v2
 kind: CiliumClusterwideNetworkPolicy
 metadata:
-  name: "host-fw-control-plane"
+  name: host-fw-control-plane
   namespace: kube-system
 spec:
-  description: "control-plane specific access rules."
+  description: control-plane specific access rules.
   nodeSelector:
     matchLabels:
       node-role.kubernetes.io/control-plane: ""
@@ -16,8 +16,7 @@ spec:
       toPorts:
         - ports:
             - port: "6443"
-              protocol: "TCP"
-
+              protocol: TCP
     # Allow access to talos from anywhere.
     # https://www.talos.dev/v1.4/learn-more/talos-network-connectivity/
     - fromEntities:
@@ -26,20 +25,18 @@ spec:
       toPorts:
         - ports:
             - port: "50000"
-              protocol: "TCP"
+              protocol: TCP
             - port: "50001"
-              protocol: "TCP"
-
+              protocol: TCP
     # Allow kube-proxy-replacement from kube-apiserver
     - fromEntities:
         - kube-apiserver
       toPorts:
         - ports:
             - port: "10250"
-              protocol: "TCP"
+              protocol: TCP
             - port: "4244"
-              protocol: "TCP"
-
+              protocol: TCP
     # Allow access from hubble-relay to hubble-peer (running on the node)
     - fromEndpoints:
         - matchLabels:
@@ -47,17 +44,15 @@ spec:
       toPorts:
         - ports:
             - port: "4244"
-              protocol: "TCP"
-
-      # Allow metrics-server to scrape
+              protocol: TCP
+              # Allow metrics-server to scrape
     - fromEndpoints:
         - matchLabels:
             k8s-app: metrics-server
       toPorts:
         - ports:
             - port: "10250"
-              protocol: "TCP"
-
+              protocol: TCP
     # Allow ICMP Ping from/to anywhere.
     - icmps:
         - fields:
@@ -65,25 +60,79 @@ spec:
               family: IPv4
             - type: 128
               family: IPv6
-
     # Allow cilium tunnel/health checks from other nodes.
     - fromEntities:
         - remote-node
       toPorts:
         - ports:
             - port: "8472"
-              protocol: "UDP"
+              protocol: UDP
             - port: "4240"
-              protocol: "TCP"
-
+              protocol: TCP
     # Allow access to etcd and api from other nodes.
     - fromEntities:
         - remote-node
       toPorts:
         - ports:
             - port: "2379"
-              protocol: "TCP"
+              protocol: TCP
             - port: "2380"
-              protocol: "TCP"
+              protocol: TCP
             - port: "51871"
-              protocol: "UDP"
+              protocol: UDP
+    # Allow access to etcd and api from unconfigured nodes
+    - fromCIDR:
+        - ENC[AES256_GCM,data:oAUamvUSv36+TUFUgBf92y8=,iv:pgtZFFzZ/48yy7aa2flQ8O8WiL5lBNyh3Vyq8sl4eHo=,tag:2PLseCNvvHH5i4/FJEVuCg==,type:str]
+      toPorts:
+        - ports:
+            - port: "2379"
+              protocol: TCP
+            - port: "2380"
+              protocol: TCP
+sops:
+  shamir_threshold: 2
+  key_groups:
+    - hc_vault: []
+      age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5STM5bVFWbjcvVzZqMHNO
+            eE91NWZiKzFBYnowTGdqT21sUWp1VEdUUGdrCkZsUjVxcmVJNCtidWVWT2xUeGdm
+            QzJ3MWNNZlVLQmFSNzd1aWxuUUV2aVUKLS0tIFlVVjNzbWdURkJya3RSM3lMR1Rs
+            ZnlEdEdmR2dRZmxvdDJhbGc1enFoOVkKupo/RYuWUBEMG06ZHbkxf28IiFpVlgNG
+            5Z41uVJN4A5Wstg2plTKcdcgfVDxNtHiI71tuqJ/PZi4zaGftQ5i6RI=
+            -----END AGE ENCRYPTED FILE-----
+    - pgp:
+        - created_at: "2023-09-18T19:21:27Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ1SH08BnVLAQ//e0SMzPQ3MLLMjYARD4ZAgnmPsG4v06gyKb5WwVgFhoYk
+            +1Kyp2UmEt+tkuIG9lU5YnOBkwhgRrAvCwZfRTd5HuA/Dj7ybQia9Tt9TA0fXF9X
+            KAwq+dDvSnGIZaGenvW+Fsq/aTW+jQ96XywiqslqQYsuaFIJg5VWZ9mLm4ubq+pH
+            96w4mr5kk6398zmS8T0XYp/zhobjJGa5/G/EO/MIePg09jHYjoMUI7MAt3UI4zJX
+            NrW/f+euVMK7/H8iY4GdJftehNz1/MqZMJKelrB/r661WpahzaUwjRpZOnEvTaN9
+            ifo5PL8V9PYTOD/WspV/CnyxOGcswlsZ7eoVnEAkCHqwa9BfFnxR3Ep3/ZWGpPtE
+            3oHaYJNPTvG/NZGRRTyBPPIhbZXZmmmpQAZTCFPMZ4ByyDA5BEGa0g5ltk6XRMS6
+            2WCxkHwY8IK+omFPkznLMK3yO6c/5K1uVFW4vZ2w8IYpsxrsYuoNzkSgbn+uMtTJ
+            zmlUttWstuZxtdwvHYjhs8s7v4a6KCNmy6xh2p3hzGPDH73L4Fq/P0zUNNRCg65b
+            qa1U1StgLMeb5lMZZ0S4lxwyZ1HBtFZHD6HSWG52wee+B9BcK79u0AptUxPh6klD
+            +j88RSwK+cfZm9lMrGkbTlXaiX9sIfwn14RKjfs6yu95tjeN5tk2fr0XbkgaN8rS
+            XQG5Rj/dyhOnUrTGf+Eb2BTiaoGHJwtc+ciEPz1ODiRHSQK4iS7MaHpNMJ41UBpJ
+            zHVucEZ1OFZIFAhC7uFfQmxVvWD7nS8gzQ1rl+TPNCARDRA31keAJQr9Fs/D7Q==
+            =/wSS
+            -----END PGP MESSAGE-----
+          fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
+      hc_vault: []
+      age: []
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age: []
+  lastmodified: "2023-09-18T19:21:27Z"
+  mac: ENC[AES256_GCM,data:ZKmRmbIUrmbGlhsZfwXLXLoG/rRFWEPyYGtVWcBl9dhblW5oVB9g5OCamfc/DHxGe0Gtc+Kee8bGQO/XZzXXk2e73wMT74RmXnFI0T/C+REK1qnsbb3nORLHs9j+Ql4KAzOuVF10O15bkwT9gsr2vAlHjcH6wxVl2lZoOZB+/g0=,iv:VYS88YU4gEc198I2IjMqYqBUkT26nt58gadbvmnQ4ak=,tag:fSN+NfZfd92FRLm+Vm1fog==,type:str]
+  pgp: []
+  encrypted_regex: ^(data|stringData|fromCIDR)$
+  version: 3.8.0
