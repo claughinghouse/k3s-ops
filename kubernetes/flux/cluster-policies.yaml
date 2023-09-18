@@ -1,20 +1,17 @@
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/kustomize.toolkit.fluxcd.io/kustomization_v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: cluster-policies
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 10m
   path: ./kubernetes/flux/kube-system/cilium/cluster-policies
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
-  # healthChecks:
-  #   - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-  #     kind: HelmRelease
-  #     name: cilium
-  #     namespace: kube-system
+    name: home-kubernetes
   decryption:
     provider: sops
     secretRef:
@@ -23,3 +20,8 @@ spec:
     substituteFrom:
       - kind: Secret
         name: cluster-secrets
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+      kind: HelmRelease
+      name: cilium
+      namespace: kube-system
