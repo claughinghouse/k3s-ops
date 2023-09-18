@@ -15,3 +15,11 @@ spec:
       kind: HelmRelease
       name: cilium
       namespace: kube-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: cluster-secrets
