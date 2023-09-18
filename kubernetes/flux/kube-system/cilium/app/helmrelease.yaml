@@ -15,10 +15,18 @@ spec:
         name: cilium
         namespace: flux-system
       interval: 10m
+  maxHistory: 2
   install:
     crds: CreateReplace
+    remediation:
+      retries: 3
   upgrade:
+    cleanupOnFail: true
     crds: CreateReplace
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
   values:
     ipam:
       mode: kubernetes
