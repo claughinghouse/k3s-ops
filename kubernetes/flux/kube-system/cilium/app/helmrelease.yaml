@@ -5,6 +5,7 @@ metadata:
   name: cilium
   namespace: kube-system
 spec:
+  affinity: ""
   interval: 5m
   chart:
     spec:
