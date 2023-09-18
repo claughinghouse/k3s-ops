@@ -5,7 +5,6 @@ metadata:
   name: cilium
   namespace: kube-system
 spec:
-  affinity: ""
   interval: 5m
   chart:
     spec:
@@ -29,6 +28,7 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    affinity: ""
     ipam:
       mode: kubernetes
     hostFirewall:
