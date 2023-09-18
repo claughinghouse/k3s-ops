@@ -2,6 +2,7 @@ apiVersion: "cilium.io/v2"
 kind: CiliumClusterwideNetworkPolicy
 metadata:
   name: "host-fw-control-plane"
+  namespace: kube-system
 spec:
   description: "control-plane specific access rules."
   nodeSelector:
