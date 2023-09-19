@@ -1,0 +1,111 @@
+apiVersion: cilium.io/v2
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+    name: host-fw-control-plane
+    namespace: kube-system
+spec:
+    description: control-plane specific access rules.
+    nodeSelector:
+        matchLabels:
+            node-role.kubernetes.io/control-plane: ""
+    ingress:
+        # Allow access to kube api from anywhere.
+        - fromEntities:
+            - world
+            - cluster
+          toPorts:
+            - ports:
+                - port: "6443"
+                  protocol: TCP
+        # Allow access to talos from anywhere.
+        # https://www.talos.dev/v1.4/learn-more/talos-network-connectivity/
+        - fromEntities:
+            - world
+            - cluster
+          toPorts:
+            - ports:
+                - port: "50000"
+                  protocol: TCP
+                - port: "50001"
+                  protocol: TCP
+        # Allow kube-proxy-replacement from kube-apiserver
+        - fromEntities:
+            - kube-apiserver
+          toPorts:
+            - ports:
+                - port: "10250"
+                  protocol: TCP
+                - port: "4244"
+                  protocol: TCP
+        # Allow access from hubble-relay to hubble-peer (running on the node)
+        - fromEndpoints:
+            - matchLabels:
+                k8s-app: hubble-relay
+          toPorts:
+            - ports:
+                - port: "4244"
+                  protocol: TCP
+                  # Allow metrics-server to scrape
+        - fromEndpoints:
+            - matchLabels:
+                k8s-app: metrics-server
+          toPorts:
+            - ports:
+                - port: "10250"
+                  protocol: TCP
+        # Allow ICMP Ping from/to anywhere.
+        - icmps:
+            - fields:
+                - type: 8
+                  family: IPv4
+                - type: 128
+                  family: IPv6
+        # Allow cilium tunnel/health checks from other nodes.
+        - fromEntities:
+            - remote-node
+          toPorts:
+            - ports:
+                - port: "8472"
+                  protocol: UDP
+                - port: "4240"
+                  protocol: TCP
+        # Allow access to etcd and api from other nodes.
+        - fromEntities:
+            - remote-node
+          toPorts:
+            - ports:
+                - port: "2379"
+                  protocol: TCP
+                - port: "2380"
+                  protocol: TCP
+                - port: "51871"
+                  protocol: UDP
+        # Allow access to etcd and api from unconfigured nodes
+        - fromCIDR:
+            - ENC[AES256_GCM,data:xBDx4NPg4v18ep7mEpJZEZY=,iv:G19YabKG2QuPZKL4f7B0pyK8JcTWZBabKLhmDhbEQNU=,tag:foGSUlhqIwgpeULpoCpSpA==,type:str]
+          toPorts:
+            - ports:
+                - port: "2379"
+                  protocol: TCP
+                - port: "2380"
+                  protocol: TCP
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2MWVQWHhOeU1VYjJLL1Zh
+            bDN2Vkg0SmN5cWQ0MXpCdnA1ZGIzM0NDdmlJCmc1eUJLdjdzL3RYRFVVRGJiUWZz
+            MW5iZFZLNEp1dUI1NC9DQk1IZTRpZTQKLS0tIEUyYTd0UVpzbWRyWjIvREZHVnlL
+            OUpXd0twZ1ZIckxUK0VzalgrRlZLdW8KQMWOKVsFe9M/8ftthA47TrbxniG9sdTp
+            YIWLzNSu6AlkdsbYBgM0Osd84OSThHIpn0zX3uDHMdnnfSwVccN5Uw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-09-19T01:34:44Z"
+    mac: ENC[AES256_GCM,data:vkzwwecHjsF+FQ1VZHZLKFjyiQ3PDBn6rSdztkxC7KIynOYdvbY2QqqWlJBAo+tR/m9pMCKZ+tl//ETaZ1DVdJ8GRxfTo/jDJZ+/8ZSH9pjdtKxKURHsccCmNZiMyGiy3+qe822MQ7wsLk+IIHnPQZXFz8cd2Wfy4b18ke9RXDU=,iv:2ngKLcUBS3ulAtCwj0toFtIuTu7hlIsJpwzvVVYpzY4=,tag:LHwGflpx3NX8zbTeSlyLJQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|fromCIDR)$
+    version: 3.8.0
