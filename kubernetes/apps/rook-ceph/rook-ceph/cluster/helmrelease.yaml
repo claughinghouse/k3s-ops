@@ -27,9 +27,10 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    monitoring:
-      enabled: true
-      createPrometheusRules: true
+    # TODO
+    # monitoring:
+    #   enabled: true
+    #   createPrometheusRules: true
     ingress:
       dashboard:
         ingressClassName: internal
