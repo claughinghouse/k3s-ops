@@ -31,15 +31,15 @@ spec:
     # monitoring:
     #   enabled: true
     #   createPrometheusRules: true
-    ingress:
-      dashboard:
-        ingressClassName: internal
-        host:
-          name: &host "${SECRET_CLUSTER_DOMAIN}}"
-          path: /
-        tls:
-          - hosts:
-              - *host
+    # ingress:
+    #   dashboard:
+    #     ingressClassName: internal
+    #     host:
+    #       name: &host "${SECRET_CLUSTER_DOMAIN}}"
+    #       path: /
+    #     tls:
+    #       - hosts:
+    #           - *host
     toolbox:
       enabled: true
     configOverride: |
