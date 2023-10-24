@@ -11,6 +11,26 @@ metadata:
         pod-security.kubernetes.io/warn: restricted
         pod-security.kubernetes.io/warn-version: latest
     name: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -31,6 +51,26 @@ spec:
     policyTypes:
         - Ingress
         - Egress
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -51,6 +91,26 @@ spec:
     podSelector: {}
     policyTypes:
         - Ingress
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -70,6 +130,26 @@ spec:
             app: notification-controller
     policyTypes:
         - Ingress
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: ResourceQuota
@@ -90,6 +170,26 @@ spec:
               values:
                 - system-node-critical
                 - system-cluster-critical
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -180,6 +280,26 @@ rules:
         - update
         - patch
         - delete
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -206,6 +326,26 @@ rules:
         - deletecollection
         - patch
         - update
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -231,6 +371,26 @@ rules:
         - get
         - list
         - watch
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -251,6 +411,26 @@ subjects:
     - kind: ServiceAccount
       name: helm-controller
       namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -283,6 +463,26 @@ subjects:
     - kind: ServiceAccount
       name: image-automation-controller
       namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -686,6 +886,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -1606,6 +1826,26 @@ spec:
           storage: false
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -2063,6 +2303,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -2452,6 +2712,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -2726,6 +3006,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -2737,6 +3037,26 @@ metadata:
         app.kubernetes.io/version: v2.1.2
     name: source-controller
     namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: Service
@@ -2758,6 +3078,26 @@ spec:
     selector:
         app: source-controller
     type: ClusterIP
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -2787,13 +3127,13 @@ spec:
         spec:
             containers:
                 - args:
-                    - --events-addr=http://notification-controller.flux-system.svc.local.k8s.theredone.dev./
-                    - --watch-all-namespaces=true
-                    - --log-level=info
-                    - --log-encoding=json
-                    - --enable-leader-election
-                    - --storage-path=/data
-                    - --storage-adv-addr=source-controller.$(RUNTIME_NAMESPACE).svc.local.k8s.theredone.dev.
+                    - ENC[AES256_GCM,data:rJudDAvuZWlzX7MntM/j60RI1piJpDXqU1cdVTLD1bz5a4c8RRQpmncuqcWjyhWaW9KWJq2rqw0t4runDTPA0tCgZX6gIpPi6S85DU6NEOehukcSz0M=,iv:pvvKpvHgTYJdc5Yn8kMqVH5HM8rzXXhI4uA6KXBuOzU=,tag:M+ZC13TEMu54/+iw6CtSdg==,type:str]
+                    - ENC[AES256_GCM,data:sqfYOLB/tlel6zqtY94PYFRvHSPYgJ9iHlCd,iv:umdA6I6Nh6hrsD3lPnps8W/NQcG/IWA1d1RLUVd0qjo=,tag:ad5pHrF7ZUVrR637y+0wHw==,type:str]
+                    - ENC[AES256_GCM,data:E+iY8mgqInIWfeSd5QQ5PA==,iv:l0LL7cnkr9S6kdvz5LRcTe12l4C0vyAc/cN0RlHk8s4=,tag:hu6ztxJc3DBgGVojT4AmVA==,type:str]
+                    - ENC[AES256_GCM,data:4g5JuAKmSNViLaSLScYT/ty8Aw==,iv:111R54NO4HrYZpHVWm+wEoe7dVv4WwYQkb03osT00RQ=,tag:ByJwpMEQx22ASAl0jLE5Gg==,type:str]
+                    - ENC[AES256_GCM,data:LWLcPGXHXEPs3oCHOErG2WN+geSmGIzQ,iv:rBG4pha4nfmlNPWbeDPm/5E7eGhNyKzCA/F7gOWxa4U=,tag:9fIM4tDrvw3BUmfvd1EZpQ==,type:str]
+                    - ENC[AES256_GCM,data:ESlEUHQaorrpWjkue6BL2BqaAaQ=,iv:iAF6Ogan2FNlFxMv1pzfI2XaJ2CFBhRH3CEJGjkj0S4=,tag:xVL1sKHkviqvtA4eF86EXw==,type:str]
+                    - ENC[AES256_GCM,data:5FaRV79cik4NJaVKME0+5kyUm3Cf8g76y8G9+cSoeFo8g51yYx4/vYgBsMSpWwoNGgxb/UB3Q/ZQ9LcmoKVKO4GJh2AJUuxVh0+QXOaM0VeCkg+LoNw=,iv:LJW+hN9GDtVgTKhX+WitocDNrkqGn8yr1pF3hUFbPms=,tag:EMLLgg7JyvpU3Fqs2a4Eog==,type:str]
                   env:
                     - name: RUNTIME_NAMESPACE
                       valueFrom:
@@ -2855,6 +3195,26 @@ spec:
                   name: data
                 - emptyDir: {}
                   name: tmp
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -4099,6 +4459,26 @@ spec:
           storage: false
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -4110,6 +4490,26 @@ metadata:
         app.kubernetes.io/version: v2.1.2
     name: kustomize-controller
     namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -4137,11 +4537,11 @@ spec:
         spec:
             containers:
                 - args:
-                    - --events-addr=http://notification-controller.flux-system.svc.local.k8s.theredone.dev./
-                    - --watch-all-namespaces=true
-                    - --log-level=info
-                    - --log-encoding=json
-                    - --enable-leader-election
+                    - ENC[AES256_GCM,data:Wh4YASNx+SmqecBQf9sBliyY2UgYLKZULu16N+2eihocjXRqmkFjM8UWYx/a+xRHNreHTFQ3gl6L/29bqfcsfD4qfMmzuQs004trGoWSj5Jd5weWb8Y=,iv:nIGK+m06J/9n3VSvA3tSnphaiw8Ghnd4W8DxKv3Z9uY=,tag:0zG64oEGrJJY/XjDLM/wYQ==,type:str]
+                    - ENC[AES256_GCM,data:ZP0E/7MTYG3PkcXCGTnzlIxdWSsFHhKmv8XG,iv:wa7/2grshxjpdkxRMYl+TUOdfJDSXgfWhIgoswTy7EU=,tag:jV5CYjCUuD8iV47JOByA/A==,type:str]
+                    - ENC[AES256_GCM,data:UCTg29GRPpRcA1+0sfz+sQ==,iv:KQrW/fXNZg/G9yNv0MWXQXN9etTYL3XEQKIBHXziogg=,tag:R6St/RA8S17HvHB6eVIzQw==,type:str]
+                    - ENC[AES256_GCM,data:0M0e3OWfEjCqjk7YUs9FB7zrng==,iv:jajL9b7QtfCpRWkiXQN6obL09xnUV6S5+r8CR5qIr+A=,tag:XQ3Qlj/9v7yufqplSf9RjQ==,type:str]
+                    - ENC[AES256_GCM,data:A8bCMqNEPaihq1WUlzbDXnhHI3qHhR6g,iv:YCTaE8Ng+EsP84hzgugcce9QaA1edIdgIlN5+ocGd8E=,tag:iRR//+f4ggXh49E3rNv+pw==,type:str]
                   env:
                     - name: RUNTIME_NAMESPACE
                       valueFrom:
@@ -4194,6 +4594,26 @@ spec:
             volumes:
                 - emptyDir: {}
                   name: temp
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -4848,6 +5268,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -4859,6 +5299,26 @@ metadata:
         app.kubernetes.io/version: v2.1.2
     name: helm-controller
     namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -4886,11 +5346,11 @@ spec:
         spec:
             containers:
                 - args:
-                    - --events-addr=http://notification-controller.flux-system.svc.local.k8s.theredone.dev./
-                    - --watch-all-namespaces=true
-                    - --log-level=info
-                    - --log-encoding=json
-                    - --enable-leader-election
+                    - ENC[AES256_GCM,data:41+Kcnhgyzd0uNs21p1CHVaQiZDTaLtgKIldbwQtw1QgKb5j+l9/5BH3HeMMvAgpwDxSLt1gox1XNPhg58tZ4j/gELXOHZVOhOD7RTrgHU18q46jGzY=,iv:ln3mHuQ4PnMxklRiIi5QTkKRhRafiE5bHWEjldVcxSE=,tag:YVlkYhTZdYL+NJ2rYknMXg==,type:str]
+                    - ENC[AES256_GCM,data:2HnrlXfxThT5wExZMoPymA1GOnYU+aiAE1pJ,iv:6N16CANH3wHGJMF+Zv2nFT1ivRIMtWINOr46BcguF9k=,tag:CNUhwIoZrHSy/+RG/KZE7w==,type:str]
+                    - ENC[AES256_GCM,data:ENt0o1HYaJSRZysHdW9y7A==,iv:yAp/k9rZdXh7D0rB/6HICSSHLwQYhdjDETSacQfKEU4=,tag:bBF3rmjtMDuGpjv91GiVHg==,type:str]
+                    - ENC[AES256_GCM,data:cA44tmW/og4zScYcVEFsWDaD3g==,iv:aKb24gCXhD7Dm2jD0ZXYb88FJhTzE+pyhqVwN4SpmtQ=,tag:XEdV1LLtPPvlD5Y8VD5VMQ==,type:str]
+                    - ENC[AES256_GCM,data:PyQRnReLsmOOkmY1IImnScfbRVzpvKlT,iv:YoxcqBi8auPo0E4gmASOFa6+KSSCNSvV5m0ylHHtQzw=,tag:6hrskJ94lJOkOP2YcBDqpA==,type:str]
                   env:
                     - name: RUNTIME_NAMESPACE
                       valueFrom:
@@ -4943,6 +5403,26 @@ spec:
             volumes:
                 - emptyDir: {}
                   name: temp
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -5292,6 +5772,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -5630,6 +6130,26 @@ spec:
           storage: true
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -6170,6 +6690,26 @@ spec:
           storage: false
           subresources:
             status: {}
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -6181,6 +6721,26 @@ metadata:
         app.kubernetes.io/version: v2.1.2
     name: notification-controller
     namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: Service
@@ -6202,6 +6762,26 @@ spec:
     selector:
         app: notification-controller
     type: ClusterIP
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: v1
 kind: Service
@@ -6223,6 +6803,26 @@ spec:
     selector:
         app: notification-controller
     type: ClusterIP
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -6250,10 +6850,10 @@ spec:
         spec:
             containers:
                 - args:
-                    - --watch-all-namespaces=true
-                    - --log-level=info
-                    - --log-encoding=json
-                    - --enable-leader-election
+                    - ENC[AES256_GCM,data:tOvN2bASxeFIViBzmQ5TNmIg7aSGi63/Rj07,iv:ICf+v9H0DfzS5W4WKO6LSwy+1DvUhL9bmHcEoeBynBw=,tag:OqoGV60XdjkRrly06GButg==,type:str]
+                    - ENC[AES256_GCM,data:ZacOwYEq6NfaVB9atWOJdg==,iv:oQAEWas4mvRFWLXmcKPfWjfhbQ6qAmEYE7CzkbynAD8=,tag:tIB9LcJJEDr2/vvLAI9bNg==,type:str]
+                    - ENC[AES256_GCM,data:CV92JdMzSkzNRmWxyuIbgwktdA==,iv:VA1hm/fCz90xQBuH61VyT/otu1lL0s+er1EsPr7nJ7U=,tag:ZaLLofwGBKr6uTd5TY1PjA==,type:str]
+                    - ENC[AES256_GCM,data:tzdiOLjyFN12389osgbJzKrplSg3X6lW,iv:2EtVRFMXzYeYJo0YY1zezQHBYcv36YzwEKETFRLPC0c=,tag:Lho9KSubsteb37W4qtoEPA==,type:str]
                   env:
                     - name: RUNTIME_NAMESPACE
                       valueFrom:
@@ -6311,3 +6911,23 @@ spec:
             volumes:
                 - emptyDir: {}
                   name: temp
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoS2JEeUthNVVhZWNuTTdx
+            OGIyYUpGNGpzTFhTQ3A3djgyVjJINWUxSVRFCjF5dmFVd25NekJHMEFEeWVxdmVl
+            K0l1RWhKbk50OS9hcGgwWGVVQ3hVaTAKLS0tIHN3RkNJdzVyc2lvbm9zWjY4V3hC
+            aGg2dVc1aUx6MHJaVjFWbmxzQ2lvVlEKGTaTlf52w8Z1Yms7gTNG75HKBxdcilxU
+            tcAUZY2dP3KP72cHk7Tmz8GoqmdD+IAs8ycYinGaVC9ZGUd0/mzPlg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-24T19:18:22Z"
+    mac: ENC[AES256_GCM,data:n5/VTRI3eHRr0RLyO2bkm+itPkkntXZlsIQL8PNM/aEtIMmMxiWy9FtUJX3NKfJ0/EUkiF7WK8gZxKKhvcr5LHIVdif6u/KXYCKQmyYOJf8/YzRcJvVxGhTDcyC1mPbk52saxkLIVW7n+rjIQugHd0q8vgdYWQzoN72NA/BEdHQ=,iv:edq5AcgBXP9PcQWGssMfd4RgZBD3lcQ1MymqAELBfYE=,tag:YsAMYcvb9i3eMAYYnJ539g==,type:str]
+    pgp: []
+    encrypted_regex: ^(args)$
+    version: 3.8.1
