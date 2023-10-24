@@ -48,11 +48,11 @@ spec:
       bdev_async_discard = true
       osd_class_update_on_start = false
     cephClusterSpec:
-      # placement:
-      #   all:
-      #     tolerations:
-      #       - effect: NoSchedule
-      #         key: node-role.kubernetes.io/control-plane
+      placement:
+        all:
+          tolerations:
+            - effect: NoSchedule
+              key: node-role.kubernetes.io/control-plane
       #         operator: Exists
       network:
         provider: host
