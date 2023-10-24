@@ -38,9 +38,9 @@ spec:
       ui:
         enabled: true
       peerService:
-        clusterDomain: "${SECRET_CLUSTER_DOMAIN}"
+        clusterDomain: ${SECRET_CLUSTER_DOMAIN}
     etcd:
-      clusterDomain: "${SECRET_CLUSTER_DOMAIN}"
+      clusterDomain: ${SECRET_CLUSTER_DOMAIN}
     kubeProxyReplacement: strict
     securityContext:
       capabilities:
@@ -64,5 +64,5 @@ spec:
       autoMount:
         enabled: true
       hostRoot: /sys/fs/cgroup
-    k8sServiceHost: "${SECRET_CLUSTER_API_SERVER}"
+    k8sServiceHost: ${SECRET_CLUSTER_API_SERVER}
     k8sServicePort: "6443"
