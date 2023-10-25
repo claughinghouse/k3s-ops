@@ -25,7 +25,7 @@ metadata:
   name: cluster
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 10m
   path: ./kubernetes/flux
   prune: true
   wait: false
