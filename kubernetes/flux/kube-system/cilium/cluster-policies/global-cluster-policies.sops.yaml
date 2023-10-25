@@ -20,8 +20,9 @@ spec:
         # Allow access to talos from anywhere.
         # https://www.talos.dev/v1.4/learn-more/talos-network-connectivity/
         - fromEntities:
-            - world
             - cluster
+        - fromCIDR:
+            - ENC[AES256_GCM,data:xBDx4NPg4v18ep7mEpJZEZY=,iv:G19YabKG2QuPZKL4f7B0pyK8JcTWZBabKLhmDhbEQNU=,tag:foGSUlhqIwgpeULpoCpSpA==,type:str]
           toPorts:
             - ports:
                 - port: "50000"
@@ -89,6 +90,20 @@ spec:
                   protocol: TCP
                 - port: "2380"
                   protocol: TCP
+        # Allow access to ceph and api from unconfigured nodes
+        - fromEntities:
+            - remote-node
+            - cluster
+          toPorts:
+            - ports:
+                - port: "3300"
+                  protocol: TCP
+                - port: 6800-7300
+                  protocol: TCP
+                - port: "9283"
+                  protocol: TCP
+                - port: "9070"
+                  protocol: TCP
 sops:
     kms: []
     gcp_kms: []
@@ -104,8 +119,8 @@ sops:
             OUpXd0twZ1ZIckxUK0VzalgrRlZLdW8KQMWOKVsFe9M/8ftthA47TrbxniG9sdTp
             YIWLzNSu6AlkdsbYBgM0Osd84OSThHIpn0zX3uDHMdnnfSwVccN5Uw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-09-19T01:34:44Z"
-    mac: ENC[AES256_GCM,data:vkzwwecHjsF+FQ1VZHZLKFjyiQ3PDBn6rSdztkxC7KIynOYdvbY2QqqWlJBAo+tR/m9pMCKZ+tl//ETaZ1DVdJ8GRxfTo/jDJZ+/8ZSH9pjdtKxKURHsccCmNZiMyGiy3+qe822MQ7wsLk+IIHnPQZXFz8cd2Wfy4b18ke9RXDU=,iv:2ngKLcUBS3ulAtCwj0toFtIuTu7hlIsJpwzvVVYpzY4=,tag:LHwGflpx3NX8zbTeSlyLJQ==,type:str]
+    lastmodified: "2023-10-25T16:44:29Z"
+    mac: ENC[AES256_GCM,data:s3JUYnBLR9XB3HQ7oI4hoonX9OijTQH4UBl41wfB5MxNIvkwIcjegsQsN8RqqdOVGbUP9ft+nVxF8HvZoSbgRyPjaTkR4GoeMDnzHxmLSp/gHkFx8TcFGaulvwRh20vLLS7sZiKogUo2utqP7PpGaM+etSBizE5ZKy7W4hF3BqM=,iv:LbBZ+RAy/MLZN0gzLOKheRNxUjrNte6f3VeJb6dwDV0=,tag:Tz9Momk6uesehvwVIrEwEg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR)$
-    version: 3.8.0
+    version: 3.8.1
