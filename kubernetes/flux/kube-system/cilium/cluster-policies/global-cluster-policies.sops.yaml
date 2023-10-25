@@ -97,12 +97,12 @@ spec:
             - ports:
                 - port: "3300"
                   protocol: TCP
-                - port: 6800-7300
-                  protocol: TCP
-                - port: "9283"
-                  protocol: TCP
-                - port: "9070"
-                  protocol: TCP
+              # - port: "6800-7300"
+              #   protocol: TCP
+              # - port: "9283"
+              #   protocol: TCP
+              # - port: "9070"
+              #   protocol: TCP
 sops:
     kms: []
     gcp_kms: []
@@ -118,8 +118,8 @@ sops:
             OUpXd0twZ1ZIckxUK0VzalgrRlZLdW8KQMWOKVsFe9M/8ftthA47TrbxniG9sdTp
             YIWLzNSu6AlkdsbYBgM0Osd84OSThHIpn0zX3uDHMdnnfSwVccN5Uw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-25T17:18:57Z"
-    mac: ENC[AES256_GCM,data:xA+pdsyC8we3GAGJKIIYovu0/IjVx5Rg4SQ8MAFzIshJFFRT96SccHir+ndSJUQBTRC+7elVLJe9WmIFcvM9CNsHaqyST4civPxWuSLfNfx5+l8kre6BuDTIsLK3kghY/R8oDxF1czey7U6WKQyByLHjYucUysKuFKnRoNR5ywE=,iv:xSIzSPLN2TxhDgN9wpHnEgUbmtK6zZ8lufiGsMm9TWc=,tag:93njwI+4/0ZP58ePtfSzBg==,type:str]
+    lastmodified: "2023-10-25T17:40:14Z"
+    mac: ENC[AES256_GCM,data:mo8kJTE1PbSA6PCIaYeGfuverR0KEj7d6UdBk87oLlE5ta+qapjsSynr4Ugb+38CCNfkIOFJgulH3hngsfGTZunZoAGYh8tIgaxDhN+I1SsCMCTwErA5IYfbrF+05fu74PsnJ1dbwCR7TKlTaz+lZt8ttEnuor3RSXJiQouZVU0=,iv:8eq+YqEueG77dOVUwqGHM79vCJ1xXjlLugHMeXdMwwI=,tag:1Tfv1tkaCCWf5W2DYgHAAQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR)$
     version: 3.8.1
