@@ -9,10 +9,7 @@ spec:
   interval: 10m
   # TODO
   # timeout: 15m
-  ## TODO
-  cephVersion:
-    image: quay.io/ceph/ceph:v17.2.3
-  ## TODO
+
   chart:
     spec:
       chart: rook-ceph-cluster
@@ -32,6 +29,10 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    ## TODO
+    cephVersion:
+      image: quay.io/ceph/ceph:v17.2.3
+    ## TODO
     crds:
       enabled: true
     enableDiscoveryDaemon: true
