@@ -78,7 +78,7 @@ spec:
         nodes:
           - name: k8s2
             devices:
-              - name: ^/dev/sd[c-i]
+              - name: /dev/disk/by-id/scsi-35002538c40375d40
           - name: k8s3
             devices:
               - name: ^/dev/sd[c-i]
