@@ -7,6 +7,7 @@ metadata:
   namespace: rook-ceph
 spec:
   interval: 10m
+  # TODO
   # timeout: 15m
   chart:
     spec:
@@ -38,7 +39,7 @@ spec:
     #   dashboard:
     #     ingressClassName: internal
     #     host:
-    #       name: &host "${SECRET_CLUSTER_DOMAIN}}"
+    #       name: &host "rook.${SECRET_CLUSTER_DOMAIN}"
     #       path: /
     #     tls:
     #       - hosts:
@@ -56,7 +57,6 @@ spec:
           tolerations:
             - effect: NoSchedule
               key: node-role.kubernetes.io/control-plane
-      #         operator: Exists
       network:
         provider: host
         connections:
