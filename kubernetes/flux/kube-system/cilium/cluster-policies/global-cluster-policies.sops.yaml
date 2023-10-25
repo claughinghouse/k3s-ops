@@ -92,7 +92,6 @@ spec:
                   protocol: TCP
         # Allow access to ceph and api from unconfigured nodes
         - fromEntities:
-            - remote-node
             - cluster
           toPorts:
             - ports:
@@ -119,8 +118,8 @@ sops:
             OUpXd0twZ1ZIckxUK0VzalgrRlZLdW8KQMWOKVsFe9M/8ftthA47TrbxniG9sdTp
             YIWLzNSu6AlkdsbYBgM0Osd84OSThHIpn0zX3uDHMdnnfSwVccN5Uw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-25T17:00:44Z"
-    mac: ENC[AES256_GCM,data:06Cu5ByU+x0MQuZ+nQakIUcvCuFu515EZ1+6hJUoxYHftQ+OqzW/eC2yGkAslVU+jwWBkE0y19WWqq7eFAa54QpUF4zxtzocjW9aIssNbgR4pbMgHWnN8MGTBB6HQx8vsQR2mwM4/LqrBtKaYHKHXueSbxLc3/TH75IXwvt4tuo=,iv:m7aEOGqZZrPkrftzEPjFFToR9Z//Xy1tYa1WrMhZIgc=,tag:31ib4BLAufFpK0W+XP2cxw==,type:str]
+    lastmodified: "2023-10-25T17:17:06Z"
+    mac: ENC[AES256_GCM,data:QPSpVUhSQJ3Z/ojdhtTVqSJQCdMJD+9UqY02xnhyGTXswo0grKQDmDxU9U1na9ajsoIXMvXZRgJk6mLMSAMIW05xryqaXBWN97QqExVi9nljCUwIGfOBWMRrj1iaw4/HZOUpQX0hd7tvqraInNW374xbJQ/P4hvmEAXxv08kgFw=,iv:BIXzN45O/zewzxLLWxMwrP/KvWrbMCkg/q/IiKp+0V4=,tag:odIwB03j5Qlw0cQorXLS6A==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR)$
     version: 3.8.1
