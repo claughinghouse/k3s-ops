@@ -55,12 +55,12 @@ spec:
                 - port: "10250"
                   protocol: TCP
         # Allow ICMP Ping from/to anywhere.
-        - icmps:
-            - fields:
-                - type: 8
-                  family: IPv4
-                - type: 128
-                  family: IPv6
+        # - icmps:
+        #     - fields:
+        #         - type: 8
+        #           family: IPv4
+        #         - type: 128
+        #           family: IPv6
         # Allow cilium tunnel/health checks from other nodes.
         - fromEntities:
             - remote-node
@@ -119,8 +119,8 @@ sops:
             OUpXd0twZ1ZIckxUK0VzalgrRlZLdW8KQMWOKVsFe9M/8ftthA47TrbxniG9sdTp
             YIWLzNSu6AlkdsbYBgM0Osd84OSThHIpn0zX3uDHMdnnfSwVccN5Uw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-25T16:44:29Z"
-    mac: ENC[AES256_GCM,data:s3JUYnBLR9XB3HQ7oI4hoonX9OijTQH4UBl41wfB5MxNIvkwIcjegsQsN8RqqdOVGbUP9ft+nVxF8HvZoSbgRyPjaTkR4GoeMDnzHxmLSp/gHkFx8TcFGaulvwRh20vLLS7sZiKogUo2utqP7PpGaM+etSBizE5ZKy7W4hF3BqM=,iv:LbBZ+RAy/MLZN0gzLOKheRNxUjrNte6f3VeJb6dwDV0=,tag:Tz9Momk6uesehvwVIrEwEg==,type:str]
+    lastmodified: "2023-10-25T16:45:55Z"
+    mac: ENC[AES256_GCM,data:pxdHTjHRPOoM1e7Wk6QYRmMu8kjK+Ln53gRd877CkrlzGZebefmrF9qRvftxvX4F1Eq8qFNshGnQsVZCso/vwjhjo313a3xDYwWwqUqGZ5beSdPr06wIMGsH5bzUB2YdboNzONeoYVvvI0J4noME0eEUVQ0HXIOkycjlEtcnOm4=,iv:4FbPKyqHyD1ITXkTqX2nTZW2s6x2UIVRu8OUYu2tyQk=,tag:ldZa9/2WbV9JY0LGHl6s/A==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR)$
     version: 3.8.1
