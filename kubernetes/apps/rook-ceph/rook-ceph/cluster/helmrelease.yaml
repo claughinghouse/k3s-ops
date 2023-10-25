@@ -29,10 +29,6 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    ## TODO
-    cephVersion:
-      image: quay.io/ceph/ceph:v17.2.3
-    ## TODO
     crds:
       enabled: true
     enableDiscoveryDaemon: true
@@ -57,6 +53,10 @@ spec:
       bdev_async_discard = true
       osd_class_update_on_start = false
     cephClusterSpec:
+      ## TODO
+      cephVersion:
+        image: quay.io/ceph/ceph:v17.2.3
+      ## TODO
       placement:
         all:
           tolerations:
@@ -81,7 +81,7 @@ spec:
           osdsPerDevice: "1"
         nodes:
           - name: k8s2
-            deviceFilter: (sd[c-i])
+            deviceFilter: ^sd[c-i]
             # - name: k8s2
             # - name: k8s1
             #   devices:
