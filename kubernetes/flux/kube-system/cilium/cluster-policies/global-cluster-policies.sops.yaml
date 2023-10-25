@@ -101,8 +101,8 @@ spec:
                   protocol: TCP
                   # - port: "6800-7300"
                   #   protocol: TCP
-                  # - port: "9283"
-                  #   protocol: TCP
+                - port: "9283"
+                  protocol: TCP
                   # - port: "9070"
                   #   protocol: TCP
 sops:
