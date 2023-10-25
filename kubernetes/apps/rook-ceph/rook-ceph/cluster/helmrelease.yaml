@@ -76,7 +76,14 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
-          - deviceFilter: ^sd[c-i]
+          # - name: k8s1
+          #     devices: "^sd[c-i]"
+          - name: k8s2
+            devices: "^sd[c-i]"
+          - name: k8s3
+            devices: "^sd[c-i]"
+          - name: k8s4
+            devices: "^sd[c-i]"
         # - name: k8s2
         # - name: k8s1
         #   devices:
