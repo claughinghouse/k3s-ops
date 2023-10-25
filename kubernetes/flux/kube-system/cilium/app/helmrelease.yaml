@@ -37,9 +37,9 @@ spec:
             ui:
                 enabled: true
             peerService:
-                clusterDomain: ENC[AES256_GCM,data:xVmqPZM6ickHQvXfAEppocvyFsRFrXs=,iv:x6M+9K/5SGUFJ0hE0kSrwGYQXvjDzIaBqgSOgS6qM0I=,tag:ZMlNH2oc69JYhdi2hnT+Jw==,type:str]
+                clusterDomain: local.k8s.theredone.dev
         etcd:
-            clusterDomain: ENC[AES256_GCM,data:bswS4Zbv+uVEuG3rF/i2qjoNYs3ghUg=,iv:Ft+m2HU179dUbOZaNUwi45dxsXZ3trohLs+sTTVjdRE=,tag:lPX+snh6rrmKVd9ahnpmVA==,type:str]
+            clusterDomain: local.k8s.theredone.dev
         kubeProxyReplacement: strict
         securityContext:
             capabilities:
@@ -63,25 +63,5 @@ spec:
             autoMount:
                 enabled: true
             hostRoot: /sys/fs/cgroup
-        k8sServiceHost: ENC[AES256_GCM,data:rXGprZD15Dtkw0aqtk0BCBe7o+MF,iv:3c+PDlK+ypfXwzS0MxYgH9kmszgquK7C2guMfn59MD4=,tag:r1fBIIrDur+Ibc1p/og+4g==,type:str]
+        k8sServiceHost: api.k8s.theredone.dev
         k8sServicePort: "6443"
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCbGZNNFM0N3V6Qmo5ejJZ
-            UUpzYzBheW5kM3Ezd25uRFhDdlEyNWl2T2c4CjNJVFBRRWVYcEpYSktlSGhEcEdP
-            WmxZWnIwQmZCN1RrWDltRUgyODhKajAKLS0tIHpQT1hZVXZVZm0wWjBaK21IZTli
-            U2k0S0MwQW9qYjRKcitkSWJ6SUtoNE0KPZ+I+g1bfbIoG2vPb26qXXyEMt3D7Zzc
-            LbY53c1WAKvxRTniUCU+oWZewgMy03KFVyphnp4SBbDUwmL1dGLeFQ==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-24T19:13:24Z"
-    mac: ENC[AES256_GCM,data:adMdWWr1gmRezE8pNsOPDG6ZUXt9OXmSL7gV5aIDUXz3cOxfTI8ztR7h0sW1VoE9BMBSUlrW0mSILXrWc9zHykkVK2om2WXeGTmk63fky9sJwrG8HrapUCojBUGR7pGJDxQFEWPxBuio1wwLAecMsjY6OYcnq07Zqe5B2+VpJz0=,iv:tsFr/ggXQaATVRMZrR08kSYKJNimA1rP9Ycbr3/mra0=,tag:spB9A48utbbok6olSYoVdg==,type:str]
-    pgp: []
-    encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost)$
-    version: 3.8.1
