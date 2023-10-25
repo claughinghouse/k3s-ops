@@ -75,15 +75,16 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
+          # - name: k8s2
           # - name: k8s1
           #   devices:
           #     - deviceFilter: /^\/pci0000:00\/0000:00:02\.2\/0000:02:00\.0\/host7\/target7:0:[1-7]\/7:0:[1-7]:0\/$/g
-          - name: k8s2
-            devicePathFilter: ^/dev/sd[c-i]
-          - name: k8s3
-            devicePathFilter: ^/dev/sd[c-i]
-          - name: k8s4
-            devicePathFilter: ^/dev/sd[c-i]
+          - name: "k8s2"
+            devicePathFilter: "^/dev/sd[c-i]"
+          - name: "k8s3"
+            devicePathFilter: "^/dev/sd[c-i]"
+          - name: "k8s4"
+            devicePathFilter: "^/dev/sd[c-i]"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
