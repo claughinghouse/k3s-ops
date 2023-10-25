@@ -16,7 +16,6 @@ talosctl --nodes $PRIVATE_IP apply-config --file machineconfigs/rendered/k8s2.ya
 ```sh
 talosctl bootstrap --nodes $PUBLIC_IP_K8S2
 talosctl dashboard --nodes $PUBLIC_IP_K8S3
-talosctl dashboard --nodes $PUBLIC_IP_K8S4
 ```
 
 ## Reboot
