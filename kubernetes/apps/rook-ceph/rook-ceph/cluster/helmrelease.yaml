@@ -77,32 +77,36 @@ spec:
           osdsPerDevice: "1"
         nodes:
           - name: k8s2
-            devices:
-              - name: "sdc"
-              # - name: "sdd"
-              # - name: "sde"
-              # - name: "sdf"
-              # - name: "sdg"
-              # - name: "sdh"
-              # - name: "sdi"
+            deviceFilter: sd[c-i]
+
+            # devices:
+            # - name: "sdc"
+            # - name: "sdd"
+            # - name: "sde"
+            # - name: "sdf"
+            # - name: "sdg"
+            # - name: "sdh"
+            # - name: "sdi"
           - name: k8s3
-            devices:
-              - name: "sdc"
-              # - name: "sdd"
-              # - name: "sde"
-              # - name: "sdf"
-              # - name: "sdg"
-              # - name: "sdh"
-              # - name: "sdi"
+            deviceFilter: sd[c-i]
+            # devices:
+            # - name: "sdc"
+            # - name: "sdd"
+            # - name: "sde"
+            # - name: "sdf"
+            # - name: "sdg"
+            # - name: "sdh"
+            # - name: "sdi"
           - name: k8s4
-            devices:
-              - name: "sdc"
-              # - name: "sdd"
-              # - name: "sde"
-              # - name: "sdf"
-              # - name: "sdg"
-              # - name: "sdh"
-              # - name: "sdi"
+            deviceFilter: sd[c-i]
+            # devices:
+            # - name: "sdc"
+            # - name: "sdd"
+            # - name: "sde"
+            # - name: "sdf"
+            # - name: "sdg"
+            # - name: "sdh"
+            # - name: "sdi"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
