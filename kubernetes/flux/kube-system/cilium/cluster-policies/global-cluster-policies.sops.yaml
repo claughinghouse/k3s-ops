@@ -90,6 +90,16 @@ spec:
                   protocol: TCP
                 - port: "2380"
                   protocol: TCP
+        # Allow HTTP and HTTPS access from anywhere
+        - fromEntities:
+            - world
+            - cluster
+          toPorts:
+            - ports:
+                - port: "80"
+                  protocol: TCP
+                - port: "443"
+                  protocol: TCP
 sops:
     kms: []
     gcp_kms: []
@@ -105,8 +115,8 @@ sops:
             TkVJd2dOSHZXalVOd000U3gxVllQRzAKuDZDUrwUVJNWRFlSJtA/Ty4DGqJUV6WL
             vlcvb50//2GzByxEhayJXsFYmNBU2Jop4XggtrQQfgClEZ5zTwZ/SA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-26T03:03:20Z"
-    mac: ENC[AES256_GCM,data:43/w07PhVzgM4Kz3m8Ph90kbVHc4153ZLitslYV5Z3h2/Uu6MkR5OvbFG3KkRHDUWJ2Y8CeKWlwegY9ddtm0huPkiAAZpHlcY4Be+6CEn9LzbMch7q856T4lrRWGO5CR8cWfG6l/u2caqSeMJy2KcuJduq/OSDnA2BbCneZ/5WU=,iv:UsvVftSwdcjxpbJq/y4E0z9sbsUlqJu3msET3sQdigQ=,tag:AVEEzzEg/wa50eqVagysNA==,type:str]
+    lastmodified: "2023-10-26T17:23:51Z"
+    mac: ENC[AES256_GCM,data:29SlHEA2D60jeVxbHdRZb2krXyOol2cRRvkObMcqtFaGYrCUMYKYQDxGbsiwtr1F9eyWmc1DAQNXcr05aV1rKMnlEMaq+tlmjFvc7F60PPh45q8NdYy7eS7AGMLRhxs6Yxfea/7QPZU0IXju2Lx9iTIf0kQfLt/+gEkXYGNFTcA=,iv:1qGK/YkdaZDk3ntaQvrqI5QrJz95EaZlz6DhihjadJw=,tag:bXqXwMvM4t9yB7g0+h4u+w==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost)$
     version: 3.8.1
