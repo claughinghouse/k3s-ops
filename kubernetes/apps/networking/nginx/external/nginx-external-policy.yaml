@@ -6,13 +6,9 @@ metadata:
   namespace: kube-system
 spec:
   description: nginx-external specific rules
+  endpointSelector:
+    matchLabels:
+      instance: nginx-external
   ingress:
-    # Allow HTTP and HTTPS access from internet
     - fromEntities:
         - world
-      toPorts:
-        - ports:
-            - port: "80"
-              protocol: TCP
-            - port: "443"
-              protocol: TCP
