@@ -78,7 +78,14 @@ spec:
         nodes:
           - name: k8s2
             devices:
-              - name: "sdc"
+              name:
+                - "sdc"
+                - "sdd"
+                - "sde"
+                - "sdf"
+                - "sdg"
+                - "sdh"
+                - "sdi"
           - name: k8s3
             devices:
               - name: ^/dev/sd[c-i]
