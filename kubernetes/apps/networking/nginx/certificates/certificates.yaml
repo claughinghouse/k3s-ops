@@ -3,7 +3,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: devbu-io
+  name: domain-dev
   namespace: networking
 spec:
   secretName: domain-dev-tls
