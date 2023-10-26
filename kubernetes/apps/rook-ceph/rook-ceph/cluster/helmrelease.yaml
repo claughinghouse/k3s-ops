@@ -78,20 +78,13 @@ spec:
         nodes:
           - name: k8s2
             devices:
-              name:
-                - sdc
-                - sdd
-                - sde
-                - sdf
-                - sdg
-                - sdh
-                - sdi
+              - name: ^sd[c-i]
           - name: k8s3
             devices:
-              - name: ^/dev/sd[c-i]
+              - name: ^sd[c-i]
           - name: k8s4
             devices:
-              - name: ^/dev/sd[c-i]
+              - name: ^sd[c-i]
     cephBlockPools:
       - name: ceph-blockpool
         spec:
