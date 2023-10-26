@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/cilium.io/ciliumloadbalancerippool_v2alpha1.json
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+    name: internal-pool
+spec:
+    cidrs:
+        - cidr: ENC[AES256_GCM,data:ycib7DPYQ7huAUA=,iv:ldrsPFEkQKmaFWAyytmVPYGN1YPmiNkqUPqIpb4maAg=,tag:D/vwkbmw2rlYwELNJKAaAg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB4NGcrcURaTS9HUlpEcDMr
+            VkR1cEJyUTU0R0JOTVV4Z3hZM3FqQWZvemp3ClBUZ21nWVdqNjVvdmZaeEowVll5
+            aFZDV1NjT3RSdFBIQ3AvVjIwK3B2QVkKLS0tICtIcGVNVkc4K2pNbnM1R08yMEZB
+            NW9GelJaNDVHTnJNSyt1TVl4VCtaTjgKMvcx5M//9DoCApngabhxWoeEWIzJl6LJ
+            SOLz30NmvqBWdNyqDf++elzna1o1YQjSrqRi6kiEHxjU8bRfizQRgg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-26T14:52:16Z"
+    mac: ENC[AES256_GCM,data:Be/G4M8J3OZzQ0TGfD4SoeoH65frwMerCiHvSuYrUX66LZ/TSnz2IeZKHeCUfdDPLadbwYvEKTAx6pU7+3dAKvg1KSsu/WZy/hEqcS2tLYgmQMq6p25YjXbLwh+3ZZkBG0DKe/3K/FbeFZ7V02shoqcyEyBoxSx3lCTtvaeF+T4=,iv:zrZN1z6G1IEzDNIBfnZXoauRQ++S4JjD76TaexVfnAA=,tag:+2LjTb9W2tMs6aXeWViQag==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost|cidrs)$
+    version: 3.8.1
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/cilium.io/ciliumloadbalancerippool_v2alpha1.json
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+    name: external-pool
+spec:
+    cidrs:
+        - cidr: ENC[AES256_GCM,data:TFrLrPnBXsh250ZDi+phRwk=,iv:xA95hhltx+Jb8pTIrcG6zwMJ60Vveh66dGMK5nbCtvE=,tag:3p7tO/zB+i3OLE48R9shIA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB4NGcrcURaTS9HUlpEcDMr
+            VkR1cEJyUTU0R0JOTVV4Z3hZM3FqQWZvemp3ClBUZ21nWVdqNjVvdmZaeEowVll5
+            aFZDV1NjT3RSdFBIQ3AvVjIwK3B2QVkKLS0tICtIcGVNVkc4K2pNbnM1R08yMEZB
+            NW9GelJaNDVHTnJNSyt1TVl4VCtaTjgKMvcx5M//9DoCApngabhxWoeEWIzJl6LJ
+            SOLz30NmvqBWdNyqDf++elzna1o1YQjSrqRi6kiEHxjU8bRfizQRgg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-10-26T14:52:16Z"
+    mac: ENC[AES256_GCM,data:Be/G4M8J3OZzQ0TGfD4SoeoH65frwMerCiHvSuYrUX66LZ/TSnz2IeZKHeCUfdDPLadbwYvEKTAx6pU7+3dAKvg1KSsu/WZy/hEqcS2tLYgmQMq6p25YjXbLwh+3ZZkBG0DKe/3K/FbeFZ7V02shoqcyEyBoxSx3lCTtvaeF+T4=,iv:zrZN1z6G1IEzDNIBfnZXoauRQ++S4JjD76TaexVfnAA=,tag:+2LjTb9W2tMs6aXeWViQag==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost|cidrs)$
+    version: 3.8.1

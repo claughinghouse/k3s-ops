@@ -15,7 +15,7 @@ creation_rules:
       - age:
           - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
   - path_regex: kubernetes/.*\.sops\.ya?ml
-    encrypted_regex: "^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost)$"
+    encrypted_regex: "^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost|cidrs)$"
     key_groups:
       - age:
           - age1ms2d7n4yhaq0mdap4cfyaq2xtfutlachqapkjfr0z2qr7ghc2ckq000jhm
