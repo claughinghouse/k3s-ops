@@ -6,4 +6,4 @@ namespace: networking
 resources:
   - ./secret.sops.yaml
   - ./helmrelease.yaml
-  - ./nginx-external-policy.yaml
+  # - ./nginx-external-policy.yaml
