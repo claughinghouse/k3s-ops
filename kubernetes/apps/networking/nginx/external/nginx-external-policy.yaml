@@ -1,0 +1,18 @@
+---
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: nginx-external-policies
+  namespace: kube-system
+spec:
+  description: nginx-external specific rules
+  ingress:
+    # Allow HTTP and HTTPS access from internet
+    - fromEntities:
+        - world
+      toPorts:
+        - ports:
+            - port: "80"
+              protocol: TCP
+            - port: "443"
+              protocol: TCP
