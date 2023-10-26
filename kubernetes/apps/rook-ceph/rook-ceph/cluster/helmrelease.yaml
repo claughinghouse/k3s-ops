@@ -78,9 +78,9 @@ spec:
         nodes:
           - name: k8s2
             devices:
-              - name: "/dev/disk/by-id/scsi-35002538c40375d40"
-              - name: "sdd"
-              - name: "/dev/disk/by-id/wwn-0x5002538c40375c45"
+              - name: sdc
+              - name: sdd
+              - name: sde
           # - name: k8s2
           #   deviceFilter: sd[c-i]
           # devices:
