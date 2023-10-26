@@ -72,7 +72,7 @@ spec:
       # namespaceSelector:
       #   any: true
       extraArgs:
-        default-ssl-certificate: networking/default-dev-tls
+        default-ssl-certificate: networking/domain-dev-tls
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: kubernetes.io/hostname
