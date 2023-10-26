@@ -5,6 +5,7 @@ kind: Kustomization
 resources:
   # Pre Flux-Kustomizations
   - ./namespace.yaml
+  - ./cilium
   # Flux-Kustomizations
   # - ./cloudflared/ks.yaml
   # - ./echo-server/ks.yaml
