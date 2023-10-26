@@ -8,7 +8,7 @@ spec:
   description: nginx-external specific rules
   endpointSelector:
     matchLabels:
-      instance: nginx-external
+      k8s-app: instance=nginx-external
   ingress:
     - fromEntities:
         - world
