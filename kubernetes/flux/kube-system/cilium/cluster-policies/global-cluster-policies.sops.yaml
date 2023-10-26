@@ -90,18 +90,6 @@ spec:
                   protocol: TCP
                 - port: "2380"
                   protocol: TCP
-    # Allow access to ceph monintors from within the cluster
-    # - fromEntities:
-    #     - cluster
-    #     - remote-node
-    #   toPorts:
-    #     - ports:
-    #         - port: "3300"
-    #           protocol: TCP
-    #         - port: "80"
-    #           protocol: TCP
-    #         - port: "9283"
-    #           protocol: TCP
 sops:
     kms: []
     gcp_kms: []
@@ -117,8 +105,8 @@ sops:
             TkVJd2dOSHZXalVOd000U3gxVllQRzAKuDZDUrwUVJNWRFlSJtA/Ty4DGqJUV6WL
             vlcvb50//2GzByxEhayJXsFYmNBU2Jop4XggtrQQfgClEZ5zTwZ/SA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-10-26T02:56:22Z"
-    mac: ENC[AES256_GCM,data:Ye4U+MA0XkOvORNX7J4czXWKbaXJPuL0xHKKqr3prfLhj7dkoWP1LXFTrHZ9H6SusrJshloAQo3zgkXeAB47VUjouvMAej3Z9wVIgbNZNgXLcSCvqUk4aNgSvGzo66S1tp+VZoh4QZMjSb/WgmebIUV90T3DtNTGBDhMc+U/by4=,iv:BFk0hSq60LbJ4QUeze9ggHF9VtsWWuBe0xlWiE0OTpE=,tag:TOkiNrpmXBh7MfFjsKRyrA==,type:str]
+    lastmodified: "2023-10-26T03:03:20Z"
+    mac: ENC[AES256_GCM,data:43/w07PhVzgM4Kz3m8Ph90kbVHc4153ZLitslYV5Z3h2/Uu6MkR5OvbFG3KkRHDUWJ2Y8CeKWlwegY9ddtm0huPkiAAZpHlcY4Be+6CEn9LzbMch7q856T4lrRWGO5CR8cWfG6l/u2caqSeMJy2KcuJduq/OSDnA2BbCneZ/5WU=,iv:UsvVftSwdcjxpbJq/y4E0z9sbsUlqJu3msET3sQdigQ=,tag:AVEEzzEg/wa50eqVagysNA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost)$
     version: 3.8.1
