@@ -12,6 +12,6 @@ roles:
   - src: geerlingguy.pip
     version: 2.2.0
   - src: geerlingguy.docker
-    version: 7.0.1
+    version: 7.0.2
   - src: xanmanning.k3s
     version: v3.4.2
