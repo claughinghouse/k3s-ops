@@ -23,8 +23,8 @@ sops:
             TXI3b3diNzBGc25rY0I1eEpOMXliKzgKhK/pNY7xW86o+4kg1R7ogoOhiiTgslr7
             6EvrMXI19cytdgffvA0TwzUnTY++Lbeww2USopQy6zu0hgNOjLyrFA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-01-21T19:13:17Z"
-    mac: ENC[AES256_GCM,data:LMK8u6xKIk35wHFkCbYe2nmiDDpg7FBF4ub/boDtH1P3v3tBRGOIRwfIA2DaaVUsyXPM7r1LIE+Ll0SDJZ9xJSo1TQqpZDPUpjw4LaGl+INxNuXddn51PWo7bONaIP1RoGf9/tRT6SiABlvhIBOdOWcjeeFGWa+M272LHWcioD0=,iv:nofZYuE4GDWpC+ta4X/aur9uFqq40nQ1kVmjjdFxj8g=,tag:3o5i7XtW1iQC8b9YmkfuUQ==,type:str]
+    lastmodified: "2024-01-21T19:14:26Z"
+    mac: ENC[AES256_GCM,data:MOIZqwNsHf97YmEsfyRioIGkWZMjZQ/GXxarxUQSkqObrSUtmLJqIXudP84Wt9dt0dzFcQyNNVt0tf9Kr87BEaB7GcRJey/WudGglMMdZfohPrExQJkVfHt991kY8szQguVfL6u4Tr3kDyjGU6A3pXzT6yyXw6GtQkvu/UD7jUM=,iv:j8orlCoXjbOZC0FqxkFtx741H6Jz9rQJjQpHT8QFcMQ=,tag:dyIM0LB55rH86LLT5hAeOA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost|cidrs)$
     version: 3.8.1

@@ -21,8 +21,8 @@ sops:
             UkxRUWVZUTN1M3R4aTQ2V0lCMkFoeE0KbDwyU1fsDrCkIDuA9j5RO/O/SItLShTM
             bODj4ZTD5HUPvF8L16x1wwgejVMngGzsGhs4o3hvNykUV63Ym1Djlw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-01T03:02:42Z"
-    mac: ENC[AES256_GCM,data:v3l8yOsP8hxkhUDmUAy0qz4yBLrCzkEr/Pg72BA3SnXUPiLQ+n8iahgzvFIywoHNTqn//Q+zB6PACF+rx19LdCU+zr8tmrjS4cFuv41B6sCEgwXyzbFvChLq9bvQqasoEdC/q6bVS1CQY5PjWWubKuPqFX3a+wRQx9VjhCUwsF8=,iv:iKuOV8FRoTQ13aeJ1SHpxzZhghi6TWcXQ/5BFanZshc=,tag:aZSvSTn57CODgsiQeVxQAQ==,type:str]
+    lastmodified: "2024-01-21T19:14:52Z"
+    mac: ENC[AES256_GCM,data:QsKJs9bu7MRn4s1P+50f4kfg5Yy85qc3L9ZZlChgcTvg1l8twCAEh9322IXjHoVsipvX3Wa1u4zwxwyaQt3Vsul3mGqI0U0U9dkHWLeiWzBQB5TkN/yU/YKre2AM1qJp50qdg3q3mM3rqv9+tz73yaFsAfLtNbyBHpaMUa4iW9I=,iv:J2rkmlMr3G6OxMQDCTA2vVvhq6mAun8VypWS5UcA1cs=,tag:miYsGOseu944Zg5hl6P+ig==,type:str]
     pgp:
         - created_at: "2023-05-01T02:57:09Z"
           enc: |
@@ -45,4 +45,4 @@ sops:
             -----END PGP MESSAGE-----
           fp: B3BB654B6CAAA312F49C37DF9CEFDEA122154047
     encrypted_regex: ^(data|stringData)$
-    version: 3.7.3
+    version: 3.8.1
