@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: flux-system
+    name: flux-system-deploy-key
     namespace: flux-system
 data:
     identity: ENC[AES256_GCM,data:1qpzr8gtdJLsCIVGhjPRnP8gCocJAHBdqFSIRGDjhI0WDaxsYW/QPJTTEE0IzZItyY3Be0KUn+Ai4EkjNarisRCoBMyBz+xOm6OME2DWqNs9kZFmlDzm3LV9RUzAYYBL1yuYkRI1uBkMZ6ffM3NcYcqzUrMIt6U26jpAFLNQJzOoWsGbhgF9N5oHGjcaTXjZbOT1kUkWcHReDIkjvg992eUXFPTl35TAn/GX2ZSoPsi8WPRXdAX1rPYkiKQYQCBg7+5qus3R6xz2aDBZQC2/dYc/suKQAolE7/1Gu2N0tPgv6hMZnC3VCl1Eny6/+9e3hOnZqXqd1KzLjrxu38ssP6EPBvj7UEjeG9UuA50Fn9/9AU3/5B+0r/NWTjr199X3BHcFy90/tgKB0SQe9s7VlSfol91TPywNsOT8QjtIPMAxnq6HC4GTf8BbvHX0GbkjYSM2ND5UxTZlreADRVj0lPXLgdO58VjKdjfRFcgPKHArTIkyesKAdGOSNuM6vvdJdRznVG2EPYpXcDcZUQ7F7DwC/tealClXnN7qP/sGyiwuqEpawM26bOuf0VWUu52WZXjkM20a1eSvyBf2sJs6lMR1d7AlE3C3aMj/Dc7+cxdV6RSz6f14HjRbftguS8+TSGsNpDbvGdFrxlo+Qn/JJyAhMIDLB+tou+KuZhmR3Bq87Z7TTfQION1SJ1cqDDyEpD64aMKaarUR8UbrAYowrBzDVwPyVIQM3l/xwDDfAezOHy/TOiR6jn+AZIpLzx6bxZPrb8ZJMfyK/bHTTgbGrY1uH3a8JOXhdpv86Ai6IP7lXjqbc3GvpIlH4DaUJX+xB2aNHWzhUXY8SjtwgDxd8dhI9ju87SeJXJi2xcKmzA1UTVOBn5AvCMEalYeMQK3TQKXhl9OIRWLT/Dw9R+08Ftix2PP26bh7f6/ujA47c5i/rxGwgai7BEiKkENpiN/oPG9t6JY7Fyn5HlDGMzpOl+iZlW6/xRhVpaCOWljc0ocCQDe+N0dyWAydYWfi4h+mM5gTP6RJL96XnGvwxt+TArzDdF12SuRZgvwqWulS0xyL1zEZbUyTM8dBgk87k6MV6BzIWFM6YFPvSZOc7CKUEpX3mJE+exz1CZRnqbnT2GgOiuYJKXJpmjXjCQmNbBWQ8FsHcOnHwDL2ofyAZ7eiZVnevyT6cmogSbR8THkHonZCSbxrmPpxchPHUJpL2677g8L4EaoOfcfdgiVbXbvm7pWAJFWk2MlpTk5tUl994SqI90zqEiDRH2hqGw80DoJmpG/E6HY5J/RTp1jHHNkD1o1//2qTIGon,iv:b0TiHNA71TqGS+9UNL+Kqql8NmkpQIrcIoGTbVlPdRo=,tag:8Ju6g5anX2PfMCW6iOCkNw==,type:str]
@@ -23,8 +23,8 @@ sops:
             TXI3b3diNzBGc25rY0I1eEpOMXliKzgKhK/pNY7xW86o+4kg1R7ogoOhiiTgslr7
             6EvrMXI19cytdgffvA0TwzUnTY++Lbeww2USopQy6zu0hgNOjLyrFA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-01-21T19:14:26Z"
-    mac: ENC[AES256_GCM,data:MOIZqwNsHf97YmEsfyRioIGkWZMjZQ/GXxarxUQSkqObrSUtmLJqIXudP84Wt9dt0dzFcQyNNVt0tf9Kr87BEaB7GcRJey/WudGglMMdZfohPrExQJkVfHt991kY8szQguVfL6u4Tr3kDyjGU6A3pXzT6yyXw6GtQkvu/UD7jUM=,iv:j8orlCoXjbOZC0FqxkFtx741H6Jz9rQJjQpHT8QFcMQ=,tag:dyIM0LB55rH86LLT5hAeOA==,type:str]
+    lastmodified: "2024-01-21T19:30:23Z"
+    mac: ENC[AES256_GCM,data:9KAdVCve3vYqhHAfklX7Eyz4KToogg/z9kNvwvuIkEx9IRn5MbiUkwgPT+qfWUPLIyStig+dr4l7ekyoDmzZ/4I1uje0no+z/aTTy//fYW5Jo3+FeKumT950vK5MkiLPwg9u64ZTa4RpZgbbOI5Hw+nR47E6xsSNKhqpGyW3SHo=,iv:Eo6BzVV5CeGY9rUsLJ7J/L5q3CpeyY33ZiPyGwYt31k=,tag:YqHIoJXdhlSn3FPbzyI5gg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|fromCIDR|clusterDomain|k8sServiceHost|cidrs)$
     version: 3.8.1
